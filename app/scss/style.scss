@@ -1,0 +1,235 @@
+@import "_fonts";
+
+//@import "bootstrap-grid";
+@import "mixin";
+//@import "_sprite";
+//@import "normalize";
+@import "_global";
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: #fff;
+}
+.header-wrapper {
+  padding: 4px 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.header-box {
+  display: flex;
+  align-items: center;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top-box {
+  .btn.desk {
+    display: none;
+  }
+}
+.header-bottom {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: -11;
+  left: -100%;
+  top: 48px;
+  width: 100%;
+  height: calc(100% - 48px);
+  background: #fff;
+  transition: 0.35s;
+  z-index: -1;
+  &.active {
+    left: 0;
+  }
+}
+.header-top-box.desk {
+  display: none;
+}
+.header-logo {
+  img,
+  picture {
+    width: 110px;
+    height: 40px;
+    object-fit: cover;
+    display: block;
+  }
+}
+.menu-btn {
+  background: 0 0;
+  border: none;
+  padding: 0;
+  width: 32px;
+  cursor: pointer;
+  height: 32px;
+  opacity: 1;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    span {
+      display: none;
+    }
+    svg {
+      display: block;
+    }
+  }
+}
+.menu-btn span {
+  display: block;
+  width: 24px;
+  background: #242424;
+  height: 2px;
+  transition: 0.5s;
+}
+.menu-btn span + span {
+  margin-top: 5.5px;
+}
+.menu-btn svg {
+  display: none;
+}
+.header-mobile-navigation {
+  width: 100%;
+  flex: 1 0 auto;
+}
+.header-mobile-adress-inner {
+  padding: 12px 0;
+  display: flex;
+  background: #f6f6f9;
+  justify-content: center;
+}
+.header-top-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #242424;
+  svg,
+  img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+  }
+}
+.header-mobile-btn {
+  padding: 15px;
+  background: #fff;
+  .btn {
+    width: 100%;
+  }
+}
+.mobile-navigation-sub-position {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 185px);
+  background: #fff;
+
+  transition: 0.25s linear;
+  overflow: hidden;
+  padding-top: 24px;
+}
+.mobile-navigation-sub-menu {
+  width: 100%;
+}
+.mobile-navigation-sub-position.active {
+  left: 0;
+}
+
+.mobile-navigation-sub-position.current {
+  opacity: 1;
+  overflow-y: auto;
+}
+ul.mobile-navigation-menu {
+  display: flex;
+  height: calc(100vh - 185px);
+  overflow-y: auto;
+
+  flex-direction: column;
+
+  justify-content: start;
+
+  align-items: start;
+  padding-top: 24px;
+  li {
+    display: block;
+    width: 100%;
+    span {
+      display: block;
+      width: 100%;
+    }
+    &.is-parent {
+      span {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: auto;
+          right: 0px;
+          display: block;
+          width: 16px;
+          height: 16px;
+          margin: -8px 0 0;
+          background-image: url(../img/svg/right.svg);
+          @include bgi;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  a {
+    display: block;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 15px;
+    color: #242424;
+
+    &:hover {
+      background: #b4b5bc;
+      color: #ffffff;
+      span {
+        &::after {
+          background-image: url(../img/svg/right-wh.svg);
+        }
+      }
+    }
+  }
+}
+ul.mobile-navigation-menu li.is-parent span.mobile-navigation-sub-menu-heading-title::after{
+	display: none;
+}
+.mobile-navigation-sub-menu-heading-title {
+  padding: 0 15px;
+}
+.mobile-navigation-sub-menu-heading {
+  cursor: pointer;
+}
+.mobile-navigation-sub-menu-heading-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #242424;
+}
+//
+
+@import "_media-header";
+@import "_media";
