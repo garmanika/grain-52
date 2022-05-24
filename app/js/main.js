@@ -19,8 +19,9 @@ $(function () {
   mobileNavParent.on("click", function (e) {
     e.preventDefault();
     let current = $(this).next(".mobile-navigation-sub-position");
+    $(this).closest('li').toggleClass('active')
     $(".mobile-navigation-sub-position").scrollTop("0").removeClass("current");
-    current.addClass("active current");
+    current.toggleClass("active current");
   });
   mobileNavBack.on("click", function (e) {
     e.preventDefault();
@@ -38,5 +39,27 @@ $(function () {
     } else {
       $(".header").removeClass("sticky");
     }
+  });
+  const swiper = new Swiper(".sliders-images", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+  });
+  const swiper1 = new Swiper(".sliders-info", {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    navigation: {
+      nextEl: ".sliders-info-wrapper > .project-slider-next",
+      prevEl: ".sliders-info-wrapper > .project-slider-prev",
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+
   });
 });
