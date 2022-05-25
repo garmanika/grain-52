@@ -1,628 +1,1103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300&family=Oswald:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300&family=Oswald:wght@500&display=swap"
-		rel="stylesheet" />
-	<link rel="stylesheet" href="css/swiper-bundle.css" />
-	<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-	<link rel="stylesheet" href="css/bootstrap-grid.css" />
-	<link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+  </head>
 
-	<link rel="stylesheet" href="css/style.css" />
-	<title></title>
-</head>
+  <body>
+    <div class="wrapper-page">
+      <div class="content">
+        <header class="header">
+          <div class="header-wrapper">
+            <div class="container">
+              <div class="header-inner">
+                <div class="header-box">
+                  <button class="menu-btn">
+                    <span class="menu-btn-top"></span>
+                    <span class="menu-btn-medium"></span>
+                    <span class="menu-btn-bottom"></span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 6L6 18"
+                        stroke="#9B9B9B"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6 6L18 18"
+                        stroke="#9B9B9B"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <a href="#" class="header-logo">
+                    <picture>
+                      <source
+                        media="(min-width:992px )"
+                        srcset="img/svg/header-logo.svg"
+                      />
+                      <source
+                        media="(min-width:0px )"
+                        srcset="img/svg/header-logo-mob.svg"
+                      />
+                      <source srcset="img/svg/header-logo.svg/" />
+                      <img src="img/svg/header-logo.svg" alt="" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="header-inner-box">
+                  <div class="header-top">
+                    <div class="header-top-inner">
+                      <div class="header-top-box desk">
+                        <div class="header-top-item">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_38_378)">
+                              <path
+                                d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_38_378">
+                                <rect width="16" height="16" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          г. Калуга, ул. Зерновая, 52
+                        </div>
+                        <a
+                          href="tel:+7484255-55-44"
+                          class="header-top-item header-top-item-tel"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M15.0499 5C16.0267 5.19057 16.9243 5.66826 17.628 6.37194C18.3317 7.07561 18.8094 7.97326 18.9999 8.95M15.0499 1C17.0792 1.22544 18.9715 2.13417 20.4162 3.57701C21.8608 5.01984 22.7719 6.91101 22.9999 8.94M21.9999 16.92V19.92C22.0011 20.1985 21.944 20.4742 21.8324 20.7293C21.7209 20.9845 21.5572 21.2136 21.352 21.4019C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9451 19.8199 21.92C16.7428 21.5856 13.7869 20.5341 11.1899 18.85C8.77376 17.3147 6.72527 15.2662 5.18993 12.85C3.49991 10.2412 2.44818 7.27099 2.11993 4.18C2.09494 3.90347 2.12781 3.62476 2.21643 3.36162C2.30506 3.09849 2.4475 2.85669 2.6347 2.65162C2.82189 2.44655 3.04974 2.28271 3.30372 2.17052C3.55771 2.05833 3.83227 2.00026 4.10993 2H7.10993C7.59524 1.99522 8.06572 2.16708 8.43369 2.48353C8.80166 2.79999 9.04201 3.23945 9.10993 3.72C9.23656 4.68007 9.47138 5.62273 9.80993 6.53C9.94448 6.88792 9.9736 7.27691 9.89384 7.65088C9.81408 8.02485 9.6288 8.36811 9.35993 8.64L8.08993 9.91C9.51349 12.4135 11.5864 14.4864 14.0899 15.91L15.3599 14.64C15.6318 14.3711 15.9751 14.1858 16.3491 14.1061C16.723 14.0263 17.112 14.0555 17.4699 14.19C18.3772 14.5286 19.3199 14.7634 20.2799 14.89C20.7657 14.9585 21.2093 15.2032 21.5265 15.5775C21.8436 15.9518 22.0121 16.4296 21.9999 16.92Z"
+                              stroke="#242424"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          +7 (4842) 55-55-44
+                        </a>
+                      </div>
+                      <div class="header-top-box">
+                        <button class="btn btn-pr small">
+                          <span class="desk">запись на сервис</span>
+                          <span class="mob">запись</span>
+                        </button>
+                        <button class="btn btn-sec small desk">
+                          дилерские центры
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-bottom">
+                    <nav class="header-mobile-navigation">
+                      <div class="header-inner-mobile">
+                        <ul class="mobile-navigation-menu">
+                          <li class="is-parent">
+                            <a href="#"><span>Купить авто</span> </a>
+                            <div class="mobile-navigation-sub-position">
+                              <div class="mobile-navigation-sub-menu-heading">
+                                <span
+                                  class="mobile-navigation-sub-menu-heading-title"
+                                >
+                                  <img src="img/svg/left.svg" alt="" />
+                                  Каталог</span
+                                >
+                              </div>
+                              <ul class="mobile-navigation-sub-menu">
+                                <li class="is-parent">
+                                  <a href="#">
+                                    <span>Все для сад</span>
+                                  </a>
+                                  <div
+                                    class="mobile-navigation-sub-position sub-sub"
+                                  >
+                                    <div
+                                      class="mobile-navigation-sub-menu-heading"
+                                    >
+                                      <span
+                                        class="mobile-navigation-sub-menu-heading-title"
+                                      >
+                                        <img src="img/svg/left.svg" alt="" />
+                                        Все для сада</span
+                                      >
+                                    </div>
+                                    <ul class="mobile-navigation-sub-menu">
+                                      <li class="is-parent">
+                                        <a href="#">
+                                          <span>Газонокосилки и триммеры</span>
+                                        </a>
+                                        <div
+                                          class="mobile-navigation-sub-position sub-sub"
+                                        >
+                                          <div
+                                            class="mobile-navigation-sub-menu-heading"
+                                          >
+                                            <span
+                                              class="mobile-navigation-sub-menu-heading-title"
+                                            >
+                                              <img
+                                                src="img/svg/left.svg"
+                                                alt=""
+                                              />
+                                              Газонокосилки и триммеры</span
+                                            >
+                                          </div>
+                                          <ul
+                                            class="mobile-navigation-sub-menu"
+                                          >
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
 
-<body>
-	<div class="wrapper-page">
-		<div class="content">
-			<header class="header">
-				<div class="header-wrapper">
-					<div class="container">
-						<div class="header-inner">
-							<div class="header-box">
-								<button class="menu-btn">
-									<span class="menu-btn-top"></span>
-									<span class="menu-btn-medium"></span>
-									<span class="menu-btn-bottom"></span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-										fill="none">
-										<path d="M18 6L6 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
-											stroke-linejoin="round" />
-										<path d="M6 6L18 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
-											stroke-linejoin="round" />
-									</svg>
-								</button>
-								<a href="#" class="header-logo">
-									<picture>
-										<source media="(min-width:992px )" srcset="img/svg/header-logo.svg" />
-										<source media="(min-width:0px )" srcset="img/svg/header-logo-mob.svg" />
-										<source srcset="img/svg/header-logo.svg/" />
-										<img src="img/svg/header-logo.svg" alt="" />
-									</picture>
-								</a>
-							</div>
-							<div class="header-inner-box">
-								<div class="header-top">
-									<div class="header-top-inner">
-										<div class="header-top-box desk">
-											<div class="header-top-item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													viewBox="0 0 16 16" fill="none">
-													<g clip-path="url(#clip0_38_378)">
-														<path
-															d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
-															stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round"
-															stroke-linejoin="round" />
-														<path
-															d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
-															stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round"
-															stroke-linejoin="round" />
-													</g>
-													<defs>
-														<clipPath id="clip0_38_378">
-															<rect width="16" height="16" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-												г. Калуга, ул. Зерновая, 52
-											</div>
-											<a href="tel:+78005553535" class="header-top-item header-top-item-tel">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-													viewBox="0 0 24 24" fill="none">
-													<path
-														d="M15.0499 5C16.0267 5.19057 16.9243 5.66826 17.628 6.37194C18.3317 7.07561 18.8094 7.97326 18.9999 8.95M15.0499 1C17.0792 1.22544 18.9715 2.13417 20.4162 3.57701C21.8608 5.01984 22.7719 6.91101 22.9999 8.94M21.9999 16.92V19.92C22.0011 20.1985 21.944 20.4742 21.8324 20.7293C21.7209 20.9845 21.5572 21.2136 21.352 21.4019C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9451 19.8199 21.92C16.7428 21.5856 13.7869 20.5341 11.1899 18.85C8.77376 17.3147 6.72527 15.2662 5.18993 12.85C3.49991 10.2412 2.44818 7.27099 2.11993 4.18C2.09494 3.90347 2.12781 3.62476 2.21643 3.36162C2.30506 3.09849 2.4475 2.85669 2.6347 2.65162C2.82189 2.44655 3.04974 2.28271 3.30372 2.17052C3.55771 2.05833 3.83227 2.00026 4.10993 2H7.10993C7.59524 1.99522 8.06572 2.16708 8.43369 2.48353C8.80166 2.79999 9.04201 3.23945 9.10993 3.72C9.23656 4.68007 9.47138 5.62273 9.80993 6.53C9.94448 6.88792 9.9736 7.27691 9.89384 7.65088C9.81408 8.02485 9.6288 8.36811 9.35993 8.64L8.08993 9.91C9.51349 12.4135 11.5864 14.4864 14.0899 15.91L15.3599 14.64C15.6318 14.3711 15.9751 14.1858 16.3491 14.1061C16.723 14.0263 17.112 14.0555 17.4699 14.19C18.3772 14.5286 19.3199 14.7634 20.2799 14.89C20.7657 14.9585 21.2093 15.2032 21.5265 15.5775C21.8436 15.9518 22.0121 16.4296 21.9999 16.92Z"
-														stroke="#242424" stroke-width="1.5" stroke-linecap="round"
-														stroke-linejoin="round" />
-												</svg>
-												88005553535
-											</a>
-										</div>
-										<div class="header-top-box">
-											<button class="btn btn-pr small">
-												<span class="desk">запись на сервис</span>
-												<span class="mob">запись</span>
-											</button>
-											<button class="btn btn-sec small desk">
-												дилерские центры
-											</button>
-										</div>
-									</div>
-								</div>
-								<div class="header-bottom">
-									<nav class="header-mobile-navigation">
-										<div class="header-inner-mobile">
-											<ul class="mobile-navigation-menu">
-												<li class="is-parent">
-													<a href="#"><span>Купить авто</span> </a>
-													<div class="mobile-navigation-sub-position">
-														<div class="mobile-navigation-sub-menu-heading">
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/benzopily/"
+                                        >
+                                          <span>Бензопилы</span>
+                                        </a>
+                                      </li>
 
-															<span class="mobile-navigation-sub-menu-heading-title">
-																<img src="img/svg/left.svg" alt="">
-																Каталог</span>
-														</div>
-														<ul class="mobile-navigation-sub-menu">
-															<li class="is-parent">
-																<a href="#">
-																	<span>Все для сад</span>
-																</a>
-																<div class="mobile-navigation-sub-position sub-sub">
-																	<div class="mobile-navigation-sub-menu-heading">
-																		<span
-																			class="mobile-navigation-sub-menu-heading-title">
-																			<img src="img/svg/left.svg" alt="">
-																			Все
-																			для сада</span>
-																	</div>
-																	<ul class="mobile-navigation-sub-menu">
-																		<li class="is-parent">
-																			<a href="#">
-																				<span>Газонокосилки и триммеры</span>
-																			</a>
-																			<div
-																				class="mobile-navigation-sub-position sub-sub">
-																				<div
-																					class="mobile-navigation-sub-menu-heading">
-																					<span
-																						class="mobile-navigation-sub-menu-heading-title">
-																						<img src="img/svg/left.svg"
-																							alt="">
-																						Газонокосилки
-																						и триммеры</span>
-																				</div>
-																				<ul class="mobile-navigation-sub-menu">
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobloki/"
+                                        >
+                                          <span>Мотоблоки</span>
+                                        </a>
+                                      </li>
 
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/benzopily/">
-																				<span>Бензопилы</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobury/"
+                                        >
+                                          <span>Мотобуры</span>
+                                        </a>
+                                      </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobloki/">
-																				<span>Мотоблоки</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobury/">
-																				<span>Мотобуры</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Инструмент</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Ручной инструмент</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="is-parent">
+                            <a href="#"><span>Выкуп авто</span> </a>
+                            <div class="mobile-navigation-sub-position">
+                              <div class="mobile-navigation-sub-menu-heading">
+                                <span
+                                  class="mobile-navigation-sub-menu-heading-title"
+                                >
+                                  <img src="img/svg/left.svg" alt="" />
+                                  Каталог</span
+                                >
+                              </div>
+                              <ul class="mobile-navigation-sub-menu">
+                                <li class="is-parent">
+                                  <a href="#">
+                                    <span>Все для сад</span>
+                                  </a>
+                                  <div
+                                    class="mobile-navigation-sub-position sub-sub"
+                                  >
+                                    <div
+                                      class="mobile-navigation-sub-menu-heading"
+                                    >
+                                      <span
+                                        class="mobile-navigation-sub-menu-heading-title"
+                                      >
+                                        <img src="img/svg/left.svg" alt="" />
+                                        Все для сада</span
+                                      >
+                                    </div>
+                                    <ul class="mobile-navigation-sub-menu">
+                                      <li class="is-parent">
+                                        <a href="#">
+                                          <span>Газонокосилки и триммеры</span>
+                                        </a>
+                                        <div
+                                          class="mobile-navigation-sub-position sub-sub"
+                                        >
+                                          <div
+                                            class="mobile-navigation-sub-menu-heading"
+                                          >
+                                            <span
+                                              class="mobile-navigation-sub-menu-heading-title"
+                                            >
+                                              <img
+                                                src="img/svg/left.svg"
+                                                alt=""
+                                              />
+                                              Газонокосилки и триммеры</span
+                                            >
+                                          </div>
+                                          <ul
+                                            class="mobile-navigation-sub-menu"
+                                          >
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/benzopily/"
+                                        >
+                                          <span>Бензопилы</span>
+                                        </a>
+                                      </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
-																	</ul>
-																</div>
-															</li>
-															<li>
-																<a href="#">
-																	<span>Инструмент</span>
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	<span>Ручной инструмент</span>
-																</a>
-															</li>
-														</ul>
-													</div>
-												</li>
-												<li class="is-parent">
-													<a href="#"><span>Выкуп авто</span> </a>
-													<div class="mobile-navigation-sub-position">
-														<div class="mobile-navigation-sub-menu-heading">
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobloki/"
+                                        >
+                                          <span>Мотоблоки</span>
+                                        </a>
+                                      </li>
 
-															<span class="mobile-navigation-sub-menu-heading-title">
-																<img src="img/svg/left.svg" alt="">
-																Каталог</span>
-														</div>
-														<ul class="mobile-navigation-sub-menu">
-															<li class="is-parent">
-																<a href="#">
-																	<span>Все для сад</span>
-																</a>
-																<div class="mobile-navigation-sub-position sub-sub">
-																	<div class="mobile-navigation-sub-menu-heading">
-																		<span
-																			class="mobile-navigation-sub-menu-heading-title">
-																			<img src="img/svg/left.svg" alt="">
-																			Все
-																			для сада</span>
-																	</div>
-																	<ul class="mobile-navigation-sub-menu">
-																		<li class="is-parent">
-																			<a href="#">
-																				<span>Газонокосилки и триммеры</span>
-																			</a>
-																			<div
-																				class="mobile-navigation-sub-position sub-sub">
-																				<div
-																					class="mobile-navigation-sub-menu-heading">
-																					<span
-																						class="mobile-navigation-sub-menu-heading-title">
-																						<img src="img/svg/left.svg"
-																							alt="">
-																						Газонокосилки
-																						и триммеры</span>
-																				</div>
-																				<ul class="mobile-navigation-sub-menu">
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobury/"
+                                        >
+                                          <span>Мотобуры</span>
+                                        </a>
+                                      </li>
 
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/benzopily/">
-																				<span>Бензопилы</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobloki/">
-																				<span>Мотоблоки</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Инструмент</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Ручной инструмент</span>
+                                  </a>
+                                </li>
+                                <li class="is-parent">
+                                  <a href="#">
+                                    <span>Все для сад</span>
+                                  </a>
+                                  <div
+                                    class="mobile-navigation-sub-position sub-sub"
+                                  >
+                                    <div
+                                      class="mobile-navigation-sub-menu-heading"
+                                    >
+                                      <span
+                                        class="mobile-navigation-sub-menu-heading-title"
+                                      >
+                                        <img src="img/svg/left.svg" alt="" />
+                                        Все для сада</span
+                                      >
+                                    </div>
+                                    <ul class="mobile-navigation-sub-menu">
+                                      <li class="is-parent">
+                                        <a href="#">
+                                          <span>Газонокосилки и триммеры</span>
+                                        </a>
+                                        <div
+                                          class="mobile-navigation-sub-position sub-sub"
+                                        >
+                                          <div
+                                            class="mobile-navigation-sub-menu-heading"
+                                          >
+                                            <span
+                                              class="mobile-navigation-sub-menu-heading-title"
+                                            >
+                                              <img
+                                                src="img/svg/left.svg"
+                                                alt=""
+                                              />
+                                              Газонокосилки и триммеры</span
+                                            >
+                                          </div>
+                                          <ul
+                                            class="mobile-navigation-sub-menu"
+                                          >
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobury/">
-																				<span>Мотобуры</span>
-																			</a>
-																		</li>
+                                            <li>
+                                              <a
+                                                href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/"
+                                              >
+                                                <span
+                                                  >Роботы газонокосилки</span
+                                                >
+                                              </a>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/benzopily/"
+                                        >
+                                          <span>Бензопилы</span>
+                                        </a>
+                                      </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobloki/"
+                                        >
+                                          <span>Мотоблоки</span>
+                                        </a>
+                                      </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
-																	</ul>
-																</div>
-															</li>
-															<li>
-																<a href="#">
-																	<span>Инструмент</span>
-																</a>
-															</li>
-															<li>
-																<a href="#">
-																	<span>Ручной инструмент</span>
-																</a>
-															</li>
-															<li class="is-parent">
-																<a href="#">
-																	<span>Все для сад</span>
-																</a>
-																<div class="mobile-navigation-sub-position sub-sub">
-																	<div class="mobile-navigation-sub-menu-heading">
-																		<span
-																			class="mobile-navigation-sub-menu-heading-title">
-																			<img src="img/svg/left.svg" alt="">
-																			Все
-																			для сада</span>
-																	</div>
-																	<ul class="mobile-navigation-sub-menu">
-																		<li class="is-parent">
-																			<a href="#">
-																				<span>Газонокосилки и триммеры</span>
-																			</a>
-																			<div
-																				class="mobile-navigation-sub-position sub-sub">
-																				<div
-																					class="mobile-navigation-sub-menu-heading">
-																					<span
-																						class="mobile-navigation-sub-menu-heading-title">
-																						<img src="img/svg/left.svg"
-																							alt="">
-																						Газонокосилки
-																						и триммеры</span>
-																				</div>
-																				<ul class="mobile-navigation-sub-menu">
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/motobury/"
+                                        >
+                                          <span>Мотобуры</span>
+                                        </a>
+                                      </li>
 
-																					<li>
-																						<a
-																							href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-																							<span>Роботы
-																								газонокосилки</span>
-																						</a>
-																					</li>
-																				</ul>
-																			</div>
-																		</li>
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/benzopily/">
-																				<span>Бензопилы</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobloki/">
-																				<span>Мотоблоки</span>
-																			</a>
-																		</li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"
+                                          ><span
+                                            >Мойки высокого давления</span
+                                          ></a
+                                        >
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
 
-																		<li>
-																			<a href="/catalog/vse_dlya_sada/motobury/">
-																				<span>Мотобуры</span>
-																			</a>
-																		</li>
+                          <li>
+                            <a href="#">
+                              <span>Акции и спецпредложения</span>
+                            </a>
+                          </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
+                          <li>
+                            <a href="#">
+                              <span>Cервис</span>
+                            </a>
+                          </li>
 
-																		<li>
-																			<a
-																				href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки
-																					высокого давления</span></a>
-																		</li>
-																	</ul>
-																</div>
-															</li>
-														</ul>
-													</div>
-												</li>
+                          <li>
+                            <a href="#">
+                              <span>О компании</span>
+                            </a>
+                          </li>
 
-												<li>
-													<a href="#">
-														<span>Акции и спецпредложения</span>
-													</a>
-												</li>
+                          <li>
+                            <a href="#">
+                              <span>Контакты</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                    <div class="header-mobile-btn">
+                      <button class="btn btn-sec small desk">
+                        дилерские центры
+                      </button>
+                    </div>
+                    <div class="header-mobile-adress">
+                      <div class="header-mobile-adress-inner">
+                        <div class="header-top-item">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_38_378)">
+                              <path
+                                d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_38_378">
+                                <rect width="16" height="16" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          г. Калуга, ул. Зерновая, 52
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main>
+          <section class="services">
+            <div class="container">
+              <div class="services-items">
+                <a href="#" class="services-item border-tr border-tr-1">
+                  <div class="services-item-img">
+                    <img src="img/svg/car-new.svg" alt="" />
+                  </div>
+                  <div class="services-item-title">Новые автомобили</div>
+                </a>
+                <a href="#" class="services-item border-tr border-tr-2">
+                  <div class="services-item-img">
+                    <img src="img/svg/car-used.svg" alt="" />
+                  </div>
+                  <div class="services-item-title">Авто с пробегом</div>
+                </a>
+                <a href="#" class="services-item border-tr border-tr-3">
+                  <div class="services-item-img">
+                    <img src="img/svg/car-transfer.svg" alt="" />
+                  </div>
+                  <div class="services-item-title">выкуп авто</div>
+                </a>
+                <a href="#" class="services-item border-tr border-tr-4">
+                  <div class="services-item-img">
+                    <img src="img/svg/repair.svg" alt="" />
+                  </div>
+                  <div class="services-item-title">сервис</div>
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="sliders">
+            <div class="container">
+              <div class="sliders-inner">
+                <div class="sliders-images swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slider-images-img">
+                        <picture>
+                          <source
+                            media="(min-width:1400px )"
+                            srcset="img/slider-img-1320.jpg"
+                          />
+                          <source
+                            media="(min-width:1200px )"
+                            srcset="img/slider-img-1140.jpg"
+                          />
+                          <source
+                            media="(min-width:992px )"
+                            srcset="img/slider-img-960.jpg"
+                          />
+                          <source
+                            media="(min-width:768px )"
+                            srcset="img/slider-img-768.jpg"
+                          />
+                          <source
+                            media="(min-width:576px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source srcset="img/slider-img.jpg" />
+                          <img src="img/slider-img.jpg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider-images-img">
+                        <picture>
+                          <source
+                            media="(min-width:1400px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source
+                            media="(min-width:1200px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source
+                            media="(min-width:992px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source
+                            media="(min-width:768px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source
+                            media="(min-width:576px )"
+                            srcset="img/slider-img.jpg"
+                          />
+                          <source srcset="img/slider-img.jpg" />
+                          <img src="img/slider-img.jpg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider-images-img">
+                        <picture>
+                          <source
+                            media="(min-width:1400px )"
+                            srcset="
+                              https://i.pinimg.com/originals/b1/7b/41/b17b4135eab99b839c7a3575bf25c17b.jpg
+                            "
+                          />
+                          <source
+                            media="(min-width:1200px )"
+                            srcset="
+                              https://i.pinimg.com/originals/7a/80/1e/7a801e822c409fde5e62e1baa04c417c.jpg
+                            "
+                          />
+                          <source
+                            media="(min-width:992px )"
+                            srcset="
+                              https://content-3.foto.my.mail.ru/mail/mits.vas/1058/b-3458.jpg
+                            "
+                          />
+                          <source
+                            media="(min-width:768px )"
+                            srcset="
+                              https://img1.goodfon.ru/original/640x1136/5/1c/gornaya-reka-gory-skaly-les.jpg
+                            "
+                          />
+                          <source
+                            media="(min-width:576px )"
+                            srcset="
+                              https://artpostergallery.ru/userdata/image/thumbs/b3/c4/b3c4715deb9b85b966f7cc8f174ac5d7_2.jpg
+                            "
+                          />
+                          <source srcset="img/slider-img.jpg" />
+                          <img src="img/slider-img.jpg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sliders-info-wrapper">
+                  <div class="sliders-info swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="sliders-info-inner">
+                          <div class="sliders-info-title">Заголовок слайда</div>
+                          <div class="slider-info-info">
+                            В АВЕС-Калуга представлен полный модельный ряд. У
+                            нас Вы сможете купить не только легковые модели
+                            Vesta, Granta, XRAY.
+                          </div>
+                          <div class="sliders-info-control">
+                            <a href="#" class="sliders-info-control-btn"
+                              >Подробнее</a
+                            >
+                            <div class="sliders-info-control-arrows">
+                              <div class="swiper-button-prev">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M13.2412 15L8.24121 10L13.2412 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                              <div class="swiper-button-next">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M8.24121 15L13.2412 10L8.24121 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sliders-info-inner">
+                          <div class="sliders-info-title">Заголовок слайда</div>
+                          <div class="slider-info-info">
+                            В АВЕС-Калуга представлен полный модельный Granta,
+                            XRAY.
+                          </div>
+                          <div class="sliders-info-control">
+                            <a href="#" class="sliders-info-control-btn"
+                              >Подробнее</a
+                            >
+                            <div class="sliders-info-control-arrows">
+                              <div class="swiper-button-prev">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M13.2412 15L8.24121 10L13.2412 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                              <div class="swiper-button-next">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M8.24121 15L13.2412 10L8.24121 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sliders-info-inner">
+                          <div class="sliders-info-title">Заголовок слайда</div>
 
-												<li>
-													<a href="#">
-														<span>Cервис</span>
-													</a>
-												</li>
+                          <div class="sliders-info-control">
+                            <a href="#" class="sliders-info-control-btn"
+                              >Подробнее</a
+                            >
+                            <div class="sliders-info-control-arrows">
+                              <div class="swiper-button-prev">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M13.2412 15L8.24121 10L13.2412 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                              <div class="swiper-button-next">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="21"
+                                  height="20"
+                                  viewBox="0 0 21 20"
+                                  fill="none"
+                                >
+                                  <path
+                                    d="M8.24121 15L13.2412 10L8.24121 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="buy-car-short">
+            <div class="container">
+              <div class="buy-car-short-inner">
+                <div class="buy-car-short-title">
+                  <span>Купить </span>
+                  автомобиль
+                </div>
+                <div class="buy-car-short-items">
+                  <a href="#" class="buy-car-short-item">
+                    <div class="buy-car-short-item-img">
+                      <img src="img/car-2.png" alt="" />
+                    </div>
+                    <div class="buy-car-short-item-title">Renault</div>
+                    <div class="buy-car-short-item-count">800 авто</div>
+                  </a>
+                  <a href="#" class="buy-car-short-item">
+                    <div class="buy-car-short-item">
+                      <div class="buy-car-short-item-img">
+                        <img src="img/car-1.png" alt="" />
+                      </div>
+                      <div class="buy-car-short-item-title">Lada</div>
+                      <div class="buy-car-short-item-count">500 авто</div>
+                    </div>
+                  </a>
+                  <a href="#" class="buy-car-short-item">
+                    <div class="buy-car-short-item">
+                      <div class="buy-car-short-item-img">
+                        <img src="img/car.png" alt="" />
+                      </div>
+                      <div class="buy-car-short-item-title">с пробегом</div>
+                      <div class="buy-car-short-item-count">900 авто</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="buy-car-short-glare glare"></div>
+            <div class="buy-car-short-glare glare-1"></div>
+            <div class="buy-car-short-glare glare-2"></div>
+          </section>
+          <section class="special">
+            <div class="container">
+              <div class="section-title">
+                <h3 class="title">Акции и спецпредложения «ЗЕРНОВАЯ 52»</h3>
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+              <div class="special-slider-inner">
+                <div class="special-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            renault
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Диагностика подвески в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
 
-												<li>
-													<a href="#">
-														<span>О компании</span>
-													</a>
-												</li>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-1.jpg" alt="" />
+                          <div class="special-slider-item-img-info">lada</div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Выгода 50 000 рублей по программе Трейд-ин
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
 
-												<li>
-													<a href="#">
-														<span>Контакты</span>
-													</a>
-												</li>
-											</ul>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-2.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            Кузовной ремонт
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Каждому 10 клиенту скидка 50% на шиномонтаж
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
 
-										</div>
-									</nav>
-									<div class="header-mobile-btn">
-										<button class="btn btn-sec small desk">
-											дилерские центры
-										</button>
-									</div>
-									<div class="header-mobile-adress">
-										<div class="header-mobile-adress-inner">
-											<div class="header-top-item">
-												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-													viewBox="0 0 16 16" fill="none">
-													<g clip-path="url(#clip0_38_378)">
-														<path
-															d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
-															stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round"
-															stroke-linejoin="round" />
-														<path
-															d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
-															stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round"
-															stroke-linejoin="round" />
-													</g>
-													<defs>
-														<clipPath id="clip0_38_378">
-															<rect width="16" height="16" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-												г. Калуга, ул. Зерновая, 52
-											</div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-3.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            автовито / АВТО С ПРОБЕГОМ
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Замена масла в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
 
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-			</header>
-			<main>
-				<section class="services">
-					<div class="container">
-						<div class="services-items">
-							<a href="#" class="services-item border-tr border-tr-1">
-								<div class="services-item-img">
-									<img src="img/svg/car-new.svg" alt="">
-								</div>
-								<div class="services-item-title">Новые автомобили</div>
-							</a>
-							<a href="#" class="services-item border-tr border-tr-2">
-								<div class="services-item-img">
-									<img src="img/svg/car-used.svg" alt="">
-								</div>
-								<div class="services-item-title">Авто с пробегом</div>
-							</a>
-							<a href="#" class="services-item border-tr border-tr-3">
-								<div class="services-item-img">
-									<img src="img/svg/car-transfer.svg" alt="">
-
-								</div>
-								<div class="services-item-title">выкуп авто</div>
-							</a>
-							<a href="#" class="services-item border-tr border-tr-4">
-								<div class="services-item-img">
-									<img src="img/svg/repair.svg" alt="">
-								</div>
-								<div class="services-item-title">сервис
-								</div>
-							</a>
-						</div>
-					</div>
-				</section>
-				<section class="sliders">
-					<div class="container">
-						<div class="sliders-inner">
-							<div class="sliders-images swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="slider-images-img">
-											<img src="img/slider-img.jpg" alt="">
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="slider-images-img">
-											<img src="https://papik.pro/uploads/posts/2021-09/1631483526_22-papik-pro-p-krutie-peizazhi-23.jpg"
-												alt="">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="sliders-info-wrapper">
-								<div class="sliders-info swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="sliders-info-inner">
-												<div class="sliders-info-title">Заголовок слайда</div>
-												<div class="slider-info-info">В АВЕС-Калуга представлен полный модельный
-													ряд. У нас Вы сможете купить не только легковые модели Vesta,
-													Granta, XRAY.</div>
-													<div class="sliders-info-control">
-														<a href="#" class="sliders-info-control-btn">Подробнее</a>
-														<div class="sliders-info-control-arrows">
-															<div class="swiper-button-prev">
-																<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-																	viewBox="0 0 21 20" fill="none">
-																	<path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white"
-																		stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
-															<div class="swiper-button-next">
-																<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-																	viewBox="0 0 21 20" fill="none">
-																	<path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white"
-																		stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
-														</div>
-													</div>
-
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="sliders-info-inner">
-												<div class="sliders-info-title">Заголовок слайда</div>
-												<div class="slider-info-info">В АВЕС-Калуга представлен полный модельный
-												
-													Granta, XRAY.</div>
-													<div class="sliders-info-control">
-														<a href="#" class="sliders-info-control-btn">Подробнее</a>
-														<div class="sliders-info-control-arrows">
-															<div class="swiper-button-prev">
-																<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-																	viewBox="0 0 21 20" fill="none">
-																	<path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white"
-																		stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
-															<div class="swiper-button-next">
-																<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
-																	viewBox="0 0 21 20" fill="none">
-																	<path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white"
-																		stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-																</svg>
-															</div>
-														</div>
-													</div>
-
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-				</section>
-				<section class="car-selection">
-					<div class="container">
-						<div class="car-selection-inner">
-							<div class="section-title">
-								<h3>Подбор автомобиля</h3>
-								</div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
-		<footer class="footer"></footer>
-	</div>
-		<div class="page-link">
-			<div class="page-link-items">
-				<a href="#" class="page-link-item">
-					<div class="page-link-item-info">
-						Сравнение
-					</div>
-					<div class="page-link-item-img">
-						<img src="img/svg/three-line.svg" alt="">
-						<span class="page-link-item-img-count">12</span>
-					</div>
-				</a>
-				<a href="#" class="page-link-item">
-					<div class="page-link-item-info">
-						сalculator
-					</div>
-					<div class="page-link-item-img">
-						<img src="img/svg/сalculator.svg" alt="">
-					</div>
-				</a>
-				<a href="#" class="page-link-item">
-					<div class="page-link-item-info">
-						fi_car
-					</div>
-					<div class="page-link-item-img">
-						<img src="img/svg/fi_car.svg" alt="">
-					</div>
-				</a>
-				<a href="#" class="page-link-item">
-					<div class="page-link-item-info">
-						ruler
-					</div>
-					<div class="page-link-item-img">
-						<img src="img/svg/ruler.svg" alt="">
-					</div>
-				</a>
-			</div>
-		</div>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/jquery.inputmask.js"></script>
-	<!-- <script src="js/dynamicAdapt.js"></script> -->
-	<script src="js/main.js"></script>
-</body>
-
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="special-slider-more more">
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer class="footer"></footer>
+    </div>
+    <div class="page-link">
+      <div class="page-link-items">
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">Сравнение</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/three-line.svg" alt="" />
+            <span class="page-link-item-img-count">12</span>
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">сalculator</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/сalculator.svg" alt="" />
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">fi_car</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/fi_car.svg" alt="" />
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">ruler</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/ruler.svg" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.inputmask.js"></script>
+    <!-- <script src="js/dynamicAdapt.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

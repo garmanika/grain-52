@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+  .page-link {
+    display: block;
+    top: 96px;
+  }
+}
+@media (min-width: 768px) {
+  .page-link {
+    top: 113px;
+  }
+}
+@media (min-width: 992px) {
+	.page-link{
+		top: 200px;
+	}
+}
+@media (min-width: 1200px) {
+	.page-link{
+		top: 208px;
+	}
+}
+@media (min-width: 1400px) {
+}

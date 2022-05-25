@@ -1,5 +1,5 @@
 $(function () {
-	let mobileNavTrigger = $(".menu-btn");
+  let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-bottom");
   mobileNavTrigger.on("click", function () {
     if (!$(this).hasClass("active")) {
@@ -19,7 +19,7 @@ $(function () {
   mobileNavParent.on("click", function (e) {
     e.preventDefault();
     let current = $(this).next(".mobile-navigation-sub-position");
-    $(this).closest('li').toggleClass('active')
+    $(this).closest("li").toggleClass("active");
     $(".mobile-navigation-sub-position").scrollTop("0").removeClass("current");
     current.toggleClass("active current");
   });
@@ -32,7 +32,7 @@ $(function () {
       .closest(".mobile-navigation-sub-position.active")
       .addClass("current");
   });
-	$(window).on("scroll", function () {
+  $(window).on("scroll", function () {
     var height = $(document).scrollTop().valueOf();
     if (height >= 160) {
       $(".header").addClass("sticky");
@@ -44,22 +44,67 @@ $(function () {
     slidesPerView: 1,
     spaceBetween: 30,
     slidesPerGroup: 1,
-    effect: 'fade',
+    effect: "fade",
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
     },
   });
   const swiper1 = new Swiper(".sliders-info", {
     slidesPerView: 1,
     slidesPerGroup: 1,
     navigation: {
-      nextEl: ".sliders-info-wrapper > .project-slider-next",
-      prevEl: ".sliders-info-wrapper > .project-slider-prev",
+      nextEl: ".sliders-info  .swiper-button-next",
+      prevEl: ".sliders-info  .swiper-button-prev",
     },
-    effect: 'fade',
+    effect: "fade",
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
     },
-
   });
+  const swipeAllSliders = (index) => {
+    swiper.slideToLoop(index);
+    swiper1.slideToLoop(index);
+  };
+
+  swiper.on("slideChange", () => swipeAllSliders(swiper.realIndex));
+  swiper1.on("slideChange", () => swipeAllSliders(swiper1.realIndex));
+	let indexSpecialSlider = {destroyed: true};
+    function initSpecialSlider() {
+       indexSpecialSlider = new Swiper('.special-slider', {
+           loop: false,
+           pagination: {
+               el: '.special-slider-inner .swiper-pagination',
+               type: 'bullets',
+               clickable: true
+           },
+					 breakpoints: {
+						320: {
+							slidesPerView: 1,
+							spaceBetween: 15,
+							slidesPerGroup: 1,
+						},
+						576: {
+							slidesPerView: 2,
+							spaceBetween: 30,
+							slidesPerGroup: 2,
+						},
+						768: {
+							slidesPerView: 3,
+							spaceBetween: 30,
+							slidesPerGroup: 3,
+						},
+					},
+       });
+   }
+   function toggleSpecialSlider() {
+       if (window.matchMedia("(max-width: 991px)").matches && indexSpecialSlider.destroyed) {
+           initSpecialSlider();
+       } else if (!window.matchMedia("(max-width: 991px)").matches && !indexSpecialSlider.destroyed) {
+           indexSpecialSlider.destroy();
+       }
+   }
+   toggleSpecialSlider();
+   $(window).resize(function() {
+       toggleSpecialSlider();
+   });
 });

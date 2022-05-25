@@ -7,6 +7,10 @@ html {
 *::after {
   box-sizing: border-box;
 }
+// .swiper-wrapper,
+// .swiper{
+// 	z-index: 0;
+// }
 
 html,
 body {
@@ -91,6 +95,8 @@ input {
   background-color: #fff;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
+  white-space: nowrap;
+	text-align: center;
   .mob {
     display: block;
   }
@@ -237,7 +243,6 @@ input[type="number"]::-webkit-outer-spin-button {
   position: absolute;
   width: 15px;
   height: 15px;
-  z-index: 1;
 }
 .border-tr-1::before {
   left: 10%;
@@ -270,6 +275,56 @@ input[type="number"]::-webkit-outer-spin-button {
 .border-tr-4::after {
   right: -7px;
   bottom: 10%;
+}
+.swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+.swiper-pagination-bullet {
+  display: flex;
+  flex-flow: row nowrap;
+
+  align-items: center;
+	height: auto;
+  justify-content: flex-end;
+  border-radius: none;
+  background: 0 0;
+  text-align: center;
+
+  opacity: 1;
+  position: relative;
+  min-height: 20px;
+  display: block;
+  width: 30px;
+  min-height: auto;
+  min-height: 20px;
+  background: 0 0;
+  transition: 0.25s;
+  border-radius: 0;
+  position: relative;
+  display: flex;
+
+  align-items: center;
+}
+.swiper-pagination-bullet:after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 2px;
+	margin: 0;
+	background: #eee;
+	transition: .25s;
+}
+.swiper-pagination-bullet-active{
+	width: 60px;
+}
+.swiper-pagination-bullet-active:after {
+	width: 60px;
+	background: #FF1E26;
 }
 
 @media (min-width: 576px) {

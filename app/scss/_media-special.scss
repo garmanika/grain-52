@@ -1,0 +1,35 @@
+@media (min-width: 576px) {
+	.title{
+		font-size: 24px;
+line-height: 40px;
+	}
+}
+@media (min-width: 768px) {
+  .special {
+    padding: 70px 0;
+  }
+	.section-title {
+
+		.btn{
+			display: block;
+		}
+	}
+	.title{
+		font-size: 28px;
+	}
+}
+@media (min-width: 992px) {
+  .special {
+    padding: 80px 0;
+  }
+	.title{
+		font-size: 32px;
+	}
+}
+@media (min-width: 1200px) {
+	.special{
+		padding: 96px 0;
+	}
+}
+@media (min-width: 1400px) {
+}
