@@ -41,7 +41,12 @@ body.no-scroll-mobile {
     list-style: none;
   }
 }
-
+.web-check-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+    color: #9b9b9b;
+}
 select::-moz-placeholder {
   opacity: 1;
 }
@@ -96,7 +101,7 @@ input {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   white-space: nowrap;
-	text-align: center;
+  text-align: center;
   .mob {
     display: block;
   }
@@ -104,6 +109,10 @@ input {
     display: none;
   }
   &:hover {
+    color: #242424;
+    border-color: #242424;
+  }
+  &:focus {
     color: #242424;
     border-color: #242424;
   }
@@ -125,6 +134,11 @@ input {
     color: #ffffff;
     border-color: transparent;
   }
+  &:focus {
+    background: #000000;
+    color: #ffffff;
+    border-color: transparent;
+  }
   &:active {
   }
   &:disabled {
@@ -135,6 +149,10 @@ input {
   color: #ff1e26;
   border-color: #ff1e26;
   &:hover {
+    color: #242424;
+    border-color: #000000;
+  }
+  &:focus {
     color: #242424;
     border-color: #000000;
   }
@@ -289,7 +307,7 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-flow: row nowrap;
 
   align-items: center;
-	height: auto;
+  height: auto;
   justify-content: flex-end;
   border-radius: none;
   background: 0 0;
@@ -309,22 +327,36 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
 
   align-items: center;
+  &:hover {
+    &::after {
+      background: #ff1e26;
+    }
+  }
+  &:focus {
+    &::after {
+      background: #ff1e26;
+    }
+  }
 }
 .swiper-pagination-bullet:after {
-	content: "";
-	display: block;
-	width: 30px;
-	height: 2px;
-	margin: 0;
-	background: #eee;
-	transition: .25s;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin: 0;
+  background: #eee;
+  transition: 0.25s;
 }
-.swiper-pagination-bullet-active{
-	width: 60px;
+.swiper-pagination-bullet-active {
+  width: 60px;
 }
 .swiper-pagination-bullet-active:after {
-	width: 60px;
-	background: #FF1E26;
+  width: 60px;
+  background: #ff1e26;
+}
+.swiper:not(.swiper-container-initialized) > .swiper-wrapper {
+  flex-flow: row wrap;
+  align-items: stretch;
 }
 
 @media (min-width: 576px) {

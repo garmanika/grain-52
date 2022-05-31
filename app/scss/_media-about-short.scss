@@ -1,0 +1,114 @@
+@media (min-width: 576px) {
+    .about-short-info-title {
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .about-short {
+        padding: 60px 0 90px;
+    }
+    .about-short-img {
+        @include container-img;
+        padding-bottom: 66%;
+        margin-right: 30px;
+        img {
+            @include img;
+        }
+    }
+    .image-caption {
+        margin: 0;
+    }
+    .image-caption {
+        position: absolute;
+        right: 0;
+        bottom: -30px;
+    }
+}
+@media (min-width: 768px) {
+    .about-short-info-title {
+        font-size: 28px;
+        line-height: 40px;
+        margin-bottom: 48px;
+    }
+    .about-short {
+        padding: 78px 0 100px;
+    }
+    .image-caption {
+        max-width: 230px;
+    }
+    .image-caption-info span{
+        margin-top: 16px;
+    }
+    .about-short-inner{
+        gap: 48px;
+    }
+}
+@media (min-width: 992px) {
+    .about-short-info-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about-short {
+        padding: 98px 0 125px;
+    }
+    .image-caption{
+        padding: 50px 30px;
+    }
+    .about-short-inner{
+        gap: 30px;
+        grid-template-columns: minmax(auto, 495px) minmax(auto, 380px);
+        justify-content: space-between;
+    }
+    .about-short-img{
+        padding-bottom: 120%;
+    } 
+    .about-short-img{
+        &::before{
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translate(0,50%);
+            width: 120px;
+            height: 2px;
+            background: #BDBDBD;
+            z-index: 1;
+        }
+    }
+}
+@media (min-width: 1200px) { 
+    .about-short {
+        padding-bottom: 111px;
+    }
+    .image-caption {
+        max-width: 250px;
+    }
+    .image-caption-info{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .about-short-img{
+        margin-right: 40px;
+    }
+    .about-short-inner{
+        gap: 170px;
+    }
+    .about-short-info{
+        padding-top: 15px;
+    }
+    .about-short-img::before{
+        left: -60px;
+    }
+    .about-short-inner{
+
+        grid-template-columns: minmax(auto, 520px) minmax(auto, 460px);
+    }
+}
+@media (min-width: 1400px) {
+    .about-short {
+        padding: 96px 0 120px;
+    }
+
+    .about-short-info{
+        padding-top: 60px;
+    }
+}

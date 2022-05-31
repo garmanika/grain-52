@@ -1,0 +1,37 @@
+@media (min-width: 576px) {
+    .banner {
+        padding: 40px 0;
+        background-image: url(../img/banner-bg-560.jpg);
+    }
+}
+@media (min-width: 768px) {
+    .banner {
+        padding: 16px 0;
+        background-image: url(../img/banner-bg-768.jpg);
+    }
+    .banner-inner{
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    .banner-info{
+        margin: 0;
+    }
+}
+@media (min-width: 992px) {
+    .banner {
+        background-image: url(../img/banner-bg-960.jpg);
+    }
+    .banner-inner{
+        justify-content: center;
+    }
+}
+@media (min-width: 1200px) {
+    .banner-info {
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+@media (min-width: 1400px) {
+}
