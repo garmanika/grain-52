@@ -1,0 +1,31 @@
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+	.filter{
+		padding: 100px 0 70px;
+	}
+}
+@media (min-width: 992px){
+	.filter-head{
+		grid-template-columns: 1fr minmax(auto, 300px);
+		gap: 30px;
+	}
+	.filter-head{
+		margin-bottom: 50px;
+	}
+	.filter{
+		padding: 110px 0 80px;
+	}
+	.range-slider-inner{
+		margin-bottom: 32px;
+	}
+}
+@media (min-width: 1200px){
+	.filter{
+		padding: 125px 0 100px;
+	}
+}
+@media (min-width: 1400px){
+
+}

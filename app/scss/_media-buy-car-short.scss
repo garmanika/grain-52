@@ -12,14 +12,17 @@
 	 .glare{
 	 	top: 0;
 	 	left: calc(50% - 56px);
+		 z-index: 1;
 	 }
 	 .glare-1{
 	 	top: 0;
 	 	left: calc(50% + 122px);
+		 z-index: 2;
 	 }
 	.glare-2{
 		top: 0;
 		left: calc(50% + 157px);
+		z-index: 3;
 	}
 }
 @media (min-width: 768px) {
@@ -31,9 +34,6 @@
   }
 	.buy-car-short-item-title{
 		font-size: 28px;
-	}
-	.buy-car-short-glare{
-		width: 243px;
 	}
 	.glare{
 		top: 0;

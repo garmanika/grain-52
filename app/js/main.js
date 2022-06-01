@@ -14,7 +14,6 @@ $(function () {
     }
   });
 
-
   let mobileNavParent = $(".mobile-navigation-menu .is-parent > a");
   let mobileNavBack = $(".mobile-navigation-sub-menu-heading");
   mobileNavParent.on("click", function (e) {
@@ -34,11 +33,11 @@ $(function () {
       .addClass("current");
   });
 
-  $(".header-inner-mobile .is-parent").on('click', function () {
-    $(this).siblings('.is-parent.active').removeClass('active');
-  })
+  $(".header-inner-mobile .is-parent").on("click", function () {
+    $(this).siblings(".is-parent.active").removeClass("active");
+  });
   $(window).on("scroll", function () {
-    var height = $(document).scrollTop().valueOf();
+    let height = $(document).scrollTop().valueOf();
     if (height >= 160) {
       $(".header").addClass("sticky");
     } else {
@@ -75,12 +74,12 @@ $(function () {
   swiper1.on("slideChange", () => swipeAllSliders(swiper1.realIndex));
   let indexSpecialSlider = { destroyed: true };
   function initSpecialSlider() {
-    indexSpecialSlider = new Swiper('.special-slider', {
+    indexSpecialSlider = new Swiper(".special-slider", {
       loop: false,
       pagination: {
-        el: '.special-slider-inner .swiper-pagination',
-        type: 'bullets',
-        clickable: true
+        el: ".special-slider-inner .swiper-pagination",
+        type: "bullets",
+        clickable: true,
       },
       breakpoints: {
         320: {
@@ -102,9 +101,15 @@ $(function () {
     });
   }
   function toggleSpecialSlider() {
-    if (window.matchMedia("(max-width: 991px)").matches && indexSpecialSlider.destroyed) {
+    if (
+      window.matchMedia("(max-width: 991px)").matches &&
+      indexSpecialSlider.destroyed
+    ) {
       initSpecialSlider();
-    } else if (!window.matchMedia("(max-width: 991px)").matches && !indexSpecialSlider.destroyed) {
+    } else if (
+      !window.matchMedia("(max-width: 991px)").matches &&
+      !indexSpecialSlider.destroyed
+    ) {
       indexSpecialSlider.destroy();
     }
   }
@@ -113,15 +118,14 @@ $(function () {
     toggleSpecialSlider();
   });
 
-
   let indexFeedbackSlider = { destroyed: true };
   function initFeedbackSlider() {
-    indexFeedbackSlider = new Swiper('.feedback-slider-inner > .swiper', {
+    indexFeedbackSlider = new Swiper(".feedback-slider-inner > .swiper", {
       loop: false,
       pagination: {
-        el: '.feedback-slider-inner .swiper-pagination',
-        type: 'bullets',
-        clickable: true
+        el: ".feedback-slider-inner .swiper-pagination",
+        type: "bullets",
+        clickable: true,
       },
       breakpoints: {
         320: {
@@ -139,9 +143,15 @@ $(function () {
     });
   }
   function toggleFeedbackSlider() {
-    if (window.matchMedia("(max-width: 991px)").matches && indexFeedbackSlider.destroyed) {
+    if (
+      window.matchMedia("(max-width: 991px)").matches &&
+      indexFeedbackSlider.destroyed
+    ) {
       initFeedbackSlider();
-    } else if (!window.matchMedia("(max-width: 991px)").matches && !indexFeedbackSlider.destroyed) {
+    } else if (
+      !window.matchMedia("(max-width: 991px)").matches &&
+      !indexFeedbackSlider.destroyed
+    ) {
       indexFeedbackSlider.destroy();
     }
   }
@@ -180,52 +190,59 @@ $(function () {
     $(".filter-body-items.active").removeClass("active");
     content.addClass("active");
   });
-  $('.custom-select > select').each(function(){
-    var $this = $(this), numberOfOptions = $(this).children('option').length;
-  
-    $this.addClass('select-hidden'); 
+  $(".filter-control-link-more").click(function () {
+    $(this)
+      .toggleClass("active")
+      .closest(".filter-body-items")
+      .toggleClass("hidden");
+  });
+  $(".custom-select > select").each(function () {
+    let $this = $(this),
+      numberOfOptions = $(this).children("option").length;
+    $this.addClass("select-hidden");
     $this.wrap('<div class="select"></div>');
     $this.after('<div class="select-styled"></div>');
 
-    var $styledSelect = $this.next('div.select-styled');
-    $styledSelect.text($this.children('option').eq(0).text());
-  
-    var $list = $('<ul />', {
-        'class': 'select-options'
+    let $styledSelect = $this.next("div.select-styled");
+    $styledSelect.text($this.children("option").eq(0).text());
+
+    let $list = $("<ul />", {
+      class: "select-options",
     }).insertAfter($styledSelect);
-  
-    for (var i = 0; i < numberOfOptions; i++) {
-        $('<li />', {
-            text: $this.children('option').eq(i).text(),
-            rel: $this.children('option').eq(i).val()
-        }).appendTo($list);
-        //if ($this.children('option').eq(i).is(':selected')){
-        //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
-        //}
+
+    for (let i = 0; i < numberOfOptions; i++) {
+      $("<li />", {
+        text: $this.children("option").eq(i).text(),
+        rel: $this.children("option").eq(i).val(),
+      }).appendTo($list);
+      //if ($this.children('option').eq(i).is(':selected')){
+      //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
+      //}
     }
-  
-    var $listItems = $list.children('li');
-  
-    $styledSelect.click(function(e) {
-        e.stopPropagation();
-        $('div.select-styled.active').not(this).each(function(){
-            $(this).removeClass('active').next('ul.select-options').hide();
+
+    let $listItems = $list.children("li");
+
+    $styledSelect.click(function (e) {
+      e.stopPropagation();
+      $("div.select-styled.active")
+        .not(this)
+        .each(function () {
+          $(this).removeClass("active").next("ul.select-options").hide();
         });
-        $(this).toggleClass('active').next('ul.select-options').toggle();
-    });
-  
-    $listItems.click(function(e) {
-        e.stopPropagation();
-        $styledSelect.text($(this).text()).removeClass('active');
-        $this.val($(this).attr('rel'));
-        $list.hide();
-        //console.log($this.val());
-    });
-  
-    $(document).click(function() {
-        $styledSelect.removeClass('active');
-        $list.hide();
+      $(this).toggleClass("active").next("ul.select-options").toggle();
     });
 
-});
+    $listItems.click(function (e) {
+      e.stopPropagation();
+      $styledSelect.text($(this).text()).removeClass("active");
+      $this.val($(this).attr("rel"));
+      $list.hide();
+      //console.log($this.val());
+    });
+
+    $(document).click(function () {
+      $styledSelect.removeClass("active");
+      $list.hide();
+    });
+  });
 });
