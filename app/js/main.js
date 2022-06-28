@@ -223,6 +223,8 @@ $(function () {
 			e.stopPropagation();
 			$styledSelect.text($(this).text()).removeClass("active");
 			$this.val($(this).attr("rel"));
+			let event = new Event('change');
+			$this[0].dispatchEvent(event);
 			$list.hide();
 			//console.log($this.val());
 		});

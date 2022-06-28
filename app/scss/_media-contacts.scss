@@ -1,0 +1,31 @@
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+    .contacts{
+        padding-bottom: 70px;
+      }
+      .contacts-items{
+        grid-template-columns: repeat(2,1fr);
+        gap: 48px 30px;
+      }
+}
+@media (min-width: 992px){
+    .contacts{
+        padding-bottom: 80px;
+      }
+      .contacts-items{
+        grid-template-columns: repeat(3,1fr);
+      }
+}
+@media (min-width: 1200px){
+    .contacts{
+        padding-bottom: 96px;
+      }
+      .contacts-items{
+        grid-template-columns: repeat(4,1fr);
+      }
+}
+@media (min-width: 1400px){
+
+}
