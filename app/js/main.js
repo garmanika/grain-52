@@ -1,36 +1,45 @@
 $(function () {
   let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-bottom");
+
   mobileNavTrigger.on("click", function () {
-    if (!$(this).hasClass("active")) {
-      $(this).addClass("active");
-      mobileNav.addClass("active");
-      $("body").addClass("no-scroll-mobile");
-    } else {
-      $(this).removeClass("active");
-      mobileNav.removeClass("active");
-      $("body").removeClass("no-scroll-mobile");
-      $(".mobile-navigation-sub-position").removeClass("active current");
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      if (!$(this).hasClass("active")) {
+        $(this).addClass("active");
+        mobileNav.addClass("active");
+        $("body").addClass("no-scroll-mobile");
+      } else {
+        $(this).removeClass("active");
+        mobileNav.removeClass("active");
+        $("body").removeClass("no-scroll-mobile");
+        $(".mobile-navigation-sub-position").removeClass("active current");
+      }
     }
   });
 
   let mobileNavParent = $(".mobile-navigation-menu .is-parent > a");
   let mobileNavBack = $(".mobile-navigation-sub-menu-heading");
   mobileNavParent.on("click", function (e) {
-    e.preventDefault();
-    let current = $(this).next(".mobile-navigation-sub-position");
-    $(this).closest("li").toggleClass("active");
-    $(".mobile-navigation-sub-position").scrollTop("0").removeClass("current");
-    current.toggleClass("active current");
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      e.preventDefault();
+      let current = $(this).next(".mobile-navigation-sub-position");
+      $(this).closest("li").toggleClass("active");
+      $(".mobile-navigation-sub-position")
+        .scrollTop("0")
+        .removeClass("current");
+      current.toggleClass("active current");
+    }
   });
   mobileNavBack.on("click", function (e) {
-    e.preventDefault();
-    $(this)
-      .closest(".mobile-navigation-sub-position")
-      .removeClass("active current");
-    $(this)
-      .closest(".mobile-navigation-sub-position.active")
-      .addClass("current");
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      e.preventDefault();
+      $(this)
+        .closest(".mobile-navigation-sub-position")
+        .removeClass("active current");
+      $(this)
+        .closest(".mobile-navigation-sub-position.active")
+        .addClass("current");
+    }
   });
 
   $(".header-inner-mobile .is-parent").on("click", function () {
@@ -48,17 +57,14 @@ $(function () {
     slidesPerView: 1,
     spaceBetween: 30,
     slidesPerGroup: 1,
-    effect: "fade",
-    fadeEffect: {
-      crossFade: true,
-    },
+    speed: 600,
   });
   const swiper1 = new Swiper(".sliders-info", {
     slidesPerView: 1,
     slidesPerGroup: 1,
     navigation: {
-      nextEl: ".sliders-info  .swiper-button-next",
-      prevEl: ".sliders-info  .swiper-button-prev",
+      nextEl: ".sliders-info-wrapper  .swiper-button-next",
+      prevEl: ".sliders-info-wrapper  .swiper-button-prev",
     },
     effect: "fade",
     fadeEffect: {
@@ -72,93 +78,109 @@ $(function () {
 
   swiper.on("slideChange", () => swipeAllSliders(swiper.realIndex));
   swiper1.on("slideChange", () => swipeAllSliders(swiper1.realIndex));
-  let indexSpecialSlider = { destroyed: true };
-  function initSpecialSlider() {
-    indexSpecialSlider = new Swiper(".special-slider", {
-      loop: false,
-      pagination: {
-        el: ".special-slider-inner .swiper-pagination",
-        type: "bullets",
-        clickable: true,
+
+  const swiper2 = new Swiper(".special-slider", {
+    loop: false,
+    watchOverflow: true,
+    pagination: {
+      el: ".special-slider-inner .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
       },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-          slidesPerGroup: 1,
-        },
-        576: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup: 2,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-          slidesPerGroup: 3,
-        },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        slidesPerGroup: 2,
       },
-    });
-  }
-  function toggleSpecialSlider() {
-    if (
-      window.matchMedia("(max-width: 991px)").matches &&
-      indexSpecialSlider.destroyed
-    ) {
-      initSpecialSlider();
-    } else if (
-      !window.matchMedia("(max-width: 991px)").matches &&
-      !indexSpecialSlider.destroyed
-    ) {
-      indexSpecialSlider.destroy();
-    }
-  }
-  toggleSpecialSlider();
-  $(window).resize(function () {
-    toggleSpecialSlider();
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        slidesPerGroup: 3,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 45,
+        slidesPerGroup: 4,
+      },
+    },
+  });
+  const swiper3 = new Swiper(".model-description-slider-color", {
+    loop: false,
+    watchOverflow: true,
+
+    slidesPerView: 6,
+    spaceBetween: 8,
+    slidesPerGroup: 1,
+
+    fadeEffect: {
+      crossFade: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 6,
+        spaceBetween: 8,
+        slidesPerGroup: 1,
+      },
+			576: {
+				spaceBetween: 15,
+			}
+    },
+  });
+  const swiper4 = new Swiper(".model-description-slider-car", {
+    loop: false,
+    watchOverflow: true,
+    speed: 0,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+      },
+    },
+    thumbs: {
+      swiper: swiper3,
+    },
   });
 
-  let indexFeedbackSlider = { destroyed: true };
-  function initFeedbackSlider() {
-    indexFeedbackSlider = new Swiper(".feedback-slider-inner > .swiper", {
-      loop: false,
-      pagination: {
-        el: ".feedback-slider-inner .swiper-pagination",
-        type: "bullets",
-        clickable: true,
+  indexFeedbackSlider = new Swiper(".feedback-slider-inner > .swiper", {
+    loop: false,
+    watchOverflow: true,
+    pagination: {
+      el: ".feedback-slider-inner .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        slidesPerGroup: 1,
       },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-          slidesPerGroup: 1,
-        },
 
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup: 2,
-        },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
       },
-    });
-  }
-  function toggleFeedbackSlider() {
-    if (
-      window.matchMedia("(max-width: 991px)").matches &&
-      indexFeedbackSlider.destroyed
-    ) {
-      initFeedbackSlider();
-    } else if (
-      !window.matchMedia("(max-width: 991px)").matches &&
-      !indexFeedbackSlider.destroyed
-    ) {
-      indexFeedbackSlider.destroy();
-    }
-  }
-  toggleFeedbackSlider();
-  $(window).resize(function () {
-    toggleFeedbackSlider();
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+      },
+    },
   });
+
   let phoneInputs = $(".add-phone-mask");
   phoneInputs.each(function (index, el) {
     $(this).inputmask({
@@ -184,10 +206,10 @@ $(function () {
   });
   $(".tabs-item").click(function () {
     let id = $(this).attr("data-tab"),
-      content = $('.filter-body-items[data-tab="' + id + '"]');
+      content = $('.container-body-tab[data-tab="' + id + '"]');
     $(".tabs-item.active").removeClass("active");
     $(this).addClass("active");
-    $(".filter-body-items.active").removeClass("active");
+    $(".container-body-tab.active").removeClass("active");
     content.addClass("active");
   });
   $(".filter-control-link-more").click(function () {
@@ -236,6 +258,8 @@ $(function () {
       e.stopPropagation();
       $styledSelect.text($(this).text()).removeClass("active");
       $this.val($(this).attr("rel"));
+      let event = new Event("change");
+      $this[0].dispatchEvent(event);
       $list.hide();
       //console.log($this.val());
     });

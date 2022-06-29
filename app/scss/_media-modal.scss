@@ -1,24 +1,27 @@
 @media (min-width: 576px){
 
 }
-@media (min-width: 768px){
-.modal{
-    padding: 64px;
-}
-.modal-form-box {
-  margin-bottom: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  .web-input{
-    flex-basis: calc(50% - 8px);
-    max-width: calc(50% - 8px);
-  }
-  }
-  .modal .fancybox-button {
-    top: 30px;
-    right: 30px;
-  }
+@media (min-width: 768px) {
+	.modal {
+		padding: 64px
+	}
+
+	.modal-form-box {
+		margin-bottom: 32px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px
+	}
+
+	.modal-form-box .web-input {
+		flex-basis: calc(50% - 8px);
+		max-width: calc(50% - 8px)
+	}
+
+	.modal .fancybox-button {
+		top: 30px;
+		right: 30px
+	}
 }
 @media (min-width: 992px){
 

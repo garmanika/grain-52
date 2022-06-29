@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Oswald:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <div class="wrapper-page add sliders">
+      <div class="content">
+        <header class="header">
+          <div class="header-wrapper">
+            <div class="container">
+              <div class="header-inner">
+                <div class="header-box">
+                  <button class="menu-btn">
+                    <svg
+                      class="menu-btn-close"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 24H28"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4 16H28"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4 8H28"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <svg
+                      class="menu-btn-open"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M18 6L6 18"
+                        stroke="#9B9B9B"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6 6L18 18"
+                        stroke="#9B9B9B"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <a href="#" class="header-logo">
+                    <picture>
+                      <source
+                        media="(max-width: 991px)"
+                        srcset="img/svg/header-logo-mob.svg"
+                      />
+                      <source srcset="img/svg/header-logo.svg" />
+                      <img src="img/svg/header-logo.svg" alt="" />
+                    </picture>
+                  </a>
+                </div>
+                <div class="header-inner-box">
+                  <div class="header-top">
+                    <div class="header-top-inner">
+                      <div class="header-top-box desk">
+                        <div class="header-top-item">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_38_378)">
+                              <path
+                                d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_38_378">
+                                <rect width="16" height="16" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          г. Калуга, ул. Зерновая, 52
+                        </div>
+                        <a
+                          href="tel:+7484255-55-44"
+                          class="header-top-item header-top-item-tel"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M15.0499 5C16.0267 5.19057 16.9243 5.66826 17.628 6.37194C18.3317 7.07561 18.8094 7.97326 18.9999 8.95M15.0499 1C17.0792 1.22544 18.9715 2.13417 20.4162 3.57701C21.8608 5.01984 22.7719 6.91101 22.9999 8.94M21.9999 16.92V19.92C22.0011 20.1985 21.944 20.4742 21.8324 20.7293C21.7209 20.9845 21.5572 21.2136 21.352 21.4019C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9451 19.8199 21.92C16.7428 21.5856 13.7869 20.5341 11.1899 18.85C8.77376 17.3147 6.72527 15.2662 5.18993 12.85C3.49991 10.2412 2.44818 7.27099 2.11993 4.18C2.09494 3.90347 2.12781 3.62476 2.21643 3.36162C2.30506 3.09849 2.4475 2.85669 2.6347 2.65162C2.82189 2.44655 3.04974 2.28271 3.30372 2.17052C3.55771 2.05833 3.83227 2.00026 4.10993 2H7.10993C7.59524 1.99522 8.06572 2.16708 8.43369 2.48353C8.80166 2.79999 9.04201 3.23945 9.10993 3.72C9.23656 4.68007 9.47138 5.62273 9.80993 6.53C9.94448 6.88792 9.9736 7.27691 9.89384 7.65088C9.81408 8.02485 9.6288 8.36811 9.35993 8.64L8.08993 9.91C9.51349 12.4135 11.5864 14.4864 14.0899 15.91L15.3599 14.64C15.6318 14.3711 15.9751 14.1858 16.3491 14.1061C16.723 14.0263 17.112 14.0555 17.4699 14.19C18.3772 14.5286 19.3199 14.7634 20.2799 14.89C20.7657 14.9585 21.2093 15.2032 21.5265 15.5775C21.8436 15.9518 22.0121 16.4296 21.9999 16.92Z"
+                              stroke="#242424"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          +7 (4842) 55-55-44
+                        </a>
+                      </div>
+                      <div class="header-top-box">
+                        <button
+                          data-fancybox=""
+                          data-src="#modal-signing"
+                          class="btn btn-pr small"
+                        >
+                          <span class="desk">запись на сервис</span>
+                          <span class="mob">запись</span>
+                        </button>
+                        <button class="btn btn-sec small desk">
+                          дилерские центры
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-bottom">
+                    <nav class="header-mobile-navigation">
+                      <div class="header-inner-mobile">
+                        <ul class="mobile-navigation-menu">
+                          <li class="is-parent">
+                            <a class="active" href="#"
+                              ><span>Купить авто</span>
+                            </a>
+                            <div class="mobile-navigation-sub-position">
+                              <div class="mobile-navigation-sub-menu-heading">
+                                <span
+                                  class="mobile-navigation-sub-menu-heading-title"
+                                >
+                                  <img src="img/svg/left.svg" alt="" />
+                                  Купить авто</span
+                                >
+                              </div>
+                              <ul class="mobile-navigation-sub-menu">
+                                <li class="is-parent">
+                                  <a href="#">
+                                    <span>Новые автомобили</span>
+                                  </a>
+                                  <div
+                                    class="mobile-navigation-sub-position sub-sub"
+                                  >
+                                    <div
+                                      class="mobile-navigation-sub-menu-heading"
+                                    >
+                                      <span
+                                        class="mobile-navigation-sub-menu-heading-title"
+                                      >
+                                        <img src="img/svg/left.svg" alt="" />
+                                        Новые автомобили</span
+                                      >
+                                    </div>
+                                    <ul class="mobile-navigation-sub-menu">
+                                      <li>
+                                        <a href="#">
+                                          <span>Renault</span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a
+                                          href="/catalog/vse_dlya_sada/benzopily/"
+                                        >
+                                          <span>Lada</span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Авто с пробегом</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="header-bottom-decor">/</li>
+                          <li class="is-parent">
+                            <a href="#"><span>Выкуп авто</span> </a>
+                            <div class="mobile-navigation-sub-position">
+                              <div class="mobile-navigation-sub-menu-heading">
+                                <span
+                                  class="mobile-navigation-sub-menu-heading-title"
+                                >
+                                  <img src="img/svg/left.svg" alt="" />
+                                  Выкуп авто</span
+                                >
+                              </div>
+                              <ul class="mobile-navigation-sub-menu">
+                                <li>
+                                  <a href="#">
+                                    <span>Экспресс-оценка авто</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Срочный выкуп</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Комиссионная продажа</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="header-bottom-decor">/</li>
+                          <li>
+                            <a href="#">
+                              <span>Акции и спецпредложения</span>
+                            </a>
+                          </li>
+                          <li class="header-bottom-decor">/</li>
+                          <li class="is-parent">
+                            <a href="#">
+                              <span>Cервис</span>
+                            </a>
+                            <div class="mobile-navigation-sub-position">
+                              <div class="mobile-navigation-sub-menu-heading">
+                                <span
+                                  class="mobile-navigation-sub-menu-heading-title"
+                                >
+                                  <img src="img/svg/left.svg" alt="" />
+                                  Cервис</span
+                                >
+                              </div>
+                              <ul class="mobile-navigation-sub-menu">
+                                <li>
+                                  <a href="#">
+                                    <span>Сервис Renault</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Сервис lada</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Кузовной ремонт</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <span>Запчасти и аксессуары</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="header-bottom-decor">/</li>
+                          <li>
+                            <a href="#">
+                              <span>О компании</span>
+                            </a>
+                          </li>
+                          <li class="header-bottom-decor">/</li>
+                          <li>
+                            <a href="#">
+                              <span>Контакты</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </nav>
+                    <div class="header-mobile-btn">
+                      <button class="btn btn-sec small desk">
+                        дилерские центры
+                      </button>
+                    </div>
+                    <div class="header-mobile-adress">
+                      <div class="header-mobile-adress-inner">
+                        <div class="header-top-item">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                          >
+                            <g clip-path="url(#clip0_38_378)">
+                              <path
+                                d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                                stroke="#FF1E26"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_38_378">
+                                <rect width="16" height="16" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          г. Калуга, ул. Зерновая, 52
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header-add">
+          <div class="container">
+            <ul class="header-add-list">
+              <li><a href="#">Описание</a></li>
+              <li><a href="#">Комплектации и цены </a></li>
+              <li><a href="#">В наличии</a></li>
+              <li><a class="active" href="#">Акции</a></li>
+              <li><a href="#">Технические характеристики</a></li>
+              <li><a href="#">Фото и видео</a></li>
+              <li><a href="#">Цвета</a></li>
+            </ul>
+          </div>
+        </div>
+        <main class="page-wrapper">
+          <div class="page-bg">
+            <picture>
+              <source
+                media="(max-width: 992px)"
+                srcset="img/model-descr-768.jpg"
+              />
+              <source media="(max-width: 768px)" srcset="img/model-bg.jp" />
+              <source srcset="img/model-descr-desk.jpg" />
+              <img src="img/model-descr-desk.jpg" alt="" />
+            </picture>
+          </div>
+
+          <div class="container">
+            <section class="breadcrumbs">
+              <div class="breadcrumbs-inner">
+                <ul class="breadcrumbs-list">
+                  <li class="breadcrumbs-list-item">
+                    <a href="#">Главная</a>
+                    <span class="breadcrumbs-list-item-splitter">/</span>
+                  </li>
+                  <li class="breadcrumbs-list-item">
+                    <a href="#">Купить авто</a>
+                    <span class="breadcrumbs-list-item-splitter">/</span>
+                  </li>
+                  <li class="breadcrumbs-list-item">
+                    <a href="#">Новые автомобили</a>
+                    <span class="breadcrumbs-list-item-splitter">/</span>
+                  </li>
+                  <li class="breadcrumbs-list-item">
+                    <a href="#">Renault</a>
+                    <span class="breadcrumbs-list-item-splitter">/</span>
+                  </li>
+                  <li class="breadcrumbs-list-item active">
+                    <span>Arkana</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <h1 class="page-title sliders">Renault arkana</h1>
+          </div>
+          <section class="model-description">
+            <div class="container">
+              <div class="model-description-sliders">
+                <div class="model-description-slider-car swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-desk.png" />
+                            <img src="img/car-desk.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-desk.png" />
+                            <img src="img/car-desk.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-desk.png" />
+                            <img src="img/car-desk.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-desk.png" />
+                            <img src="img/car-desk.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-mob.png" />
+                            <img src="img/car-mob.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-car-item">
+                        <div class="model-description-slider-car-item-img">
+                          <picture>
+                            <source
+                              media="(max-width: 991px)"
+                              srcset="img/car-768.png"
+                            />
+                            <source
+                              media="(max-width: 768px)"
+                              srcset="img/car-mob.png"
+                            />
+                            <source srcset="img/car-desk.png" />
+                            <img src="img/car-desk.png" alt="" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="model-description-slider-color swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color-1.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color-2.png" alt="" />
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color-3.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color-4.png" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="model-description-slider-color-item">
+                        <img src="img/color-5.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="model-description-price-box">
+								<div class="model-description-price-box-inner">
+									<div class="point-helper">
+										<button class="point-helper-trigger">
+											от&nbsp;<span class="text-transform">2 000 000 ₽</span>
+											<span>&nbsp;<i class="point-helper-icon"></i></span>
+										</button>
+										<div class="point-helper-bubble">
+											Небольшой текст-пояснение в несколько строк
+										</div>
+									</div>
+									<div class="model-description-price-stock">
+										24 авто в наличии
+									</div>
+								</div>
+
+              </div>
+              <div class="footer-top-items model-description-links">
+                <a href="#" class="footer-top-item">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.8327 9.2333V9.99997C18.8317 11.797 18.2498 13.5455 17.1738 14.9848C16.0978 16.4241 14.5854 17.477 12.8621 17.9866C11.1389 18.4961 9.29707 18.4349 7.61141 17.8121C5.92575 17.1894 4.48656 16.0384 3.50848 14.5309C2.5304 13.0233 2.06584 11.24 2.18408 9.4469C2.30232 7.65377 2.99702 5.94691 4.16458 4.58086C5.33214 3.21482 6.91 2.26279 8.66284 1.86676C10.4157 1.47073 12.2496 1.65192 13.891 2.3833"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M18.8333 3.33337L10.5 11.675L8 9.17504"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Заказать авто
+                </a>
+                <a href="#" class="footer-top-item">
+                  <svg
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.3327 4.16663L4.66602 15.8333"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M15.0833 16.6667C16.2339 16.6667 17.1667 15.7339 17.1667 14.5833C17.1667 13.4327 16.2339 12.5 15.0833 12.5C13.9327 12.5 13 13.4327 13 14.5833C13 15.7339 13.9327 16.6667 15.0833 16.6667Z"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.91732 7.50004C7.06791 7.50004 8.00065 6.5673 8.00065 5.41671C8.00065 4.26611 7.06791 3.33337 5.91732 3.33337C4.76672 3.33337 3.83398 4.26611 3.83398 5.41671C3.83398 6.5673 4.76672 7.50004 5.91732 7.50004Z"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  Расчет кредита
+                </a>
+                <a href="#" class="footer-top-item">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.73914 17.8479H12"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M18.7004 5.71477L19.3395 5.32222V5.32222L18.7004 5.71477ZM20.36 8.41654L19.7209 8.80909L20.0517 9.34761L20.6385 9.1129L20.36 8.41654ZM3.63043 8.41655L3.3519 9.11291L3.99401 9.36974L4.30197 8.75052L3.63043 8.41655ZM4.86795 5.92824L5.53949 6.26222L5.54051 6.26015L4.86795 5.92824ZM2.91304 17.3696L3.62455 17.6068L3.77113 17.167L3.44337 16.8393L2.91304 17.3696ZM21.0869 17.3695L20.5566 16.8392L20.2289 17.167L20.3754 17.6067L21.0869 17.3695ZM21.0201 11.192L21.0517 11.9413L21.0201 11.192ZM20.9375 11.3426L21.5693 10.9386L20.9375 11.3426ZM2.97994 11.192L2.94825 11.9414L2.97994 11.192ZM7.23537 5.20654H16.4509V3.70654H7.23537V5.20654ZM18.0614 6.10732L19.7209 8.80909L20.9991 8.02399L19.3395 5.32222L18.0614 6.10732ZM4.30197 8.75052L5.53948 6.26222L4.19641 5.59427L2.9589 8.08257L4.30197 8.75052ZM16.4509 5.20654C17.1078 5.20654 17.7175 5.5476 18.0614 6.10732L19.3395 5.32222C18.7228 4.31829 17.6291 3.70654 16.4509 3.70654V5.20654ZM7.23537 3.70654C5.94495 3.70654 4.76644 4.43916 4.19539 5.59634L5.54051 6.26015C5.85889 5.61499 6.51593 5.20654 7.23537 5.20654V3.70654ZM3.90896 7.72018C3.10703 7.39943 2.2269 7.46271 1.53322 7.80725C0.835525 8.15379 0.25 8.83574 0.25 9.76092H1.75C1.75 9.53827 1.88187 9.30892 2.20048 9.15067C2.5231 8.99042 2.95818 8.95543 3.3519 9.11291L3.90896 7.72018ZM0.25 9.76092C0.25 10.6228 0.726308 11.1957 1.29759 11.5187C1.82999 11.8196 2.45861 11.9207 2.94825 11.9414L3.01162 10.4427C2.63916 10.427 2.2778 10.3497 2.03576 10.2129C1.83261 10.098 1.75 9.97363 1.75 9.76092H0.25ZM2.43067 10.9386C2.28724 11.163 2.01424 11.5365 1.80522 12.0693C1.59131 12.6146 1.44565 13.308 1.44565 14.2609H2.94565C2.94565 13.4669 3.06587 12.9632 3.20162 12.6171C3.34225 12.2586 3.5027 12.0465 3.6944 11.7467L2.43067 10.9386ZM1.44565 14.2609C1.44565 15.2788 1.57278 16.0685 1.74515 16.6546C1.90964 17.2139 2.13449 17.6517 2.38271 17.8999L3.44337 16.8393C3.45246 16.8483 3.31861 16.6884 3.1842 16.2313C3.05765 15.8011 2.94565 15.156 2.94565 14.2609H1.44565ZM2.20153 17.1324C2.10704 17.4159 1.92391 18.1218 1.92391 18.8044H3.42391C3.42391 18.3391 3.55963 17.8015 3.62455 17.6068L2.20153 17.1324ZM1.92391 18.8044C1.92391 19.2271 1.99172 19.7617 2.20038 20.2207C2.41079 20.6836 2.85467 21.2283 3.63043 21.2283V19.7283C3.62583 19.7283 3.63121 19.7278 3.64143 19.7316C3.65118 19.7352 3.65541 19.7389 3.65326 19.7372C3.64517 19.7305 3.6093 19.6954 3.56593 19.6C3.47567 19.4014 3.42391 19.0991 3.42391 18.8044H1.92391ZM6.5 21.2283C7.44248 21.2283 8.20652 20.4642 8.20652 19.5218H6.70652C6.70652 19.6358 6.61405 19.7283 6.5 19.7283V21.2283ZM20.6385 9.1129C21.0319 8.95556 21.4699 8.99008 21.796 9.15126C22.1185 9.31069 22.25 9.5407 22.25 9.76086H23.75C23.75 8.83319 23.1593 8.15193 22.4607 7.80659C21.7657 7.46302 20.8837 7.39929 20.0815 7.72018L20.6385 9.1129ZM22.25 9.76086C22.25 9.97357 22.1674 10.098 21.9642 10.2128C21.7222 10.3496 21.3608 10.4269 20.9884 10.4426L21.0517 11.9413C21.5414 11.9206 22.17 11.8196 22.7024 11.5186C23.2737 11.1957 23.75 10.6227 23.75 9.76086H22.25ZM20.3056 11.7467C20.4973 12.0465 20.6577 12.2586 20.7984 12.6171C20.9341 12.9631 21.0543 13.4668 21.0543 14.2608H22.5543C22.5543 13.3079 22.4087 12.6146 22.1948 12.0693C21.9857 11.5364 21.7127 11.1629 21.5693 10.9386L20.3056 11.7467ZM21.0543 14.2608C21.0543 15.156 20.9423 15.801 20.8158 16.2313C20.6814 16.6883 20.5475 16.8483 20.5566 16.8392L21.6173 17.8999C21.8655 17.6516 22.0903 17.2138 22.2548 16.6545C22.4272 16.0685 22.5543 15.2788 22.5543 14.2608H21.0543ZM20.3754 17.6067C20.4404 17.8015 20.5761 18.339 20.5761 18.8043H22.0761C22.0761 18.1218 21.893 17.4158 21.7985 17.1324L20.3754 17.6067ZM20.5761 18.8043C20.5761 19.099 20.5243 19.4014 20.4341 19.5999C20.3907 19.6954 20.3548 19.7305 20.3467 19.7371C20.3446 19.7389 20.3488 19.7351 20.3586 19.7315C20.3688 19.7278 20.3742 19.7282 20.3696 19.7282V21.2282C21.1453 21.2282 21.5892 20.6836 21.7996 20.2206C22.0083 19.7616 22.0761 19.227 22.0761 18.8043H20.5761ZM17.5 19.7282C17.3859 19.7282 17.2935 19.6358 17.2935 19.5217H15.7935C15.7935 20.4642 16.5575 21.2282 17.5 21.2282V19.7282ZM3.63043 21.2283H6.5V19.7283H3.63043V21.2283ZM20.3696 19.7282H17.5V21.2282H20.3696V19.7282ZM20.9884 10.4426C20.3902 10.4679 19.9227 11.1479 20.3056 11.7467L21.5693 10.9386C21.8694 11.4079 21.4965 11.9225 21.0517 11.9413L20.9884 10.4426ZM2.94825 11.9414C2.50348 11.9226 2.13055 11.408 2.43067 10.9386L3.6944 11.7467C4.07725 11.148 3.60982 10.468 3.01162 10.4427L2.94825 11.9414Z"
+                      fill="#9B9B9B"
+                    />
+                    <path
+                      d="M17.2609 17.8478H12"
+                      stroke="#9B9B9B"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M9.74268 9.1305C9.74268 9.54472 10.0785 9.8805 10.4927 9.8805C10.9069 9.8805 11.2427 9.54472 11.2427 9.1305H9.74268ZM10.8732 12.1452C10.8732 12.5594 11.209 12.8952 11.6232 12.8952C12.0374 12.8952 12.3732 12.5594 12.3732 12.1452H10.8732ZM11.2427 9.1305C11.2427 9.0446 11.27 8.97984 11.3797 8.90666C11.5117 8.81867 11.7344 8.75 12 8.75V7.25C11.5119 7.25 10.9809 7.36975 10.5477 7.65859C10.0922 7.96224 9.74268 8.46274 9.74268 9.1305H11.2427ZM12 8.75C12.2656 8.75 12.4883 8.81867 12.6203 8.90666C12.7301 8.97984 12.7574 9.0446 12.7574 9.1305H14.2574C14.2574 8.46274 13.9078 7.96224 13.4523 7.65859C13.0191 7.36975 12.4881 7.25 12 7.25V8.75ZM12.7574 9.1305C12.7574 9.55441 12.5923 9.73856 12.2234 10.1075L13.284 11.1682C13.6687 10.7835 14.2574 10.2139 14.2574 9.1305H12.7574ZM12.2234 10.1075C12.1634 10.1675 12.0818 10.2337 11.9462 10.3434C11.8244 10.442 11.666 10.5707 11.5168 10.7199C11.2139 11.0227 10.8732 11.4854 10.8732 12.1452H12.3732C12.3732 12.0513 12.4093 11.9487 12.5774 11.7805C12.6638 11.6942 12.7645 11.6109 12.89 11.5093C13.0017 11.4189 13.1555 11.2966 13.284 11.1682L12.2234 10.1075Z"
+                      fill="#9B9B9B"
+                    />
+                    <circle cx="11.6034" cy="13.8555" r="0.75" fill="#9B9B9B" />
+                  </svg>
+
+                  Запрос Trade-in
+                </a>
+                <a href="#" class="footer-top-item">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z" stroke="#9B9B9B" stroke-width="1.5"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.51001 9.58229C1.66933 9.47377 1.83624 9.36771 2.01067 9.26434C3.91203 8.13761 6.5876 7.4165 9.58327 7.4165C12.5789 7.4165 15.2545 8.13761 17.1559 9.26434C17.6683 9.56799 18.1158 9.89494 18.4966 10.2391C18.4988 10.1596 18.4999 10.0799 18.4999 9.99984C18.4999 9.38854 18.4354 8.79232 18.3128 8.21761C18.1847 8.13414 18.0538 8.05288 17.9206 7.97391C15.7502 6.68778 12.8008 5.9165 9.58327 5.9165C6.64517 5.9165 3.93063 6.55963 1.82873 7.65063C1.6514 8.26857 1.54227 8.91534 1.51001 9.58229Z" fill="#9B9B9B"></path>
+                    <path d="M19.1666 11.2721L15.7928 10.8972C15.4379 10.8578 15.0888 11.0106 14.8771 11.2982L11.8614 15.3936C11.7349 15.5654 11.6666 15.7732 11.6666 15.9865V19.1668" stroke="#9B9B9B" stroke-width="1.5"></path>
+                    <path d="M0.833374 11.2721L4.20723 10.8972C4.56214 10.8578 4.91116 11.0106 5.1229 11.2982L8.13861 15.3936C8.26513 15.5654 8.33337 15.7732 8.33337 15.9865V19.1668" stroke="#9B9B9B" stroke-width="1.5"></path>
+                  </svg>
+
+                  тест-драйв
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="about">
+            <div class="container">
+              <div class="section-title">
+                <h3 class="title">Описание Renault Arkana</h3>
+              </div>
+              <p>
+                В состав группы входят: официальные дилерские центры RENAULT
+                «Автосалон Престиж» и LADA «АВЕС-Калуга», автосалон подержанных
+                автомобилей «Автовито» и малярно-кузовной центр «Престиж-К».
+              </p>
+              <p>
+                ГК «Зерновая 52» активно развивающаяся компания в которой
+                задействовано 150 высококвалифицированных сотрудников.
+              </p>
+              <p>
+                За долгие годы своей деятельности, основываясь на стандартах
+                ведущих автомобильных брендов, в ГК «Зерновая 52» выработала
+                несколько важных принципов, которые помогают удовлетворять
+                потребности наших клиентов.
+              </p>
+              <div class="about-icons-box">
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="49"
+                      height="48"
+                      viewBox="0 0 49 48"
+                      fill="none"
+                    >
+                      <path
+                        d="M19.5371 5V13C19.5371 14.1046 18.6417 15 17.5371 15H8.53711"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M38.5371 4H20.2413C19.7855 4 19.3435 4.15568 18.9883 4.44128L9.28395 13.6551C8.81177 14.0347 8.53711 14.6079 8.53711 15.2138V42C8.53711 43.1046 9.43255 44 10.5371 44H38.5371C39.6417 44 40.5371 43.1046 40.5371 42V6C40.5371 4.89544 39.6417 4 38.5371 4Z"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M16.3926 22H18.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M16.3926 28H18.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M16.3926 34H18.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M23.3926 22H32.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M23.3926 28H32.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M23.3926 34H32.3926"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="about-icon-title">Брошюра</div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="49"
+                      height="48"
+                      viewBox="0 0 49 48"
+                      fill="none"
+                    >
+                      <path
+                        d="M28.75 8C28.75 6.89544 27.8546 6 26.75 6H22.75C21.6454 6 20.75 6.89542 20.75 8V9.5147C20.75 11.2965 18.5957 12.1889 17.3358 10.9289L16.2647 9.85786C15.4837 9.07682 14.2174 9.07682 13.4363 9.85786L10.6079 12.6863C9.82682 13.4673 9.82682 14.7337 10.6079 15.5147L11.6789 16.5858C12.9389 17.8457 12.0465 20 10.2647 20H8.75C7.64544 20 6.75 20.8954 6.75 22V26C6.75 27.1046 7.64542 28 8.75 28H10.2647C12.0465 28 12.9389 30.1542 11.6789 31.4142L10.6079 32.4852C9.8268 33.2664 9.8268 34.5326 10.6079 35.3138L13.4363 38.1422C14.2173 38.9232 15.4837 38.9232 16.2647 38.1422L17.3358 37.071C18.5957 35.8112 20.75 36.7034 20.75 38.4852V40C20.75 41.1046 21.6454 42 22.75 42H26.75C27.8546 42 28.75 41.1046 28.75 40V38.4852C28.75 36.7034 30.9042 35.8112 32.1642 37.071L33.2352 38.1422C34.0164 38.9232 35.2826 38.9232 36.0638 38.1422L38.8922 35.3138C39.6732 34.5326 39.6732 33.2664 38.8922 32.4852L37.821 31.4142C36.5612 30.1542 37.4534 28 39.2352 28H40.75C41.8546 28 42.75 27.1046 42.75 26V22C42.75 20.8954 41.8546 20 40.75 20H39.2352C37.4534 20 36.5612 17.8457 37.821 16.5858L38.8922 15.5147C39.6732 14.7337 39.6732 13.4673 38.8922 12.6863L36.0636 9.85786C35.2826 9.07682 34.0164 9.07682 33.2352 9.85786L32.1642 10.9289C30.9042 12.1889 28.75 11.2965 28.75 9.51472V8Z"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M24.75 27.5C26.683 27.5 28.25 25.933 28.25 24C28.25 22.067 26.683 20.5 24.75 20.5C22.817 20.5 21.25 22.067 21.25 24C21.25 25.933 22.817 27.5 24.75 27.5Z"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                  <div class="about-icon-title">Технические характеристики</div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="49"
+                      height="48"
+                      viewBox="0 0 49 48"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.2991 32.7276L16.6232 8.06091C16.6317 7.90115 16.8151 7.81563 16.943 7.91175L36.6897 22.7528C36.8247 22.8544 36.7811 23.0672 36.6169 23.107L27.3567 25.3628C27.2339 25.3926 27.1693 25.5272 27.2227 25.6416L33.5857 39.287C33.6323 39.3872 33.5891 39.5062 33.4889 39.5528L30.2261 41.0742C30.1261 41.121 30.0071 41.0776 29.9605 40.9776L23.5975 27.3322C23.5441 27.2178 23.3995 27.1808 23.2977 27.2554L15.6173 32.8994C15.4812 32.9994 15.2901 32.8962 15.2991 32.7276Z"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        d="M29.127 12V2.28003H31.983C32.567 2.28003 33.039 2.38803 33.399 2.60403C33.767 2.82003 34.035 3.13603 34.203 3.55203C34.379 3.96003 34.467 4.45603 34.467 5.04003C34.467 5.67203 34.359 6.18403 34.143 6.57603C33.927 6.96003 33.623 7.24003 33.231 7.41603C32.847 7.59203 32.391 7.68003 31.863 7.68003H30.903V12H29.127ZM30.903 6.43203H31.575C31.895 6.43203 32.143 6.38803 32.319 6.30003C32.503 6.20403 32.627 6.05603 32.691 5.85603C32.763 5.64803 32.799 5.37203 32.799 5.02803C32.799 4.67603 32.771 4.39203 32.715 4.17603C32.667 3.95203 32.555 3.78803 32.379 3.68403C32.211 3.58003 31.943 3.52803 31.575 3.52803H30.903V6.43203Z"
+                        fill="#FF1E26"
+                      />
+                      <path
+                        d="M35.4551 12V2.28003H37.7471C38.5391 2.28003 39.1551 2.38803 39.5951 2.60403C40.0431 2.82003 40.3591 3.15203 40.5431 3.60003C40.7351 4.04803 40.8311 4.61603 40.8311 5.30403V8.85603C40.8311 9.56003 40.7351 10.148 40.5431 10.62C40.3591 11.084 40.0471 11.432 39.6071 11.664C39.1751 11.888 38.5791 12 37.8191 12H35.4551ZM37.2311 10.764H37.7711C38.1791 10.764 38.4711 10.692 38.6471 10.548C38.8231 10.404 38.9311 10.196 38.9711 9.92403C39.0111 9.64403 39.0311 9.30403 39.0311 8.90403V5.18403C39.0311 4.79203 39.0031 4.47603 38.9471 4.23603C38.8911 3.99603 38.7751 3.82003 38.5991 3.70803C38.4231 3.59603 38.1391 3.54003 37.7471 3.54003H37.2311V10.764Z"
+                        fill="#FF1E26"
+                      />
+                      <path
+                        d="M42.1348 12V2.28003H46.1308V3.50403H43.9108V6.33603H45.7228V7.57203H43.9108V12H42.1348Z"
+                        fill="#FF1E26"
+                      />
+                      <path
+                        d="M21.8945 16L27.3945 20.5"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="about-icon-title">Руководство</div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="49"
+                      height="48"
+                      viewBox="0 0 49 48"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.75 37V11C8.75 9.89544 9.64544 9 10.75 9H12.75C13.8546 9 14.75 9.89544 14.75 11V37C14.75 38.1046 13.8546 39 12.75 39H10.75C9.64544 39 8.75 38.1046 8.75 37Z"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M20.75 37V11C20.75 9.89544 21.6454 9 22.75 9H24.75C25.8546 9 26.75 9.89544 26.75 11V37C26.75 38.1046 25.8546 39 24.75 39H22.75C21.6454 39 20.75 38.1046 20.75 37Z"
+                        stroke="#242424"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M36.4497 37.3235L29.2831 12.3306C28.9787 11.2688 29.5925 10.1613 30.6543 9.8568L32.5769 9.30554C33.6387 9.00106 34.7461 9.615 35.0507 10.6768L42.2173 35.6697C42.5217 36.7315 41.9077 37.8389 40.8459 38.1435L38.9235 38.6947C37.8617 38.9991 36.7541 38.3853 36.4497 37.3235Z"
+                        stroke="#FF1E26"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="about-icon-title">Каталог аксессуаров</div>
+                </div>
+              </div>
+              <div class="section-title">
+                <h3 class="title">Комплектации и цены</h3>
+                <a href="#" class="btn btn-sec">Все комплектации и цены</a>
+              </div>
+              <div class="section-title">
+                <h3 class="title">Технические характертистики</h3>
+                <a href="#" class="btn btn-sec"
+                  >все технические характеристики</a
+                >
+              </div>
+              <p>
+                В состав группы входят: официальные дилерские центры RENAULT
+                «Автосалон Престиж» и LADA «АВЕС-Калуга», автосалон подержанных
+                автомобилей «Автовито» и малярно-кузовной центр «Престиж-К».
+              </p>
+              <p>
+                ГК «Зерновая 52» активно развивающаяся компания в которой
+                задействовано 150 высококвалифицированных сотрудников.
+              </p>
+              <p>
+                За долгие годы своей деятельности, основываясь на стандартах
+                ведущих автомобильных брендов, в ГК «Зерновая 52» выработала
+                несколько важных принципов, которые помогают удовлетворять
+                потребности наших клиентов.
+              </p>
+              <div class="special-slider-more more">
+                <a href="#" class="btn btn-sec"
+                  >все технические характеристики</a
+                >
+              </div>
+              <div class="section-title">
+                <h3 class="title">Экстерьер</h3>
+              </div>
+              <p>
+                Крупнейшее в Европе народное голосование в премии «Автомобиль
+                года в России — 2020» завершилось. С 1 января по 20 августа
+                тысячи людей по всей стране отдавали голоса за свои любимые
+                автомобили. И мы рады сообщить, что кроссовер Renault Arkana
+                стал победителем в номинации «Легкие внедорожники»!
+              </p>
+              <p>
+                Благодарим всех любителей Renault за то, что отдавали свой голос
+                за Renault Arkana и болели за своего фаворита.
+              </p>
+              <div class="container-table">
+                <div class="responsive-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Комплектация</th>
+                        <th>Объем двигателя,&nbsp;л.</th>
+                        <th>Мощность,&nbsp;л.с.</th>
+                        <th>Тип двигателя</th>
+                        <th>Коробка передач</th>
+                        <th>Привод</th>
+                        <th>Розничная цена</th>
+                        <th>Выгода до</th>
+                        <th>Цена с учетом выгоды</th>
+                        <th>РВ наличии</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Drive</td>
+                        <td>1.6</td>
+                        <td>114</td>
+                        <td>Бензиновый</td>
+                        <td>МКПП</td>
+                        <td>Передний</td>
+                        <td>2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>100&nbsp;000&nbsp;₽</td>
+                        <td>от&nbsp;2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>3 авто</td>
+                        <td>
+                          <a href="#">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M16.6663 18.3334C17.1266 18.3334 17.4997 17.9603 17.4997 17.5001C17.4997 17.0398 17.1266 16.6667 16.6663 16.6667C16.2061 16.6667 15.833 17.0398 15.833 17.5001C15.833 17.9603 16.2061 18.3334 16.6663 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.50033 18.3334C7.96056 18.3334 8.33366 17.9603 8.33366 17.5001C8.33366 17.0398 7.96056 16.6667 7.50033 16.6667C7.04009 16.6667 6.66699 17.0398 6.66699 17.5001C6.66699 17.9603 7.04009 18.3334 7.50033 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                            купить
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Style</td>
+                        <td>1.4</td>
+                        <td>150</td>
+                        <td>Бензиновый</td>
+                        <td>МКПП</td>
+                        <td>Передний</td>
+                        <td>2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>100&nbsp;000&nbsp;₽</td>
+                        <td>от&nbsp;2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>7 авто</td>
+                        <td>
+                          <a href="#">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M16.6663 18.3334C17.1266 18.3334 17.4997 17.9603 17.4997 17.5001C17.4997 17.0398 17.1266 16.6667 16.6663 16.6667C16.2061 16.6667 15.833 17.0398 15.833 17.5001C15.833 17.9603 16.2061 18.3334 16.6663 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.50033 18.3334C7.96056 18.3334 8.33366 17.9603 8.33366 17.5001C8.33366 17.0398 7.96056 16.6667 7.50033 16.6667C7.04009 16.6667 6.66699 17.0398 6.66699 17.5001C6.66699 17.9603 7.04009 18.3334 7.50033 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                            купить
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Life</td>
+                        <td>1.6</td>
+                        <td>114</td>
+                        <td>Бензиновый</td>
+                        <td>МКПП</td>
+                        <td>Передний</td>
+                        <td>2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>100&nbsp;000&nbsp;₽</td>
+                        <td>от&nbsp;2&nbsp;000&nbsp;000&nbsp;₽</td>
+                        <td>2 авто</td>
+                        <td>
+                          <a href="#">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              viewBox="0 0 20 20"
+                              fill="none"
+                            >
+                              <path
+                                d="M16.6663 18.3334C17.1266 18.3334 17.4997 17.9603 17.4997 17.5001C17.4997 17.0398 17.1266 16.6667 16.6663 16.6667C16.2061 16.6667 15.833 17.0398 15.833 17.5001C15.833 17.9603 16.2061 18.3334 16.6663 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.50033 18.3334C7.96056 18.3334 8.33366 17.9603 8.33366 17.5001C8.33366 17.0398 7.96056 16.6667 7.50033 16.6667C7.04009 16.6667 6.66699 17.0398 6.66699 17.5001C6.66699 17.9603 7.04009 18.3334 7.50033 18.3334Z"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967"
+                                stroke="#242424"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                            купить
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="special special-car">
+            <div class="container">
+              <div class="section-title">
+                <h3 class="title">Акции и спецпредложения «ЗЕРНОВАЯ 52»</h3>
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+              <div class="special-slider-inner">
+                <div class="special-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            renault
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Диагностика подвески в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            renault
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Диагностика подвески в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-1.jpg" alt="" />
+                          <div class="special-slider-item-img-info">lada</div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Выгода 5 000 000 ₽ рублей по программе Трейд - ин
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-2.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            Кузовной ремонт
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Каждому 10 клиенту скидка 50% на шиномонтаж
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-3.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            автовито / АВТО С ПРОБЕГОМ
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Замена масла в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="18"
+                            viewBox="0 0 16 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M6 14L10 10L6 6"
+                              stroke="#9B9B9B"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="special-slider-more more">
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="feedback">
+            <div class="container">
+              <div class="feedback-inner">
+                <div class="section-title">
+                  <h3 class="title">Отзывы</h3>
+                  <a href="#" class="btn btn-sec">все отзывы</a>
+                </div>
+                <div class="feedback-slider-inner">
+                  <div
+                    class="feedback-slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
+                  >
+                    <div
+                      class="swiper-wrapper"
+                      id="swiper-wrapper-5a04fd4510d3f8a34"
+                      aria-live="polite"
+                      style="transform: translate3d(0px, 0px, 0px)"
+                    >
+                      <div
+                        class="swiper-slide swiper-slide-active"
+                        role="group"
+                        aria-label="1 / 3"
+                        style="width: 350px; margin-right: 30px"
+                      >
+                        <a
+                          href="#"
+                          class="feedback-slider-item border-tr border-tr-1"
+                        >
+                          <div class="feedback-slider-item-head">
+                            <div class="feedback-slider-item-head-img">
+                              <img src="img/avatar.png" alt="" />
+                            </div>
+                            <div class="feedback-slider-item-head-info">
+                              <div class="feedback-slider-item-head-info-title">
+                                Зоя Куркова
+                              </div>
+                              <div
+                                class="feedback-slider-item-head-info-raiting"
+                              >
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star.svg" alt="" />
+                              </div>
+                              <div class="feedback-slider-item-head-info-date">
+                                1 марта 2022
+                              </div>
+                            </div>
+                          </div>
+                          <div class="feedback-slider-item-info">
+                            Здравствуйте. Сегодня приобрели в салоне автомобиль
+                            Рено Аркана. Покупкой очень давольны! Мы уже
+                            покупали в рено автомобиль, но обслуживание было не
+                            очень хорошее. Решили сменить салон,не меняя
+                            производителя, нам выпала удача!!!
+                          </div>
+                          <div class="feedback-slider-item-info-more">
+                            Читать полностью
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="swiper-slide swiper-slide-next"
+                        role="group"
+                        aria-label="2 / 3"
+                        style="width: 350px; margin-right: 30px"
+                      >
+                        <a
+                          href="#"
+                          class="feedback-slider-item border-tr border-tr-2"
+                        >
+                          <div class="feedback-slider-item-head">
+                            <div class="feedback-slider-item-head-img">
+                              <img src="img/avatar-1.png" alt="" />
+                            </div>
+                            <div class="feedback-slider-item-head-info">
+                              <div class="feedback-slider-item-head-info-title">
+                                Анна Вавилова
+                              </div>
+                              <div
+                                class="feedback-slider-item-head-info-raiting"
+                              >
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star.svg" alt="" />
+                              </div>
+                              <div class="feedback-slider-item-head-info-date">
+                                1 марта 2022
+                              </div>
+                            </div>
+                          </div>
+                          <div class="feedback-slider-item-info">
+                            Добрый день. Приятный персонал, мы приехали с
+                            другого города, нас встретили, показали нами
+                            выбранный автомобиль . Довольно быстро одобрели
+                            кредит, и страховку . Старую свою машину сдали в
+                            салон в зачёт нового. Всем остались довольны.
+                          </div>
+                          <div class="feedback-slider-item-info-more">
+                            Читать полностью
+                          </div>
+                        </a>
+                      </div>
+                      <div
+                        class="swiper-slide"
+                        role="group"
+                        aria-label="3 / 3"
+                        style="width: 350px; margin-right: 30px"
+                      >
+                        <a
+                          href="#"
+                          class="feedback-slider-item border-tr border-tr-3"
+                        >
+                          <div class="feedback-slider-item-head">
+                            <div class="feedback-slider-item-head-img">
+                              <img src="img/avatar-2.png" alt="" />
+                            </div>
+                            <div class="feedback-slider-item-head-info">
+                              <div class="feedback-slider-item-head-info-title">
+                                Владимир Заднепропетровский
+                              </div>
+                              <div
+                                class="feedback-slider-item-head-info-raiting"
+                              >
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star-fill.svg" alt="" />
+                                <img src="img/svg/star.svg" alt="" />
+                              </div>
+                              <div class="feedback-slider-item-head-info-date">
+                                1 марта 2022
+                              </div>
+                            </div>
+                          </div>
+                          <div class="feedback-slider-item-info">
+                            Обслуживала автомобиль в данном салоне! Все
+                            сотрудники очень внимательны,все разъяснили,салон
+                            очень чистый,приятно было там находиться,держите
+                            уровень!!!
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <span
+                      class="swiper-notification"
+                      aria-live="assertive"
+                      aria-atomic="true"
+                    ></span>
+                  </div>
+                  <div
+                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"
+                  >
+                    <span
+                      class="swiper-pagination-bullet swiper-pagination-bullet-active"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Go to slide 1"
+                      aria-current="true"
+                    ></span>
+                  </div>
+                </div>
+                <div class="special-slider-more more">
+                  <a href="#" class="btn btn-sec">все отзывы</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="about buy-car-about">
+            <div class="container">
+              <p>
+                В состав группы входят: официальные дилерские центры RENAULT
+                «Автосалон Престиж» и LADA «АВЕС-Калуга», автосалон подержанных
+                автомобилей «Автовито» и малярно-кузовной центр «Престиж-К».
+              </p>
+              <p>
+                ГК «Зерновая 52» активно развивающаяся компания в которой
+                задействовано 150 высококвалифицированных сотрудников.
+              </p>
+              <p>
+                За долгие годы своей деятельности, основываясь на стандартах
+                ведущих автомобильных брендов, в ГК «Зерновая 52» выработала
+                несколько важных принципов, которые помогают удовлетворять
+                потребности наших клиентов.
+              </p>
+              <div class="about-icons-box">
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <img src="img/svg/like.svg" alt="" />
+                  </div>
+                  <div class="about-icon-title">Порядочность</div>
+                  <div class="about-icon-info">
+                    Мы выполняем все взятые на себя обязательства перед
+                    клиентом.
+                  </div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <img src="img/svg/verified.svg" alt="" />
+                  </div>
+                  <div class="about-icon-title">Качество</div>
+                  <div class="about-icon-info">
+                    Мы выполняем все взятые на себя обязательства перед
+                    клиентом.
+                  </div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <img src="img/svg/sitcase.svg" alt="" />
+                  </div>
+                  <div class="about-icon-title">Профессионализм</div>
+                  <div class="about-icon-info">
+                    Мы выполняем все взятые на себя обязательства перед
+                    клиентом.
+                  </div>
+                </div>
+                <div class="about-icon">
+                  <div class="about-icon-img">
+                    <img src="img/svg/stop-watch.svg" alt="" />
+                  </div>
+                  <div class="about-icon-title">Еще качество</div>
+                  <div class="about-icon-info">
+                    Мы выполняем все взятые на себя обязательства перед
+                    клиентом.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-top-inner">
+              <div class="footer-top-items">
+                <a href="#" class="footer-top-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.3333 3.3335H4.66667C3.74619 3.3335 3 4.07969 3 5.00016V16.6668C3 17.5873 3.74619 18.3335 4.66667 18.3335H16.3333C17.2538 18.3335 18 17.5873 18 16.6668V5.00016C18 4.07969 17.2538 3.3335 16.3333 3.3335Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 8.3335H18"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.8334 1.6665V4.99984"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.16663 1.6665V4.99984"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  Записаться на сервис
+                </a>
+                <a href="#" class="footer-top-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M6.11591 14.873H10.5"
+                      stroke="white"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M16.0837 4.76239L16.7227 4.36984L16.7227 4.36984L16.0837 4.76239ZM17.4666 7.01387L16.8276 7.40641L17.1584 7.94494L17.7452 7.71023L17.4666 7.01387ZM3.52534 7.01387L3.24681 7.71023L3.88892 7.96706L4.19688 7.34785L3.52534 7.01387ZM4.5566 4.94028L5.22814 5.27426L5.22917 5.27219L4.5566 4.94028ZM2.92751 14.4747L3.63903 14.7119L3.78561 14.2722L3.45784 13.9444L2.92751 14.4747ZM18.0724 14.4747L17.5421 13.9444L17.2143 14.2721L17.3609 14.7119L18.0724 14.4747ZM18.0452 9.3254L18.0073 8.57636L18.0452 9.3254ZM17.9634 9.4764L17.3336 9.8837L17.9634 9.4764ZM2.95471 9.32545L2.91675 10.0745L2.95471 9.32545ZM3.03657 9.47645L2.40681 9.06914L3.03657 9.47645ZM6.52945 4.46387H14.2091V2.96387H6.52945V4.46387ZM15.4446 5.15494L16.8276 7.40641L18.1057 6.62132L16.7227 4.36984L15.4446 5.15494ZM4.19688 7.34785L5.22814 5.27426L3.88507 4.60631L2.85381 6.67989L4.19688 7.34785ZM14.2091 4.46387C14.713 4.46387 15.1808 4.72553 15.4446 5.15494L16.7227 4.36984C16.1861 3.49621 15.2343 2.96387 14.2091 2.96387V4.46387ZM6.52945 2.96387C5.40653 2.96387 4.38098 3.60139 3.88404 4.60838L5.22917 5.27219C5.47342 4.77723 5.97751 4.46387 6.52945 4.46387V2.96387ZM3.80387 6.31751C3.10158 6.0366 2.33104 6.0917 1.72206 6.39417C1.10906 6.69864 0.583313 7.30465 0.583313 8.13418H2.08331C2.08331 8.00719 2.1554 7.85377 2.38932 7.73759C2.62725 7.61941 2.95273 7.59261 3.24681 7.71023L3.80387 6.31751ZM0.583313 8.13418C0.583313 8.89498 1.00086 9.40773 1.50061 9.69682C1.96161 9.96349 2.50102 10.0534 2.91675 10.0745L2.99268 8.57641C2.69411 8.56128 2.42283 8.49741 2.2517 8.39841C2.17348 8.35317 2.13608 8.31212 2.11786 8.28366C2.10308 8.26057 2.08331 8.21965 2.08331 8.13418H0.583313ZM2.40681 9.06914C2.28377 9.25938 2.05423 9.57883 1.87801 10.0379C1.69862 10.5051 1.57969 11.0919 1.57969 11.8842H3.07969C3.07969 11.2474 3.17427 10.8466 3.27836 10.5755C3.38562 10.2961 3.50952 10.1262 3.66634 9.88375L2.40681 9.06914ZM1.57969 11.8842C1.57969 12.7427 1.68689 13.4128 1.83435 13.9142C1.97394 14.3888 2.16889 14.7768 2.39718 15.0051L3.45784 13.9444C3.48686 13.9734 3.38291 13.8633 3.2734 13.4909C3.17176 13.1454 3.07969 12.6199 3.07969 11.8842H1.57969ZM2.216 14.2376C2.13479 14.4812 1.97824 15.0835 1.97824 15.6704H3.47824C3.47824 15.3008 3.58739 14.8668 3.63903 14.7119L2.216 14.2376ZM1.97824 15.6704C1.97824 16.0333 2.03608 16.4981 2.21983 16.9024C2.40534 17.3105 2.80936 17.8153 3.52534 17.8153V16.3153C3.55783 16.3153 3.59925 16.3311 3.62351 16.351C3.63598 16.3612 3.6163 16.3497 3.58538 16.2817C3.52003 16.1379 3.47824 15.9053 3.47824 15.6704H1.97824ZM5.91664 17.8153C6.77109 17.8153 7.46374 17.1227 7.46374 16.2682H5.96374C5.96374 16.2942 5.94266 16.3153 5.91664 16.3153V17.8153ZM17.7452 7.71023C18.0389 7.59274 18.3669 7.61907 18.6079 7.73819C18.8453 7.85555 18.9166 8.00962 18.9166 8.13413H20.4166C20.4166 7.30211 19.8861 6.69679 19.2726 6.39352C18.6627 6.09201 17.8907 6.03647 17.1881 6.3175L17.7452 7.71023ZM18.9166 8.13413C18.9166 8.21961 18.8969 8.26052 18.8821 8.28361C18.8639 8.31207 18.8265 8.35312 18.7483 8.39836C18.5771 8.49736 18.3058 8.56123 18.0073 8.57636L18.0832 10.0744C18.4989 10.0534 19.0383 9.96345 19.4993 9.69678C19.9991 9.40769 20.4166 8.89493 20.4166 8.13413H18.9166ZM17.3336 9.8837C17.4904 10.1262 17.6143 10.296 17.7216 10.5754C17.8257 10.8465 17.9203 11.2473 17.9203 11.8841H19.4203C19.4203 11.0918 19.3013 10.5051 19.1219 10.0378C18.9457 9.57878 18.7162 9.25933 18.5931 9.06909L17.3336 9.8837ZM17.9203 11.8841C17.9203 12.6198 17.8282 13.1453 17.7265 13.4909C17.617 13.8632 17.5131 13.9734 17.5421 13.9444L18.6028 15.005C18.8311 14.7767 19.026 14.3887 19.1656 13.9141C19.3131 13.4128 19.4203 12.7426 19.4203 11.8841H17.9203ZM17.3609 14.7119C17.4126 14.8668 17.5217 15.3007 17.5217 15.6703H19.0217C19.0217 15.0834 18.8652 14.4812 18.7839 14.2375L17.3609 14.7119ZM17.5217 15.6703C17.5217 15.9052 17.4799 16.1379 17.4146 16.2816C17.3837 16.3497 17.364 16.3611 17.3764 16.3509C17.4007 16.3311 17.4421 16.3153 17.4746 16.3153V17.8153C18.1906 17.8153 18.5946 17.3105 18.7801 16.9023C18.9639 16.4981 19.0217 16.0333 19.0217 15.6703H17.5217ZM15.0833 16.3153C15.0573 16.3153 15.0362 16.2942 15.0362 16.2682H13.5362C13.5362 17.1226 14.2289 17.8153 15.0833 17.8153V16.3153ZM3.52534 17.8153H5.91664V16.3153H3.52534V17.8153ZM17.4746 16.3153H15.0833V17.8153H17.4746V16.3153ZM18.0073 8.57636C17.4156 8.60635 16.9455 9.28361 17.3336 9.8837L18.5931 9.06909C18.8979 9.54024 18.5215 10.0522 18.0832 10.0744L18.0073 8.57636ZM2.91675 10.0745C2.47845 10.0523 2.10209 9.54029 2.40681 9.06914L3.66634 9.88375C4.05445 9.28366 3.58434 8.6064 2.99268 8.57641L2.91675 10.0745Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M14.884 14.873H10.5"
+                      stroke="white"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M8.4939 7.60859C8.4939 8.0228 8.82968 8.35859 9.2439 8.35859C9.65811 8.35859 9.9939 8.0228 9.9939 7.60859H8.4939ZM9.43598 10.1208C9.43598 10.535 9.77177 10.8708 10.186 10.8708C10.6002 10.8708 10.936 10.535 10.936 10.1208H9.43598ZM9.9939 7.60859C9.9939 7.58195 9.9991 7.57532 9.99968 7.57433C10.0022 7.56996 10.0144 7.55146 10.0525 7.52606C10.1373 7.46947 10.2972 7.4165 10.5 7.4165V5.9165C10.0747 5.9165 9.60656 6.02055 9.22041 6.27799C8.81203 6.55024 8.4939 7.00363 8.4939 7.60859H9.9939ZM10.5 7.4165C10.7028 7.4165 10.8627 7.46947 10.9476 7.52606C10.9857 7.55146 10.9978 7.56996 11.0003 7.57433C11.0009 7.57532 11.0061 7.58195 11.0061 7.60859H12.5061C12.5061 7.00363 12.188 6.55024 11.7796 6.27799C11.3935 6.02055 10.9253 5.9165 10.5 5.9165V7.4165ZM11.0061 7.60859C11.0061 7.7838 10.9661 7.88633 10.9167 7.96854C10.8541 8.07301 10.7646 8.16751 10.5977 8.33437L11.6584 9.39503C11.9803 9.07313 12.5061 8.56641 12.5061 7.60859H11.0061ZM10.5977 8.33437C10.5535 8.37863 10.4915 8.42912 10.3765 8.5222C10.2753 8.60412 10.1385 8.71513 10.0089 8.84467C9.74534 9.10827 9.43598 9.52387 9.43598 10.1208H10.936C10.936 10.0897 10.9407 10.0343 11.0696 9.90533C11.1363 9.8386 11.2154 9.77298 11.3203 9.68807C11.4114 9.61432 11.5456 9.5078 11.6584 9.39503L10.5977 8.33437Z"
+                      fill="white"
+                    />
+                    <circle cx="10.1695" cy="11.5459" r="0.625" fill="white" />
+                  </svg>
+                  Trade-in оценка авто
+                </a>
+                <a href="#" class="footer-top-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.51001 9.58229C1.66933 9.47377 1.83624 9.36771 2.01067 9.26434C3.91203 8.13761 6.5876 7.4165 9.58327 7.4165C12.5789 7.4165 15.2545 8.13761 17.1559 9.26434C17.6683 9.56799 18.1158 9.89494 18.4966 10.2391C18.4988 10.1596 18.4999 10.0799 18.4999 9.99984C18.4999 9.38854 18.4354 8.79232 18.3128 8.21761C18.1847 8.13414 18.0538 8.05288 17.9206 7.97391C15.7502 6.68778 12.8008 5.9165 9.58327 5.9165C6.64517 5.9165 3.93063 6.55963 1.82873 7.65063C1.6514 8.26857 1.54227 8.91534 1.51001 9.58229Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M19.1666 11.2721L15.7928 10.8972C15.4379 10.8578 15.0888 11.0106 14.8771 11.2982L11.8614 15.3936C11.7349 15.5654 11.6666 15.7732 11.6666 15.9865V19.1668"
+                      stroke="white"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M0.833374 11.2721L4.20723 10.8972C4.56214 10.8578 4.91116 11.0106 5.1229 11.2982L8.13861 15.3936C8.26513 15.5654 8.33337 15.7732 8.33337 15.9865V19.1668"
+                      stroke="white"
+                      stroke-width="1.5"
+                    />
+                  </svg>
+                  заказать тест-драйв
+                </a>
+                <a href="#" class="footer-top-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M18.3333 14.0999V16.5999C18.3343 16.832 18.2867 17.0617 18.1937 17.2744C18.1008 17.487 17.9644 17.6779 17.7934 17.8348C17.6224 17.9917 17.4205 18.1112 17.2006 18.1855C16.9808 18.2599 16.7478 18.2875 16.5167 18.2666C13.9523 17.988 11.4892 17.1117 9.32498 15.7083C7.31151 14.4288 5.60443 12.7217 4.32499 10.7083C2.91663 8.53426 2.04019 6.05908 1.76665 3.48325C1.74583 3.25281 1.77321 3.02055 1.84707 2.80127C1.92092 2.58199 2.03963 2.38049 2.19562 2.2096C2.35162 2.03871 2.54149 1.90218 2.75314 1.80869C2.9648 1.7152 3.1936 1.6668 3.42499 1.66658H5.92499C6.32941 1.6626 6.72148 1.80582 7.02812 2.06953C7.33476 2.33324 7.53505 2.69946 7.59165 3.09992C7.69717 3.89997 7.89286 4.68552 8.17499 5.44158C8.2871 5.73985 8.31137 6.06401 8.24491 6.37565C8.17844 6.68729 8.02404 6.97334 7.79998 7.19992L6.74165 8.25825C7.92795 10.3445 9.65536 12.072 11.7417 13.2583L12.8 12.1999C13.0266 11.9759 13.3126 11.8215 13.6243 11.755C13.9359 11.6885 14.26 11.7128 14.5583 11.8249C15.3144 12.107 16.0999 12.3027 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6912 18.3333 14.0999Z"
+                      stroke="white"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  обратная связь
+                </a>
+              </div>
+              <div class="footer-top-lists">
+                <div class="footer-top-list">
+                  <div class="footer-top-list-title">Купить авто</div>
+                  <div class="footer-top-list-box">
+                    <a href="#">Новые автомобили </a>
+                    <a href="#">Авто с пробегом </a>
+                    <a href="#">Акции и спецпредложения </a>
+                  </div>
+                </div>
+                <div class="footer-top-list">
+                  <div class="footer-top-list-title">Выкуп авто</div>
+                  <div class="footer-top-list-box">
+                    <a href="#">Экспресс оценка </a>
+                    <a href="#">Срочный выкуп</a>
+                    <a href="#">Комиссионная продажа</a>
+                  </div>
+                </div>
+                <div class="footer-top-list">
+                  <div class="footer-top-list-title">Сервис</div>
+                  <div class="footer-top-list-box">
+                    <a href="#">Renault</a>
+                    <a href="#">Lada</a>
+                    <a href="#">Запчасти и аксессуары</a>
+                  </div>
+                </div>
+                <div class="footer-top-list footer-top-list-tw">
+                  <div class="footer-top-list-title">Кузовной ремонт</div>
+                  <div class="footer-top-list-box">
+                    <a href="#">Покраска</a>
+                    <a href="#">Стапель</a>
+                    <a href="#">Выпрямление вмятин</a>
+                    <a href="#">Вклейка стекол</a>
+                    <a href="#">Полировка</a>
+                    <a href="#">Партнеры по автострахованию</a>
+                    <a href="#">Галерея работ</a>
+                    <a href="#">SOS</a>
+                  </div>
+                </div>
+                <div class="footer-top-list">
+                  <div class="footer-top-list-title">О компании</div>
+                  <div class="footer-top-list-box">
+                    <a href="#">Контакты</a>
+                    <a href="#">Новости</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">Вклейка стекол</a>
+                    <a href="#">Политика конфиденциальности</a>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="footer-top-policy">
+                Политика конфиденциальности
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-inner">
+              <div class="footer-bottom-item">
+                © Группа компаний «Зерновая 52»
+              </div>
+              <a href="#" class="footer-bottom-item"
+                >Создание сайта — Айти-Эскорт</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="page-link">
+      <div class="page-link-items">
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">Сравнение</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/three-line.svg" alt="" />
+            <span class="page-link-item-img-count">12</span>
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">Расчет</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/сalculator.svg" alt="" />
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">Trade-in</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/fi_car.svg" alt="" />
+          </div>
+        </a>
+        <a href="#" class="page-link-item">
+          <div class="page-link-item-info">Тест-драйв</div>
+          <div class="page-link-item-img">
+            <img src="img/svg/ruler.svg" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="modal-signing" class="modal modal-signing" style="display: none">
+      <div class="modal-inner">
+        <div class="modal-title">Запись на сервис</div>
+        <form>
+          <div class="modal-form-box">
+            <select class="web-select select-wv">
+              <option selected hidden>Тип сервиса</option>
+              <option>
+                aksdjkasjdkljaskldjakl aklsdjlkasjdlkasj jklasjdklasjkld1
+              </option>
+              <option>2</option>
+            </select>
+            <input type="text" placeholder="Имя" class="web-input" />
+            <input
+              type="tel"
+              placeholder="Телефон"
+              class="web-input add-phone-mask"
+            />
+          </div>
+
+          <button class="btn btn-pr">Записаться</button>
+          <div class="web-check">
+            <label>
+              <input type="checkbox" class="check-box" required="" />
+              <span class="check-style"></span>
+              <span class="web-check-text">
+                Нажимая кнопку «Записаться», я даю свое согласие на обработку
+                моих персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.inputmask.js"></script>
+    <!-- <script src="js/dynamicAdapt.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

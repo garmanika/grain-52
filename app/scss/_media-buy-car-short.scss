@@ -1,91 +1,157 @@
 @media (min-width: 576px) {
-  .buy-car-short-items {
-    grid-template-columns: repeat(3, 1fr);
-  }
-	.buy-car-short-glare{
-		width: 100%;
+	.buy-car-short-items {
+		grid-template-columns: repeat(3, 1fr)
+	}
+
+	.buy-car-short-glare {
+		width: 190px;
 		height: 100%;
-		background: linear-gradient(263.48deg, #F5F5F9 51.02%, #FFFFFF 86.49%);
-		transform: skewX(-45deg);
-		opacity: 0.5;
+		background: linear-gradient(263.48deg, #f5f5f9 51.02%, #fff 86.49%);
+		transform: skewX(-25deg);
+		opacity: .5
 	}
-	 .glare{
-	 	top: 0;
-	 	left: calc(50% - 56px);
-		 z-index: 1;
-	 }
-	 .glare-1{
-	 	top: 0;
-	 	left: calc(50% + 122px);
-		 z-index: 2;
-	 }
-	.glare-2{
+
+	.glare {
 		top: 0;
-		left: calc(50% + 157px);
-		z-index: 3;
+		left: calc(50% - 165px);
+		z-index: 1
+	}
+
+	.glare-1 {
+		top: 0;
+		left: calc(50% + 10px);
+		z-index: 2
+	}
+
+	.glare-2 {
+		top: 0;
+		left: calc(50% + 190px);
+		z-index: 3
+	}
+
+	.buy-car-short-item-img img {
+		height: 101px
 	}
 }
+
 @media (min-width: 768px) {
-  .buy-car-short {
-    padding: 70px 0;
-  }
-  .buy-car-short-inner {
-    gap: 48px;
-  }
-	.buy-car-short-item-title{
-		font-size: 28px;
+	.buy-car-short{
+		margin-bottom: 70px;
 	}
-	.glare{
+	.buy-car-short-glare {
+		width: 250px
+	}
+
+	.buy-car-short-title {
+		font-size: 28px
+	}
+
+	.buy-car-short {
+		padding: 70px 0
+	}
+
+	.buy-car-short-inner {
+		gap: 48px
+	}
+
+	.glare {
 		top: 0;
-		left: calc(50% - 97px);
+		left: calc(50% - 245px)
 	}
-	.glare-1{
+
+	.glare-1 {
 		top: 0;
-		left: calc(50% + 146px);
+		left: calc(50% - 5px)
 	}
- .glare-2{
-	 top: 0;
-	 left: calc(50% + 389px);
- }
+
+	.glare-2 {
+		top: 0;
+		left: calc(50% + 240px)
+	}
+
+	.buy-car-short-item-img img {
+		height: 130px
+	}
 }
+
 @media (min-width: 992px) {
-  .buy-car-short {
-    padding: 88px 0;
-  }
-	.buy-car-short-inner{
-		gap: 30px;	
+	.buy-car-short{
+		margin-bottom: 80px;
 	}
-	.buy-car-short-title span{
-		display: block;
+	.buy-car-short-title {
+		font-size: 32px
 	}
-	.buy-car-short-inner{
+
+	.buy-car-short {
+		padding: 88px 0
+	}
+
+	.buy-car-short-inner {
+		gap: 30px;
 		grid-template-columns: minmax(auto, 215px) 1fr;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-between
 	}
-	.glare{
+
+	.buy-car-short-title span {
+		display: block
+	}
+
+	.glare {
 		top: 0;
-		left: calc(50% - 97px);
+		left: calc(50% - 97px)
 	}
-	.glare-1{
+
+	.glare-1 {
 		top: 0;
-		left: calc(50% + 146px);
+		left: calc(50% + 115px)
 	}
- .glare-2{
-	 top: 0;
-	 left: calc(50% + 491px);
- }
+
+	.glare-2 {
+		top: 0;
+		left: calc(50% + 350px)
+	}
 }
+
 @media (min-width: 1200px) {
-	.buy-car-short-item-title{
-		font-size: 32px;
+	.buy-car-short{
+		margin-bottom: 96px;
 	}
-	.buy-car-short-inner{
-		grid-template-columns: minmax(auto, 255px) 1fr;
+	.glare-2 {
+		left: calc(50% + 420px)
+	}
+
+	.glare-1 {
+		left: calc(50% + 140px)
+	}
+
+	.glare {
+		left: calc(50% - 150px)
+	}
+
+	.buy-car-short-glare {
+		width: 290px
+	}
+
+	.buy-car-short-inner {
+		grid-template-columns: minmax(auto, 255px) 1fr
 	}
 }
+
 @media (min-width: 1400px) {
-	.buy-car-short-inner{
-		grid-template-columns: minmax(auto, 300px) 1fr;
+	.glare-2 {
+		left: calc(50% + 510px)
+	}
+
+	.glare-1 {
+		left: calc(50% + 190px)
+	}
+
+	.buy-car-short-glare {
+		width: 330px
+	}
+
+	.buy-car-short-inner {
+		grid-template-columns: minmax(auto, 300px) 1fr
 	}
 }

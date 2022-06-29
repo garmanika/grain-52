@@ -1,0 +1,65 @@
+@media (min-width: 576px) {
+	.model-description-slider-car{
+		min-height: 260px;
+	}
+  .page-bg {
+    display: block;
+  }
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 230px;
+  }
+  .model-description-slider-car {
+    margin-bottom: 35px;
+  }
+}
+@media (min-width: 768px) {
+	.model-description-links{
+		margin-bottom: 70px;
+	}
+	.model-description-slider-car{
+		margin-bottom: 30px;
+	}
+	.model-description-slider-color{
+		padding: 10px 0;
+	}
+  .model-description-slider-color
+    .swiper-slide-thumb-active
+    .model-description-slider-color-item::before {
+    padding: 21px;
+		top: -3px;
+  }
+  .model-description-slider-color
+    .swiper-slide-thumb-active
+    .model-description-slider-color-item::after {
+    padding: 23px;
+		top: -3.5px;
+  }
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 280px;
+  }
+  .model-description-slider-color-item {
+    height: 46px;
+    width: 46px;
+  }
+	.model-description-slider-color{
+		margin-bottom: 22px;
+	}
+}
+@media (min-width: 992px) {
+	.model-description-links{
+		margin-bottom: 80px;
+	}
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 350px;
+  }
+}
+@media (min-width: 1200px) {
+	.model-description-links{
+		margin-bottom: 96px;
+	}
+}
+@media (min-width: 1400px) {
+}

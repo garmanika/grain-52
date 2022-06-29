@@ -1,31 +1,41 @@
-@media (min-width: 576px){
-
+@media (min-width: 576px) {
 }
-@media (min-width: 768px){
-	.filter{
-		padding: 100px 0 70px;
+@media (min-width: 768px) {
+	.filter {
+		margin-bottom: 70px
 	}
 }
-@media (min-width: 992px){
-	.filter-head{
+
+@media (min-width: 992px) {
+	.filter-head {
 		grid-template-columns: 1fr minmax(auto, 300px);
 		gap: 30px;
+		margin-bottom: 50px
 	}
-	.filter-head{
-		margin-bottom: 50px;
-	}
-	.filter{
-		padding: 110px 0 80px;
-	}
-	.range-slider-inner{
-		margin-bottom: 32px;
-	}
-}
-@media (min-width: 1200px){
-	.filter{
-		padding: 125px 0 100px;
-	}
-}
-@media (min-width: 1400px){
 
+	.filter {
+		margin-bottom: 80px
+	}
+
+	.range-slider-inner {
+		margin-bottom: 32px
+	}
+
+	.filter-control {
+		flex: 0 0 auto;
+		min-width: 245px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.filter-wrapper {
+		padding-left: 30px;
+		padding-right: 30px
+	}
+
+	.filter {
+		margin-bottom: 96px
+	}
+}
+@media (min-width: 1400px) {
 }

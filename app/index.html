@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,300&family=Oswald:wght@300;500&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Oswald:wght@300;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/swiper-bundle.css" />
   <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/bootstrap-grid.css" />
@@ -28,10 +28,19 @@
             <div class="header-inner">
               <div class="header-box">
                 <button class="menu-btn">
-                  <span class="menu-btn-top"></span>
-                  <span class="menu-btn-medium"></span>
-                  <span class="menu-btn-bottom"></span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+
+                  <svg class="menu-btn-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none">
+                    <path d="M4 24H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M4 16H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M4 8H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                  <svg class="menu-btn-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
                     <path d="M18 6L6 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
                       stroke-linejoin="round" />
                     <path d="M6 6L18 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
@@ -40,11 +49,10 @@
                 </button>
                 <a href="#" class="header-logo">
                   <picture>
-                    <source media="(min-width:992px )" srcset="img/svg/header-logo.svg" />
-                    <source media="(min-width:0px )" srcset="img/svg/header-logo-mob.svg" />
-                    <source srcset="img/svg/header-logo.svg/" />
+                    <source media="(max-width: 991px)" srcset="img/svg/header-logo-mob.svg" />
+                    <source srcset="img/svg/header-logo.svg" />
                     <img src="img/svg/header-logo.svg" alt="" />
-                  </picture>
+                </picture>
                 </a>
               </div>
               <div class="header-inner-box">
@@ -94,94 +102,48 @@
                     <div class="header-inner-mobile">
                       <ul class="mobile-navigation-menu">
                         <li class="is-parent">
-                          <a href="#"><span>Купить авто</span> </a>
+                          <a href="#" class="active"><span>Купить авто</span> </a>
                           <div class="mobile-navigation-sub-position">
                             <div class="mobile-navigation-sub-menu-heading">
                               <span class="mobile-navigation-sub-menu-heading-title">
                                 <img src="img/svg/left.svg" alt="" />
-                                Каталог</span>
+                                Купить авто</span>
                             </div>
                             <ul class="mobile-navigation-sub-menu">
                               <li class="is-parent">
                                 <a href="#">
-                                  <span>Все для сад</span>
+                                  <span>Новые автомобили</span>
                                 </a>
                                 <div class="mobile-navigation-sub-position sub-sub">
                                   <div class="mobile-navigation-sub-menu-heading">
                                     <span class="mobile-navigation-sub-menu-heading-title">
                                       <img src="img/svg/left.svg" alt="" />
-                                      Все для сада</span>
+                                     Новые автомобили</span>
                                   </div>
                                   <ul class="mobile-navigation-sub-menu">
-                                    <li class="is-parent">
+                                    <li>
                                       <a href="#">
-                                        <span>Газонокосилки и триммеры</span>
+                                        <span>Renault</span>
                                       </a>
-                                      <div class="mobile-navigation-sub-position sub-sub">
-                                        <div class="mobile-navigation-sub-menu-heading">
-                                          <span class="mobile-navigation-sub-menu-heading-title">
-                                            <img src="img/svg/left.svg" alt="" />
-                                            Газонокосилки и триммеры</span>
-                                        </div>
-                                        <ul class="mobile-navigation-sub-menu">
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-                                        </ul>
-                                      </div>
                                     </li>
                                     <li>
                                       <a href="/catalog/vse_dlya_sada/benzopily/">
-                                        <span>Бензопилы</span>
+                                        <span>Lada</span>
                                       </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobloki/">
-                                        <span>Мотоблоки</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobury/">
-                                        <span>Мотобуры</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
                                     </li>
                                   </ul>
                                 </div>
                               </li>
                               <li>
                                 <a href="#">
-                                  <span>Инструмент</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <span>Ручной инструмент</span>
+                                  <span>Авто с пробегом</span>
                                 </a>
                               </li>
                             </ul>
                           </div>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
                         </li>
                         <li class="is-parent">
                           <a href="#"><span>Выкуп авто</span> </a>
@@ -189,177 +151,83 @@
                             <div class="mobile-navigation-sub-menu-heading">
                               <span class="mobile-navigation-sub-menu-heading-title">
                                 <img src="img/svg/left.svg" alt="" />
-                                Каталог</span>
+                                Выкуп авто</span>
                             </div>
                             <ul class="mobile-navigation-sub-menu">
-                              <li class="is-parent">
-                                <a href="#">
-                                  <span>Все для сад</span>
-                                </a>
-                                <div class="mobile-navigation-sub-position sub-sub">
-                                  <div class="mobile-navigation-sub-menu-heading">
-                                    <span class="mobile-navigation-sub-menu-heading-title">
-                                      <img src="img/svg/left.svg" alt="" />
-                                      Все для сада</span>
-                                  </div>
-                                  <ul class="mobile-navigation-sub-menu">
-                                    <li class="is-parent">
-                                      <a href="#">
-                                        <span>Газонокосилки и триммеры</span>
-                                      </a>
-                                      <div class="mobile-navigation-sub-position sub-sub">
-                                        <div class="mobile-navigation-sub-menu-heading">
-                                          <span class="mobile-navigation-sub-menu-heading-title">
-                                            <img src="img/svg/left.svg" alt="" />
-                                            Газонокосилки и триммеры</span>
-                                        </div>
-                                        <ul class="mobile-navigation-sub-menu">
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </li>
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/benzopily/">
-                                        <span>Бензопилы</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobloki/">
-                                        <span>Мотоблоки</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobury/">
-                                        <span>Мотобуры</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </li>
                               <li>
                                 <a href="#">
-                                  <span>Инструмент</span>
+                                  <span>Экспресс-оценка авто</span>
                                 </a>
                               </li>
                               <li>
                                 <a href="#">
-                                  <span>Ручной инструмент</span>
+                                  <span>Срочный выкуп</span>
                                 </a>
                               </li>
-                              <li class="is-parent">
+                              <li>
                                 <a href="#">
-                                  <span>Все для сад</span>
+                                  <span>Комиссионная продажа</span>
                                 </a>
-                                <div class="mobile-navigation-sub-position sub-sub">
-                                  <div class="mobile-navigation-sub-menu-heading">
-                                    <span class="mobile-navigation-sub-menu-heading-title">
-                                      <img src="img/svg/left.svg" alt="" />
-                                      Все для сада</span>
-                                  </div>
-                                  <ul class="mobile-navigation-sub-menu">
-                                    <li class="is-parent">
-                                      <a href="#">
-                                        <span>Газонокосилки и триммеры</span>
-                                      </a>
-                                      <div class="mobile-navigation-sub-position sub-sub">
-                                        <div class="mobile-navigation-sub-menu-heading">
-                                          <span class="mobile-navigation-sub-menu-heading-title">
-                                            <img src="img/svg/left.svg" alt="" />
-                                            Газонокосилки и триммеры</span>
-                                        </div>
-                                        <ul class="mobile-navigation-sub-menu">
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-
-                                          <li>
-                                            <a
-                                              href="/catalog/vse_dlya_sada/gazonokosilki_i_trimmery/roboty_gazonokosilki/">
-                                              <span>Роботы газонокосилки</span>
-                                            </a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </li>
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/benzopily/">
-                                        <span>Бензопилы</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobloki/">
-                                        <span>Мотоблоки</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/motobury/">
-                                        <span>Мотобуры</span>
-                                      </a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
-                                    </li>
-
-                                    <li>
-                                      <a href="/catalog/vse_dlya_sada/moyki_vysokogo_davleniya/"><span>Мойки высокого
-                                          давления</span></a>
-                                    </li>
-                                  </ul>
-                                </div>
                               </li>
                             </ul>
                           </div>
                         </li>
-
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
                         <li>
                           <a href="#">
                             <span>Акции и спецпредложения</span>
                           </a>
                         </li>
-
-                        <li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li class="is-parent">
                           <a href="#">
                             <span>Cервис</span>
                           </a>
+                          <div class="mobile-navigation-sub-position">
+                            <div class="mobile-navigation-sub-menu-heading">
+                              <span class="mobile-navigation-sub-menu-heading-title">
+                                <img src="img/svg/left.svg" alt="" />
+                                Cервис</span>
+                            </div>
+                            <ul class="mobile-navigation-sub-menu">
+                              <li>
+                                <a href="#">
+                                  <span>Сервис Renault</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Сервис lada</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Кузовной ремонт</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Запчасти и аксессуары</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
                         </li>
-
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
                         <li>
                           <a href="#">
                             <span>О компании</span>
                           </a>
                         </li>
-
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
                         <li>
                           <a href="#">
                             <span>Контакты</span>
@@ -405,25 +273,25 @@
         <section class="services">
           <div class="container">
             <div class="services-items">
-              <a href="#" class="services-item border-tr border-tr-1">
+              <a href="#" class="services-item border-eraser border-eraser-h-ltr">
                 <div class="services-item-img">
                   <img src="img/svg/car-new.svg" alt="" />
                 </div>
                 <div class="services-item-title">Новые автомобили</div>
               </a>
-              <a href="#" class="services-item border-tr border-tr-2">
+              <a href="#" class="services-item border-eraser border-eraser-v-btt">
                 <div class="services-item-img">
                   <img src="img/svg/car-used.svg" alt="" />
                 </div>
                 <div class="services-item-title">Авто с пробегом</div>
               </a>
-              <a href="#" class="services-item border-tr border-tr-3">
+              <a href="#" class="services-item border-eraser border-eraser-h-rtl">
                 <div class="services-item-img">
                   <img src="img/svg/car-transfer.svg" alt="" />
                 </div>
                 <div class="services-item-title">выкуп авто</div>
               </a>
-              <a href="#" class="services-item border-tr border-tr-4">
+              <a href="#" class="services-item border-eraser border-eraser-v-ttb">
                 <div class="services-item-img">
                   <img src="img/svg/repair.svg" alt="" />
                 </div>
@@ -440,49 +308,20 @@
                   <div class="swiper-slide">
                     <div class="slider-images-img">
                       <picture>
-                        <source media="(min-width:1400px )" srcset="img/slider-img-1320.jpg" />
-                        <source media="(min-width:1200px )" srcset="img/slider-img-1140.jpg" />
-                        <source media="(min-width:992px )" srcset="img/slider-img-960.jpg" />
-                        <source media="(min-width:768px )" srcset="img/slider-img-768.jpg" />
-                        <source media="(min-width:576px )" srcset="img/slider-img.jpg" />
-                        <source srcset="img/slider-img.jpg" />
-                        <img src="img/slider-img.jpg" alt="" />
+                        <source media="(max-width: 767px)" srcset="img/index_slide_1_576.jpg" />
+                        <source media="(max-width: 991px)" srcset="img/index_slide_1_768.jpg" />
+                        <source srcset="img/index_slide_1.jpg" />
+                        <img src="img/index_slide_1.jpg" alt="" />
                       </picture>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="slider-images-img">
                       <picture>
-                        <source media="(min-width:1400px )" srcset="img/slider-img.jpg" />
-                        <source media="(min-width:1200px )" srcset="img/slider-img.jpg" />
-                        <source media="(min-width:992px )" srcset="img/slider-img.jpg" />
-                        <source media="(min-width:768px )" srcset="img/slider-img.jpg" />
-                        <source media="(min-width:576px )" srcset="img/slider-img.jpg" />
-                        <source srcset="img/slider-img.jpg" />
-                        <img src="img/slider-img.jpg" alt="" />
-                      </picture>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="slider-images-img">
-                      <picture>
-                        <source media="(min-width:1400px )" srcset="
-                              https://i.pinimg.com/originals/b1/7b/41/b17b4135eab99b839c7a3575bf25c17b.jpg
-                            " />
-                        <source media="(min-width:1200px )" srcset="
-                              https://i.pinimg.com/originals/7a/80/1e/7a801e822c409fde5e62e1baa04c417c.jpg
-                            " />
-                        <source media="(min-width:992px )" srcset="
-                              https://content-3.foto.my.mail.ru/mail/mits.vas/1058/b-3458.jpg
-                            " />
-                        <source media="(min-width:768px )" srcset="
-                              https://img1.goodfon.ru/original/640x1136/5/1c/gornaya-reka-gory-skaly-les.jpg
-                            " />
-                        <source media="(min-width:576px )" srcset="
-                              https://artpostergallery.ru/userdata/image/thumbs/b3/c4/b3c4715deb9b85b966f7cc8f174ac5d7_2.jpg
-                            " />
-                        <source srcset="img/slider-img.jpg" />
-                        <img src="img/slider-img.jpg" alt="" />
+                        <source media="(max-width: 767px)" srcset="img/index_slide_1_576.jpg" />
+                        <source media="(max-width: 991px)" srcset="img/index_slide_1_768.jpg" />
+                        <source srcset="img/index_slide_1.jpg" />
+                        <img src="img/index_slide_1.jpg" alt="" />
                       </picture>
                     </div>
                   </div>
@@ -495,84 +334,52 @@
                       <div class="sliders-info-inner">
                         <div class="sliders-info-title">Заголовок слайда</div>
                         <div class="slider-info-info">
-                          В АВЕС-Калуга представлен полный модельный ряд. У
-                          нас Вы сможете купить не только легковые модели
-                          Vesta, Granta, XRAY.
+                          <span>
+                            В АВЕС-Калуга представлен полный модельный ряд. У
+                            нас Вы сможете купить не только легковые модели
+                            Vesta, Granta, XRAY.</span>
                         </div>
-                        <div class="sliders-info-control">
-                          <a href="#" class="sliders-info-control-btn">Подробнее</a>
-                          <div class="sliders-info-control-arrows">
-                            <div class="swiper-button-prev">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                            <div class="swiper-button-next">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
+
+                      </div>
+                      <div class="sliders-info-control">
+                        <a href="#" class="sliders-info-control-btn">Подробнее</a>
+
                       </div>
                     </div>
                     <div class="swiper-slide">
                       <div class="sliders-info-inner">
                         <div class="sliders-info-title">Заголовок слайда</div>
                         <div class="slider-info-info">
-                          В АВЕС-Калуга представлен полный модельный Granta,
-                          XRAY.
+                          <span>
+                            В АВЕС-Калуга представлен полный модельный ряд. У
+                            нас Вы сможете купить не только легковые модели
+                            Vesta, Granta, XRAY. Вы сможете купить не только легковые модели
+                            Vesta, Granta, XRAY.
+                          </span>
                         </div>
-                        <div class="sliders-info-control">
-                          <a href="#" class="sliders-info-control-btn">Подробнее</a>
-                          <div class="sliders-info-control-arrows">
-                            <div class="swiper-button-prev">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                            <div class="swiper-button-next">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="sliders-info-inner">
-                        <div class="sliders-info-title">Заголовок слайда</div>
 
-                        <div class="sliders-info-control">
-                          <a href="#" class="sliders-info-control-btn">Подробнее</a>
-                          <div class="sliders-info-control-arrows">
-                            <div class="swiper-button-prev">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                            <div class="swiper-button-next">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
-                                fill="none">
-                                <path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white" stroke-width="1.5"
-                                  stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
+                      </div>
+                      <div class="sliders-info-control">
+                        <a href="#" class="sliders-info-control-btn">Подробнее</a>
+
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div class="sliders-info-control-arrows">
+                  <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
+                      fill="none">
+                      <path d="M13.2412 15L8.24121 10L13.2412 5" stroke="white" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"
+                      fill="none">
+                      <path d="M8.24121 15L13.2412 10L8.24121 5" stroke="white" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -590,339 +397,348 @@
                 </div>
               </div>
               <div class="filter-body">
-                <div class="filter-body-items active hidden" data-tab="1">
-									<div class="custom-select">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option  value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option  value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<!-- <div class="filter-body-items-selects">
-
-									</div> -->
-									<!-- <div class="filter-body-items-sliders range-sliders">
-
-									</div> -->
-									<div class="range-slider hidden">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
+								<div class="container-body-tab   active" data-tab="1">
+									<div class="filter-body-items hidden" >
+										<div class="custom-select">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault</option>
+												<option value="Lada">Lada</option>
+											</select>
 										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+										<div class="custom-select ">
+											<select>
+												<option selected hidden value="hide">Модель</option>
+												<option value="Model 1">Model 1</option>
+												<option value="Model 2">Model 2</option>
+												<option value="Model 2">Model 3</option>
+											</select>
+										</div>
+										<div class="custom-select ">
+											<select>
+												<option selected hidden value="hide">Коробка</option>
+												<option value="МКПП">МКПП</option>
+												<option value="АКПП">АКПП</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<!-- <div class="filter-body-items-selects">
+	
+										</div> -->
+										<!-- <div class="filter-body-items-sliders range-sliders">
+	
+										</div> -->
+										<div class="range-slider hidden">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="range-slider hidden">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
-										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+										<div class="range-slider hidden">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="range-slider">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
-										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+										<div class="range-slider">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="filter-control">
-										<button class="filter-control-link-more">
-											<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
-												<path d="M6.07129 7.5L11.4469 12.5L16.8225 7.5" stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<div class="filter-control">
+											<button class="filter-control-link-more">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+													<path d="M6.07129 7.5L11.4469 12.5L16.8225 7.5" stroke="#FF1E26" stroke-width="1.5"
+														stroke-linecap="round" stroke-linejoin="round" />
 												</svg>
 												<span class="visible">Больше параметров</span>
 												<span class="hidden">Скрыть</span>
-										</button>
-										<button class="filter-control-reset">
-											Сбросить
-										</button>
-										<a href="#" class="btn btn-pr">Показать 9 999 авто</a>
-
-									</div>
-
-                </div>
-                <div class="filter-body-items hidden" data-tab="2">
-									<div class="custom-select">
-										<select>
-											<option selected hidden value="hide">Марка2</option>
-											<option  value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option  value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select ">
-										<select>
-											<option selected hidden value="hide">Марка2</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select ">
-										<select>
-											<option selected hidden value="hide">Марка2</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden ">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<div class="custom-select hidden">
-										<select>
-											<option selected hidden value="hide">Марка</option>
-											<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
-											<option value="Lada">Lada</option>
-									</select> 
-									</div>
-									<!-- <div class="filter-body-items-selects">
-
-									</div> -->
-									<!-- <div class="filter-body-items-sliders range-sliders">
-
-									</div> -->
-									<div class="range-slider hidden">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
+											</button>
+											<button class="filter-control-reset">
+												Сбросить
+											</button>
+											<a href="#" class="btn btn-pr">Показать 9 999 авто</a>
+	
 										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+	
+									</div>
+								</div>
+								<div class="container-body-tab " data-tab="2">
+									<div class="filter-body-items hidden">
+										<div class="custom-select">
+											<select>
+												<option selected hidden value="hide">Марка2</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select ">
+											<select>
+												<option selected hidden value="hide">Марка2</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select ">
+											<select>
+												<option selected hidden value="hide">Марка2</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden ">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<div class="custom-select hidden">
+											<select>
+												<option selected hidden value="hide">Марка</option>
+												<option value="Renault">Renault sada asdasd asdasd asdasd asdasda asdasda asdasd</option>
+												<option value="Lada">Lada</option>
+											</select>
+										</div>
+										<!-- <div class="filter-body-items-selects">
+	
+										</div> -->
+										<!-- <div class="filter-body-items-sliders range-sliders">
+	
+										</div> -->
+										<div class="range-slider hidden">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="range-slider hidden">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
-										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+										<div class="range-slider hidden">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="range-slider">
-										<div class="range-slider-inner">
-											<label class="range-slider-label">
-												<input type="text" class="range-slider-input" placeholder="800 000 ₽">
-											</label>
-
-											<label class="filter-label">
-												<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
-											</label>
-										</div>
-										<div class="bx-ui-slider-track-container">
-											<div class="bx-ui-slider-track">
-												
-												<div class="bx-ui-slider-pricebar-vd"></div>
-												<div class="bx-ui-slider-pricebar-vn"></div>
-												<div class="bx-ui-slider-pricebar-v"></div>
-												<div class="bx-ui-slider-range">
-													<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
-													<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+										<div class="range-slider">
+											<div class="range-slider-inner">
+												<label class="range-slider-label">
+													<input type="text" class="range-slider-input" placeholder="800 000 ₽">
+												</label>
+	
+												<label class="filter-label">
+													<input type="text" class="range-slider-input" placeholder="5 000 000 ₽">
+												</label>
+											</div>
+											<div class="bx-ui-slider-track-container">
+												<div class="bx-ui-slider-track">
+	
+													<div class="bx-ui-slider-pricebar-vd"></div>
+													<div class="bx-ui-slider-pricebar-vn"></div>
+													<div class="bx-ui-slider-pricebar-v"></div>
+													<div class="bx-ui-slider-range">
+														<a class="bx-ui-slider-handle left" href="javascript:void(0)"></a>
+														<a class="bx-ui-slider-handle right" href="javascript:void(0)"></a>
+													</div>
 												</div>
 											</div>
+	
 										</div>
-
-									</div>
-									<div class="filter-control">
-										<button class="filter-control-link-more">
-											<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
-												<path d="M6.07129 7.5L11.4469 12.5L16.8225 7.5" stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<div class="filter-control">
+											<button class="filter-control-link-more">
+												<svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
+													<path d="M6.07129 7.5L11.4469 12.5L16.8225 7.5" stroke="#FF1E26" stroke-width="1.5"
+														stroke-linecap="round" stroke-linejoin="round" />
 												</svg>
 												<span class="visible">Больше параметров</span>
 												<span class="hidden">Скрыть</span>
-										</button>
-										<button class="filter-control-reset">
-											Сбросить
-										</button>
-										<a href="#" class="btn btn-pr">Показать 9 999 авто</a>
-
+											</button>
+											<button class="filter-control-reset">
+												Сбросить
+											</button>
+											<a href="#" class="btn btn-pr">Показать 9 999 авто</a>
+	
+										</div>
+	
 									</div>
+								</div>
 
-                </div>
 
+
+              </div>
             </div>
-          </div>
         </section>
         <section class="buy-car-short">
           <div class="container">
@@ -973,6 +789,27 @@
             <div class="special-slider-inner">
               <div class="special-slider swiper">
                 <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="special-slider-item">
+                      <div class="special-slider-item-img">
+                        <img src="img/special.jpg" alt="" />
+                        <div class="special-slider-item-img-info">
+                          renault
+                        </div>
+                      </div>
+                      <div class="special-slider-item-title">
+                        Диагностика подвески в подарок
+                      </div>
+                      <div class="special-slider-item-more">
+                        подробнее
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
                   <div class="swiper-slide">
                     <a href="#" class="special-slider-item">
                       <div class="special-slider-item-img">
@@ -1065,6 +902,13 @@
           </div>
         </section>
         <section class="banner">
+          <div class="banner-bg">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/banner-bg-576.jpg" />
+              <source srcset="img/banner-bg.jpg" />
+              <img src="img/banner-bg.jpg" alt="" />
+            </picture>
+          </div>
           <div class="container">
             <div class="banner-inner">
               <div class="banner-info">
@@ -1076,7 +920,7 @@
                     stroke-linejoin="round" />
                 </svg>
                 оригинальные запчасти
-                и аксессуарыв наличии
+                и аксессуары в наличии
               </div>
               <a href="#" class="btn btn-pr">посмотреть каталог</a>
             </div>
@@ -1103,8 +947,11 @@
               </div>
               <div class="img-with-caption">
                 <div class="about-short-img">
-                  <img src="img/about-short.jpg" alt="">
-
+                  <picture>
+                    <source media="(max-width: 991px)" srcset="img/about-short-768.jpg" />
+                    <source srcset="img/about-short.jpg" />
+                    <img src="img/about-short.jpg" alt="" />
+                  </picture>
                 </div>
                 <div class="image-caption">
                   <div class="image-caption-info">
@@ -1158,7 +1005,7 @@
                       <a href="#" class="feedback-slider-item border-tr border-tr-2">
                         <div class="feedback-slider-item-head">
                           <div class="feedback-slider-item-head-img">
-                            <img src="img/avatar.png" alt="">
+                            <img src="img/avatar-1.png" alt="">
                           </div>
                           <div class="feedback-slider-item-head-info">
                             <div class="feedback-slider-item-head-info-title">Анна Вавилова</div>
@@ -1184,7 +1031,7 @@
                       <a href="#" class="feedback-slider-item border-tr border-tr-3">
                         <div class="feedback-slider-item-head">
                           <div class="feedback-slider-item-head-img">
-                            <img src="img/avatar.png" alt="">
+                            <img src="img/avatar-2.png" alt="">
                           </div>
                           <div class="feedback-slider-item-head-info">
                             <div class="feedback-slider-item-head-info-title">Владимир Заднепропетровский</div>
