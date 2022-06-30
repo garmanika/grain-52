@@ -17,16 +17,20 @@
 	.menu-btn {
 		margin-right: 30px
 	}
+
 }
 
 @media (min-width: 768px) {
+	.mobile-navigation-sub-position{
+		height: calc(100vh - 64px);
+	}
 	.header-add{
 		top: 64px;
 	}
 	.wrapper-page.add .content{
 		margin-top: 128px;
 	}
-	.header-add{
+	ul.header-add-list{
 		padding: 19px 0;
 	}
 	.header-top-box .btn .mob {
@@ -73,6 +77,12 @@
 }
 
 @media (min-width: 992px) {
+
+	.no-scroll-mobile{
+		.wrapper-page.add .header-wrapper{
+			box-shadow: none
+		}
+	}
 	.wrapper-page.add .content{
 		margin-top: 201px;
 	}

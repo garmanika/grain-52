@@ -1,5 +1,5 @@
 @media (min-width: 576px) {
-  .about .container-table{
+  .container-table{
     margin-left: calc(50% - 270px);
   }
   
@@ -48,12 +48,12 @@
     line-height: 54px;
 
   }
-  .about .container-table{
+  .container-table{
     margin-left: calc(50% - 360px);
   }
 }
 @media (min-width: 992px) {
-  .about .container-table{
+  .container-table{
     margin-left: calc(50% - 480px);
   }
   .about {
@@ -105,7 +105,7 @@
   .about .responsive-table{
     margin-bottom: 64px;
   }
-  .about .container-table{
+  .container-table{
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -130,7 +130,7 @@
   }
 }
 @media (min-width: 1400px) {
-  .about .container-table{
+  .container-table{
     max-width: 1320px;
   }
 

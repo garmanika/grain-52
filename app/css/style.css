@@ -296,7 +296,8 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: stretch
 }
 .page-wrapper {
-  padding-bottom: 60px
+  padding-bottom: 60px;
+  position: relative
 }
 @media (min-width:576px) {
   .wrapper-page {
@@ -331,30 +332,30 @@ input[type=number]::-webkit-outer-spin-button {
 .wrapper-page.add .content {
   margin-top: 96px
 }
-.header-add-list {
+ul.header-add-list {
   display: flex;
   flex-wrap: nowrap;
   overflow: auto;
   align-items: start;
-  gap: 24px
+  gap: 24px;
+  padding: 11px 0
 }
-.header-add-list::-webkit-scrollbar {
+ul.header-add-list::-webkit-scrollbar {
   width: 2px;
   height: 2px
 }
-.header-add-list::-webkit-scrollbar-track {
-  background: #eee;
-  margin-right: 15px
+ul.header-add-list::-webkit-scrollbar-track {
+  background: #eee
 }
-.header-add-list::-webkit-scrollbar-thumb {
+ul.header-add-list::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 15px;
   border: transparent
 }
-.header-add-list::-webkit-scrollbar-thumb:hover {
+ul.header-add-list::-webkit-scrollbar-thumb:hover {
   background-color: #1f1d1e
 }
-.header-add-list a {
+ul.header-add-list a {
   white-space: nowrap;
   font-weight: 500;
   font-size: 14px;
@@ -362,9 +363,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: #242424;
   transition: .4s
 }
-.header-add-list a.active,
-.header-add-list a:focus,
-.header-add-list a:hover {
+ul.header-add-list a.active,
+ul.header-add-list a:focus,
+ul.header-add-list a:hover {
   color: #ff1e26
 }
 .header {
@@ -378,7 +379,6 @@ input[type=number]::-webkit-outer-spin-button {
 .header-add {
   background: #f6f6f9;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
-  padding: 11px 0;
   position: fixed;
   width: 100%;
   top: 48px;
@@ -611,6 +611,9 @@ span.mobile-navigation-sub-menu-heading-title {
 ul.mobile-navigation-menu > li a.active::before {
   opacity: 1
 }
+.no-scroll-mobile .wrapper-page.add .header-wrapper {
+  box-shadow: 0 5px 10px rgba(0,0,0,.1)
+}
 @media (min-width:576px) {
   .header-mobile-btn,
   ul.mobile-navigation-menu li span {
@@ -629,12 +632,17 @@ ul.mobile-navigation-menu > li a.active::before {
   }
 }
 @media (min-width:768px) {
+  .mobile-navigation-sub-position {
+    height: calc(100vh - 64px)
+  }
   .header-add {
-    top: 64px;
-    padding: 19px 0
+    top: 64px
   }
   .wrapper-page.add .content {
     margin-top: 128px
+  }
+  ul.header-add-list {
+    padding: 19px 0
   }
   .header-top-box .btn .mob {
     display: none
@@ -670,6 +678,9 @@ ul.mobile-navigation-menu > li a.active::before {
   }
 }
 @media (min-width:992px) {
+  .no-scroll-mobile .wrapper-page.add .header-wrapper {
+    box-shadow: none
+  }
   .wrapper-page.add .content {
     margin-top: 201px
   }
@@ -2648,13 +2659,16 @@ ul.mobile-navigation-menu > li a.active::before {
   color: #fff;
   background: #9b9b9b
 }
-.filter-body-items {
+.container-body-tab {
   display: none
 }
 .filter-body-items .custom-select {
   flex: 1 1 170px
 }
-.filter-body-items.active {
+.container-body-tab.active {
+  display: block
+}
+.filter-body-items {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -2804,11 +2818,11 @@ ul.mobile-navigation-menu > li a.active::before {
 }
 .custom-select .select-options li {
   margin: 0;
-  padding: 12px 24px 12px 16px;
+  padding: 14px 24px 14px 16px;
   border-top: 1px solid #e6e6e6;
   font-weight: 300;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
   color: #242424
 }
 .custom-select .select-options li.is-selected,
@@ -2938,7 +2952,9 @@ ul.mobile-navigation-menu > li a.active::before {
   }
 }
 .breadcrumbs {
-  padding: 8px 0
+  padding: 8px 0;
+  position: relative;
+  z-index: 1
 }
 .breadcrumbs-list {
   display: flex;
@@ -2979,7 +2995,17 @@ ul.mobile-navigation-menu > li a.active::before {
   font-size: 24px;
   line-height: 40px;
   text-transform: uppercase;
-  color: #242424
+  color: #242424;
+  position: relative;
+  z-index: 1
+}
+.page-title.sliders {
+  margin-bottom: 30px
+}
+@media (min-width:576px) {
+  .page-title.sliders {
+    margin-bottom: 34px
+  }
 }
 @media (min-width:768px) {
   .breadcrumbs {
@@ -2989,6 +3015,11 @@ ul.mobile-navigation-menu > li a.active::before {
     font-size: 40px;
     line-height: 54px;
     margin-bottom: 48px
+  }
+}
+@media (min-width:992px) {
+  .page-title.sliders {
+    margin-bottom: -42px
   }
 }
 @media (min-width:1200px) {
@@ -3087,11 +3118,11 @@ ul.mobile-navigation-menu > li a.active::before {
   line-height: 24px;
   color: #242424
 }
-.about .container-table {
+.container-table {
   padding-left: 15px;
   max-width: 100%
 }
-.about .responsive-table {
+.responsive-table {
   max-width: 100%;
   margin-bottom: 40px;
   overflow-x: auto;
@@ -3099,30 +3130,30 @@ ul.mobile-navigation-menu > li a.active::before {
   padding-bottom: 32px;
   padding-right: 15px
 }
-.about .responsive-table::-webkit-scrollbar {
+.responsive-table::-webkit-scrollbar {
   width: 2px;
   height: 2px
 }
-.about .responsive-table::-webkit-scrollbar-track {
+.responsive-table::-webkit-scrollbar-track {
   background: #eee;
   margin-right: 15px
 }
-.about .responsive-table::-webkit-scrollbar-thumb {
+.responsive-table::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 15px;
   border: transparent
 }
-.about .responsive-table::-webkit-scrollbar-thumb:hover {
+.responsive-table::-webkit-scrollbar-thumb:hover {
   background-color: #1f1d1e
 }
-.about table {
+.responsive-table table {
   width: 100%;
   border-collapse: collapse
 }
-.about table thead {
+.responsive-table table thead {
   background: #f6f6f9
 }
-.about table th {
+.responsive-table table th {
   font-family: Oswald;
   font-style: normal;
   font-weight: 300;
@@ -3131,13 +3162,13 @@ ul.mobile-navigation-menu > li a.active::before {
   text-transform: uppercase;
   color: #242424
 }
-.about table td {
+.responsive-table table td {
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   color: #242424
 }
-.about table td a {
+.responsive-table table td a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -3148,8 +3179,8 @@ ul.mobile-navigation-menu > li a.active::before {
   font-family: Oswald,sans-serif;
   color: #242424
 }
-.about table td,
-.about table th {
+.responsive-table table td,
+.responsive-table table th {
   width: 118px;
   border: 1px solid #eee;
   text-align: center;
@@ -3235,7 +3266,7 @@ ul.mobile-navigation-menu > li a.active::before {
   height: auto
 }
 @media (min-width:576px) {
-  .about .container-table {
+  .container-table {
     margin-left: calc(50% - 270px)
   }
 }
@@ -3277,12 +3308,12 @@ ul.mobile-navigation-menu > li a.active::before {
     font-size: 40px;
     line-height: 54px
   }
-  .about .container-table {
+  .container-table {
     margin-left: calc(50% - 360px)
   }
 }
 @media (min-width:992px) {
-  .about .container-table {
+  .container-table {
     margin-left: calc(50% - 480px)
   }
   .about .about-short-inner {
@@ -3321,16 +3352,16 @@ ul.mobile-navigation-menu > li a.active::before {
     padding: 48px 0;
     margin: 0 0 96px
   }
-  .about .container-table {
+  .about .responsive-table {
+    margin-bottom: 64px;
+    padding-right: 0
+  }
+  .container-table {
     width: 100%;
-    padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1140px
-  }
-  .about .responsive-table {
-    margin-bottom: 64px;
+    max-width: 1140px;
     padding-right: 0
   }
   .responsive-table {
@@ -3340,9 +3371,6 @@ ul.mobile-navigation-menu > li a.active::before {
   .responsive-table::-webkit-scrollbar-track {
     padding-right: 0;
     margin-right: 0
-  }
-  .container-table {
-    padding-right: 0
   }
 }
 .buy-car,
@@ -3688,13 +3716,6 @@ ul.mobile-navigation-menu > li a.active::before {
   .brand-car-item-info {
     min-height: 48px
   }
-  .custom-select .select-options li,
-  .custom-select .select-styled,
-  .range-slider-input,
-  .web-input,
-  .web-select {
-    padding-left: 24px
-  }
 }
 @media (min-width:992px) {
   .brand-car {
@@ -3717,7 +3738,7 @@ ul.mobile-navigation-menu > li a.active::before {
   }
 }
 @media (min-width:1400px) {
-  .about .container-table {
+  .container-table {
     max-width: 1320px
   }
   .brand-car-item-box {
@@ -3731,5 +3752,272 @@ ul.mobile-navigation-menu > li a.active::before {
   }
   .brand-car-item-title {
     text-align: left
+  }
+}
+.page-bg {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  top: 0;
+  left: 0;
+  z-index: 0
+}
+.page-bg img,
+.page-bg picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+.model-description-slider-car-item-img img,
+.model-description-slider-car-item-img picture {
+  display: block;
+  height: 140px;
+  object-fit: cover;
+  margin: 0 auto
+}
+.model-description-slider-color .swiper-wrapper {
+  justify-content: center
+}
+.model-description-slider-color .swiper-slide {
+  width: auto;
+  flex: 0 0
+}
+.model-description-slider-color-item {
+  width: 32px;
+  height: 32px
+}
+.model-description-slider-color-item img {
+  width: 100%;
+  height: 100%
+}
+.model-description-slider-car {
+  margin-bottom: 19px
+}
+.model-description-slider-color {
+  margin-bottom: 28px;
+  padding: 5px 0
+}
+.model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item {
+  position: relative
+}
+.model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::before {
+  content: "";
+  position: absolute;
+  border: 3px solid #fff;
+  padding: 14px;
+  border-radius: 50%;
+  top: -2px;
+  left: 50%;
+  transform: translate(-50%)
+}
+.model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::after {
+  content: "";
+  position: absolute;
+  border: 1.5px solid #ff1e26;
+  padding: 16px;
+  border-radius: 50%;
+  top: -2.6px;
+  left: 50%;
+  transform: translate(-50%)
+}
+.model-description-links {
+  margin-bottom: 60px
+}
+.model-description-links .footer-top-item {
+  color: #9b9b9b
+}
+.model-description-links .footer-top-item:hover {
+  border-color: transparent;
+  background-color: #ff1e26;
+  color: #fff
+}
+.model-description-links .footer-top-item:focus svg circle[stroke="#9B9B9B"],
+.model-description-links .footer-top-item:focus svg path[stroke="#9B9B9B"],
+.model-description-links .footer-top-item:hover svg circle[stroke="#9B9B9B"],
+.model-description-links .footer-top-item:hover svg path[stroke="#9B9B9B"] {
+  stroke: #fff
+}
+.model-description-links .footer-top-item:focus svg circle[fill="#9B9B9B"],
+.model-description-links .footer-top-item:focus svg path[fill="#9B9B9B"],
+.model-description-links .footer-top-item:hover svg circle[fill="#9B9B9B"],
+.model-description-links .footer-top-item:hover svg path[fill="#9B9B9B"] {
+  fill: #fff
+}
+.model-description-price-box {
+  margin-bottom: 32px
+}
+.model-description-price-box-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  text-align: center
+}
+.model-description-price-stock {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff1e26
+}
+.point-helper {
+  position: relative
+}
+.point-helper-trigger {
+  background: 0 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 24px;
+  line-height: 40px;
+  color: #242424
+}
+.point-helper-trigger .text-transform {
+  font-weight: 200;
+  font-size: 32px;
+  line-height: 40px;
+  color: #242424
+}
+.point-helper-bubble {
+  width: calc(100% - 36px);
+  position: absolute;
+  bottom: 100%;
+  z-index: 1;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .45s;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  border-radius: 5px;
+  height: 0;
+  padding: 0;
+  overflow: hidden
+}
+.point-helper-trigger img,
+.point-helper-trigger svg {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  background: #f6f6f9;
+  top: -12px
+}
+.point-helper-trigger:focus ~ .point-helper-bubble,
+.point-helper-trigger:hover ~ .point-helper-bubble {
+  opacity: 1;
+  padding: 16px;
+  height: auto;
+  overflow: visible
+}
+.model-description-icons-box {
+  margin-top: 40px
+}
+.model-description .about,
+.model-description-info-box {
+  margin-bottom: 60px
+}
+.model-description-stock-inner .section-title .btn {
+  display: block
+}
+@media (min-width:576px) {
+  .model-description-slider-car {
+    min-height: 260px;
+    margin-bottom: 35px
+  }
+  .page-bg {
+    display: block
+  }
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 230px
+  }
+}
+@media (min-width:768px) {
+  .model-description-stock-inner .section-title .btn .desk {
+    display: block
+  }
+  .model-description-stock-inner .section-title .btn .mob {
+    display: none
+  }
+  .model-description .about,
+  .model-description-info-box,
+  .model-description-links {
+    margin-bottom: 70px
+  }
+  .model-description-slider-car {
+    margin-bottom: 30px
+  }
+  .model-description-slider-color {
+    padding: 10px 0;
+    margin-bottom: 22px
+  }
+  .model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::before {
+    padding: 21px;
+    top: -3px
+  }
+  .model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::after {
+    padding: 23px;
+    top: -3.5px
+  }
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 280px
+  }
+  .model-description-slider-color-item {
+    height: 46px;
+    width: 46px
+  }
+  .point-helper {
+    width: auto
+  }
+  .model-description-price-box-inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px
+  }
+  .point-helper-trigger:focus ~ .point-helper-bubble,
+  .point-helper-trigger:hover ~ .point-helper-bubble {
+    width: 240px;
+    left: calc(100% + 15px);
+    bottom: auto;
+    top: -30px
+  }
+  .model-description-icons-box {
+    margin-top: 64px
+  }
+}
+@media (min-width:992px) {
+  .model-description .about,
+  .model-description-info-box,
+  .model-description-links {
+    margin-bottom: 80px
+  }
+  .model-description-slider-car-item-img img,
+  .model-description-slider-car-item-img picture {
+    height: 350px
+  }
+}
+@media (min-width:1200px) {
+  .model-description .about,
+  .model-description-info-box,
+  .model-description-links {
+    margin-bottom: 96px
+  }
+}
+@media (min-width:768px) {
+  .section-title {
+    margin-bottom: 52px
+  }
+  .custom-select .select-options li,
+  .custom-select .select-styled,
+  .range-slider-input,
+  .web-input,
+  .web-select {
+    padding-left: 24px
   }
 }
