@@ -125,6 +125,9 @@ input {
 .btn-pr:disabled {
 	background: #d0d0d0;
 }
+.btn-pr.disabled {
+	background: #d0d0d0;
+}
 
 .btn-sec {
 	color: #ff1e26;
@@ -354,7 +357,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .page-wrapper {
-	padding-bottom: 60px;
+	margin-bottom: 60px;
 	position: relative;
 }
 
@@ -367,7 +370,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @media (min-width: 768px) {
 	.page-wrapper {
-		padding-bottom: 70px;
+		margin-bottom: 70px;
 	}
 
 }
@@ -377,6 +380,9 @@ input[type="number"]::-webkit-outer-spin-button {
 	.border-tr::before {
 		width: 20px;
 		height: 20px;
+	}
+	.page-wrapper{
+		margin-bottom: 80px;
 	}
 }
 
@@ -388,6 +394,6 @@ input[type="number"]::-webkit-outer-spin-button {
 	}
 
 	.page-wrapper {
-		padding-bottom: 96px;
+		margin-bottom: 96px;
 	}
 }

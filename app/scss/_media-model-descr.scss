@@ -1,5 +1,4 @@
 @media (min-width: 576px) {
-
   .model-description-slider-car {
     min-height: 260px;
   }
@@ -15,16 +14,107 @@
   }
 }
 @media (min-width: 768px) {
-  .model-description-stock-inner{
-    .section-title .btn .desk{
+  .model-detail-inner {
+    display: grid;
+    grid-template-areas: "sliders sliders-info" "slider-prices slider-prices";
+    gap: 48px 30px;
+  }
+  .model-detail-info,
+  .model-detail-sliders {
+    margin-bottom: 0;
+  }
+  .model-detail-info-subtitle {
+    margin-bottom: 32px;
+  }
+  .model-detail-sliders {
+    max-width: 330px;
+  }
+  .model-detail-inner {
+    margin-bottom: 50px;
+  }
+  .model-detail-slider .swiper-pagination {
+    display: none;
+  }
+  .model-detail-slider {
+    margin-bottom: 32px;
+  }
+  .model-detail-slider-tb-inner {
+    display: block;
+    .gallery-slider-arrows {
+      margin-top: 15px;
+    }
+  }
+  .model-detail-slider-tb-img {
+    height: 64px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .model-detail-tabs-info {
+    margin-top: 38px;
+  }
+  .model-detail-tabs-inner {
+    margin-bottom: 70px;
+  }
+  .model-detail-tabs {
+    gap: 40px;
+  }
+  .model-detail-prices {
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    padding: 32px 24px;
+  }
+  .model-color-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px 30px;
+  }
+  .model-color-item {
+    padding: 0 35px;
+  }
+  .model-color {
+    margin-bottom: 70px;
+  }
+  .model-specification-item-img {
+    padding-bottom: 55%;
+  }
+  .model-specification-items {
+    margin-bottom: 70px;
+  }
+
+  .gallery {
+    margin-bottom: 60px;
+    &.no-slider {
+      margin-bottom: 70px;
+    }
+  }
+  .gallery-slider-title {
+    margin-bottom: 48px;
+  }
+  .model-description-stock-inner {
+    margin-bottom: 60px;
+  }
+  .model-description-stock-inner {
+    .section-title .btn .desk {
       display: block;
     }
-    .section-title .btn .mob{
+    .section-title .btn .mob {
       display: none;
     }
   }
-  .model-description{
-    .about{
+  .model {
+    .about {
+      margin-bottom: 70px;
+    }
+  }
+  .model {
+    .about {
+      margin-bottom: 70px;
+    }
+  }
+  .model {
+    .about {
       margin-bottom: 70px;
     }
   }
@@ -60,7 +150,7 @@
     margin-bottom: 22px;
   }
   .point-helper {
-    width: auto;
+    width: fit-content;
   }
   .model-description-price-box-inner {
     display: flex;
@@ -78,10 +168,65 @@
   .model-description-icons-box {
     margin-top: 64px;
   }
+  .gallery-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .model-detail-info-subtitle {
+    gap: 16px;
+  }
+  .model-detail-info-subtitle-box {
+    gap: 24px;
+  }
 }
 @media (min-width: 992px) {
-  .model-description{
-    .about{
+  .model-detail-slider-tb-inner .gallery-slider-arrows{
+    margin: 0;
+  }
+  .model-detail-sliders {
+    max-width: 450px;
+  }
+  .model-detail-inner {
+    margin-bottom: 80px;
+  }
+  .model-detail-tabs-inner {
+    margin-bottom: 80px;
+  }
+  .model-detail-prices {
+    padding: 24px;
+  }
+  .model-color-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .model-color {
+    margin-bottom: 80px;
+  }
+  .model-specification-items {
+    margin-bottom: 80px;
+  }
+
+  .gallery {
+    margin-bottom: 70px;
+    &.no-slider {
+      margin-bottom: 80px;
+    }
+  }
+  .model-description-stock-inner {
+    margin-bottom: 70px;
+  }
+  .model {
+    .about {
+      margin-bottom: 80px;
+    }
+  }
+  .model {
+    .about {
+      margin-bottom: 80px;
+    }
+  }
+  .model {
+    .about {
       margin-bottom: 80px;
     }
   }
@@ -95,21 +240,137 @@
   .model-description-slider-car-item-img picture {
     height: 350px;
   }
+  .model-detail-info-subtitle {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .model-detail-info-subtitle-box {
+    gap: 40px;
+  }
+  .model-detail-info-specification {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 30px;
+  }
+  .model-detail-slider-tb-inner {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .model-detail-sliders .slider-prev {
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+  .model-detail-sliders .slider-next {
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
 }
 @media (min-width: 1200px) {
+  .model-detail-slider-tb-box {
+    position: relative;
+  }
+  .model-detail-sliders {
+    max-width: 540px;
+  }
+  .model-detail-inner {
+    gap: 40px 60px;
+  }
+  .model-detail-sliders .gallery-slider-arrows {
+    margin: 0;
+  }
+  .model-detail-sliders .slider-prev {
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
+  .model-detail-sliders .slider-next {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+  .model-detail-slider-tb-inner {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+  .model-detail-inner {
+    margin-bottom: 96px;
+  }
+  .model-detail-slider-tb-img {
+    height: 80px;
+    img {
+    }
+  }
+  .model-detail-tabs-inner {
+    margin-bottom: 96px;
+  }
+  .model-color-item {
+    padding: 0 75px;
+  }
+  .model-color {
+    margin-bottom: 96px;
+  }
+  .gallery-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .model-specification-items {
+    margin-bottom: 96px;
+  }
+  .model-specification-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery {
+    margin-bottom: 86px;
+    &.no-slider {
+      margin-bottom: 96px;
+    }
+  }
+  .model-description-stock-inner {
+    margin-bottom: 86px;
+  }
   .model-description-info-box {
     margin-bottom: 96px;
   }
-  .model-description{
-    .about{
+  .model {
+    .about {
+      margin-bottom: 96px;
+    }
+  }
+  .model {
+    .about {
+      margin-bottom: 96px;
+    }
+  }
+  .model {
+    .about {
       margin-bottom: 96px;
     }
   }
 
-  
   .model-description-links {
     margin-bottom: 96px;
   }
+  .model-detail-inner {
+    grid-template-areas:
+      "sliders sliders-info"
+      "sliders slider-prices";
+  }
+  .model-detail-slider {
+    margin-bottom: 50px;
+  }
+  .model-detail-info-subtitle {
+    margin-bottom: 40px;
+  }
 }
 @media (min-width: 1400px) {
+  .model-detail-sliders {
+    max-width: 630px;
+  }
+  .model-detail-inner {
+    gap: 40px 140px;
+  }
+  .model-detail-slider {
+    margin-bottom: 62px;
+  }
 }

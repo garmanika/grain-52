@@ -37,6 +37,10 @@
 	.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
 		margin-top: 28px
 	}
+	.special-items{
+		grid-template-columns: repeat(3,1fr);
+		gap: 48px 45px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -52,5 +56,9 @@
 @media (min-width: 1200px) {
 	.special {
 		margin-bottom: 96px;
+	}
+	.special-items{
+		grid-template-columns: repeat(4,1fr);
+		gap: 64px 45px;
 	}
 }

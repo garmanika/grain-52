@@ -1,4 +1,5 @@
 $(function () {
+  $.fancybox.defaults.backFocus = false
   let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-bottom");
 
@@ -52,6 +53,35 @@ $(function () {
     } else {
       $(".header").removeClass("sticky");
     }
+  });
+  $('.gallery').each(function () {
+    let section = $(this);
+    new Swiper(section.find('.gallery-slider')[0], {
+      spaceBetween: 30,
+      watchOverflow: true,
+      navigation: {
+        nextEl: section.find('.slider-next')[0],
+        prevEl: section.find('.slider-prev')[0],
+      },
+      pagination: {
+        el: ".gallery-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        991: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
+    });
   });
   const swiper = new Swiper(".sliders-images", {
     slidesPerView: 1,
@@ -152,6 +182,85 @@ $(function () {
       swiper: swiper3,
     },
   });
+  const swiper5 = new Swiper(".model-description-stock-slider", {
+    loop: false,
+    watchOverflow: true,
+    
+    pagination: {
+      el: ".model-description-stock-slider-inner .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        slidesPerGroup: 2,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        slidesPerGroup: 3,
+      },
+
+    },
+  });
+  const swiper7 = new Swiper(".model-detail-slider-tb", {
+    loop: false,
+    watchOverflow: true,
+    navigation: {
+      nextEl: ".model-detail-slider-tb-inner .slider-next",
+      prevEl: ".model-detail-slider-tb-inner .slider-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        slidesPerGroup: 3,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        slidesPerGroup: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+        slidesPerGroup: 4,
+      },
+    },
+  });
+  const swiper6 = new Swiper(".model-detail-slider", {
+    loop: false,
+    watchOverflow: true,
+    speed: 0,
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true,
+    },
+    pagination: {
+      el: ".model-detail-slider .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+    thumbs: {
+      swiper: swiper7,
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+      },
+    },
+  });
+
 
   indexFeedbackSlider = new Swiper(".feedback-slider-inner > .swiper", {
     loop: false,
@@ -233,14 +342,21 @@ $(function () {
     }).insertAfter($styledSelect);
 
     for (let i = 0; i < numberOfOptions; i++) {
+      let itemClass = '';
+      let curOption = $this.children("option").eq(i);
+      if (curOption.is(':disabled')) {
+        itemClass = 'disabled';
+      }
       $("<li />", {
-        text: $this.children("option").eq(i).text(),
-        rel: $this.children("option").eq(i).val(),
+        text: curOption.text(),
+        rel: curOption.val(),
+        class: itemClass
       }).appendTo($list);
       //if ($this.children('option').eq(i).is(':selected')){
       //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
       //}
     }
+
 
     let $listItems = $list.children("li");
 

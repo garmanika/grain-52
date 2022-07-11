@@ -1,8 +1,5 @@
 @media (min-width: 576px) {
-  .container-table{
-    margin-left: calc(50% - 270px);
-  }
-  
+
 }
 @media (min-width: 768px) {
   .about {
@@ -13,7 +10,7 @@
   .about-icons-box {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-bottom: 48px;
+
   }
   .about ul {
     margin: 48px 0 70px;
@@ -21,8 +18,13 @@
   .about ol {
     margin: 116px 0 76px;
   }
+  .about {
+    .responsive-table-box {
+      margin: 70px 0;
+    }
+  }
   .responsive-table-box {
-    margin: 70px 0;
+   margin-bottom: 70px;
   }
   .banner-short {
     margin: 70px 0;
@@ -39,53 +41,57 @@
     padding: 48px 0;
     margin: 0px 0 70px;
   }
-  .about .responsive-table{
+  .about .responsive-table {
     margin-bottom: 38px;
   }
   .about h1 {
-
     font-size: 40px;
     line-height: 54px;
-
   }
-  .container-table{
-    margin-left: calc(50% - 360px);
-  }
+  .about-icons-box {
+    margin: 64px 0 48px;
+  
+}
 }
 @media (min-width: 992px) {
-  .container-table{
-    margin-left: calc(50% - 480px);
-  }
+
   .about {
     .about-short-inner {
-      margin-bottom: 94px;
+      margin-bottom: 80px;
     }
   }
-  .about-short-inner.left{
-    .about-short-img picture::before{
+  .about-short-inner.left {
+    .about-short-img picture::before {
       left: auto;
       right: -30px;
     }
   }
 }
 @media (min-width: 1200px) {
-  .about-short-inner.left{
-    .about-short-img picture::before{
+	.about-icons-box {
+    margin-bottom: 96px;
+  
+}
+  .about-short-inner.left {
+    .about-short-img picture::before {
       left: auto;
       right: -60px;
     }
   }
-  .about-icons-box {
-    margin-bottom: 96px;
-  }
+
   .about ul {
     margin: 96px 0 96px;
   }
   .about ol {
     margin: 126px 0 96px;
   }
+  .about{
+    .responsive-table-box {
+      margin: 96px 0;
+    }
+  }
   .responsive-table-box {
-    margin: 96px 0;
+    margin-bottom: 96px;
   }
   .banner-short {
     margin: 96px 0;
@@ -102,19 +108,11 @@
     padding: 48px 0;
     margin: 0 0 96px;
   }
-  .about .responsive-table{
+  .about .responsive-table {
     margin-bottom: 64px;
   }
-  .container-table{
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1140px;
-    
-  }
-  .about .responsive-table{
+
+  .about .responsive-table {
     padding-right: 0;
   }
   .responsive-table {
@@ -125,13 +123,8 @@
       margin-right: 0px;
     }
   }
-  .container-table{
-    padding-right: 0;
-  }
+
 }
 @media (min-width: 1400px) {
-  .container-table{
-    max-width: 1320px;
-  }
 
 }
