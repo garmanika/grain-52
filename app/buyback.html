@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Oswald:wght@300;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper-bundle.css" />
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-grid.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <title></title>
+</head>
+
+<body>
+  <div class="wrapper-page">
+    <div class="content">
+      <header class="header">
+        <div class="header-wrapper">
+          <div class="container">
+            <div class="header-inner">
+              <div class="header-box">
+                <button class="menu-btn">
+
+                  <svg class="menu-btn-close" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                    viewBox="0 0 32 32" fill="none">
+                    <path d="M4 24H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M4 16H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M4 8H28" stroke="#242424" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                  <svg class="menu-btn-open" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <a href="#" class="header-logo">
+                  <picture>
+                    <source media="(max-width: 991px)" srcset="img/svg/header-logo-mob.svg" />
+                    <source srcset="img/svg/header-logo.svg" />
+                    <img src="img/svg/header-logo.svg" alt="" />
+                  </picture>
+                </a>
+              </div>
+              <div class="header-inner-box">
+                <div class="header-top">
+                  <div class="header-top-inner">
+                    <div class="header-top-box desk">
+                      <div class="header-top-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <g clip-path="url(#clip0_38_378)">
+                            <path
+                              d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                              stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                              d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                              stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_38_378">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        г. Калуга, ул. Зерновая, 52
+                      </div>
+                      <a href="tel:+7484255-55-44" class="header-top-item header-top-item-tel">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M15.0499 5C16.0267 5.19057 16.9243 5.66826 17.628 6.37194C18.3317 7.07561 18.8094 7.97326 18.9999 8.95M15.0499 1C17.0792 1.22544 18.9715 2.13417 20.4162 3.57701C21.8608 5.01984 22.7719 6.91101 22.9999 8.94M21.9999 16.92V19.92C22.0011 20.1985 21.944 20.4742 21.8324 20.7293C21.7209 20.9845 21.5572 21.2136 21.352 21.4019C21.1468 21.5901 20.9045 21.7335 20.6407 21.8227C20.3769 21.9119 20.0973 21.9451 19.8199 21.92C16.7428 21.5856 13.7869 20.5341 11.1899 18.85C8.77376 17.3147 6.72527 15.2662 5.18993 12.85C3.49991 10.2412 2.44818 7.27099 2.11993 4.18C2.09494 3.90347 2.12781 3.62476 2.21643 3.36162C2.30506 3.09849 2.4475 2.85669 2.6347 2.65162C2.82189 2.44655 3.04974 2.28271 3.30372 2.17052C3.55771 2.05833 3.83227 2.00026 4.10993 2H7.10993C7.59524 1.99522 8.06572 2.16708 8.43369 2.48353C8.80166 2.79999 9.04201 3.23945 9.10993 3.72C9.23656 4.68007 9.47138 5.62273 9.80993 6.53C9.94448 6.88792 9.9736 7.27691 9.89384 7.65088C9.81408 8.02485 9.6288 8.36811 9.35993 8.64L8.08993 9.91C9.51349 12.4135 11.5864 14.4864 14.0899 15.91L15.3599 14.64C15.6318 14.3711 15.9751 14.1858 16.3491 14.1061C16.723 14.0263 17.112 14.0555 17.4699 14.19C18.3772 14.5286 19.3199 14.7634 20.2799 14.89C20.7657 14.9585 21.2093 15.2032 21.5265 15.5775C21.8436 15.9518 22.0121 16.4296 21.9999 16.92Z"
+                            stroke="#242424" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        +7 (4842) 55-55-44
+                      </a>
+                    </div>
+                    <div class="header-top-box">
+                      <button data-fancybox="" data-src="#modal-signing" class="btn btn-pr small">
+                        <span class="desk">запись на сервис</span>
+                        <span class="mob">запись</span>
+                      </button>
+                      <button class="btn btn-sec small desk">
+                        дилерские центры
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-bottom">
+                  <nav class="header-mobile-navigation">
+                    <div class="header-inner-mobile">
+                      <ul class="mobile-navigation-menu">
+                        <li class="is-parent">
+                          <a class="active" href="#"><span>Купить авто</span> </a>
+                          <div class="mobile-navigation-sub-position">
+                            <div class="mobile-navigation-sub-menu-heading">
+                              <span class="mobile-navigation-sub-menu-heading-title">
+                                <img src="img/svg/left.svg" alt="" />
+                                Купить авто</span>
+                            </div>
+                            <ul class="mobile-navigation-sub-menu">
+                              <li class="is-parent">
+                                <a href="#">
+                                  <span>Новые автомобили</span>
+                                </a>
+                                <div class="mobile-navigation-sub-position sub-sub">
+                                  <div class="mobile-navigation-sub-menu-heading">
+                                    <span class="mobile-navigation-sub-menu-heading-title">
+                                      <img src="img/svg/left.svg" alt="" />
+                                      Новые автомобили</span>
+                                  </div>
+                                  <ul class="mobile-navigation-sub-menu">
+                                    <li>
+                                      <a href="#">
+                                        <span>Renault</span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/catalog/vse_dlya_sada/benzopily/">
+                                        <span>Lada</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Авто с пробегом</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li class="is-parent">
+                          <a href="#"><span>Выкуп авто</span> </a>
+                          <div class="mobile-navigation-sub-position">
+                            <div class="mobile-navigation-sub-menu-heading">
+                              <span class="mobile-navigation-sub-menu-heading-title">
+                                <img src="img/svg/left.svg" alt="" />
+                                Выкуп авто</span>
+                            </div>
+                            <ul class="mobile-navigation-sub-menu">
+                              <li>
+                                <a href="#">
+                                  <span>Экспресс-оценка авто</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Срочный выкуп</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Комиссионная продажа</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>Акции и спецпредложения</span>
+                          </a>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li class="is-parent">
+                          <a href="#">
+                            <span>Cервис</span>
+                          </a>
+                          <div class="mobile-navigation-sub-position">
+                            <div class="mobile-navigation-sub-menu-heading">
+                              <span class="mobile-navigation-sub-menu-heading-title">
+                                <img src="img/svg/left.svg" alt="" />
+                                Cервис</span>
+                            </div>
+                            <ul class="mobile-navigation-sub-menu">
+                              <li>
+                                <a href="#">
+                                  <span>Сервис Renault</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Сервис lada</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Кузовной ремонт</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <span>Запчасти и аксессуары</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>О компании</span>
+                          </a>
+                        </li>
+                        <li class="header-bottom-decor">
+                          /
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>Контакты</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <div class="header-mobile-btn">
+                    <button class="btn btn-sec small desk">
+                      дилерские центры
+                    </button>
+                  </div>
+                  <div class="header-mobile-adress">
+                    <div class="header-mobile-adress-inner">
+                      <div class="header-top-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <g clip-path="url(#clip0_38_378)">
+                            <path
+                              d="M14 6.66669C14 11.3334 8 15.3334 8 15.3334C8 15.3334 2 11.3334 2 6.66669C2 5.07539 2.63214 3.54926 3.75736 2.42405C4.88258 1.29883 6.4087 0.666687 8 0.666687C9.5913 0.666687 11.1174 1.29883 12.2426 2.42405C13.3679 3.54926 14 5.07539 14 6.66669Z"
+                              stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                              d="M8 8.66669C9.10457 8.66669 10 7.77126 10 6.66669C10 5.56212 9.10457 4.66669 8 4.66669C6.89543 4.66669 6 5.56212 6 6.66669C6 7.77126 6.89543 8.66669 8 8.66669Z"
+                              stroke="#FF1E26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_38_378">
+                              <rect width="16" height="16" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        г. Калуга, ул. Зерновая, 52
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="page-wrapper">
+
+        <div class="container">
+          <section class="breadcrumbs">
+
+            <div class="breadcrumbs-inner">
+              <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-list-item">
+                  <a href="#">Главная</a>
+                  <span class="breadcrumbs-list-item-splitter">/</span>
+                </li>
+                <li class="breadcrumbs-list-item active">
+                  <span>Выкуп авто</span>
+                </li>
+              </ul>
+            </div>
+
+          </section>
+
+          <h1 class="page-title">Выкуп авто</h1>
+        </div>
+        <section class="buyback">
+          <div class="container">
+            <div class="about-icons-box">
+              <div class="about-icon">
+                <div class="about-icon-img">
+                  <img src="img/svg/shield-tick.svg" alt="">
+                </div>
+                <div class="about-icon-title">Юридическая
+                  чистота сделки</div>
+                <div class="about-icon-info">
+                  Гарантируем юридическую чистоту сделки. Мы заключаем договор
+                  и выплачиваем всю сумму без
+                  каких-либо комиссий и удержаний
+
+                </div>
+              </div>
+              <div class="about-icon">
+                <div class="about-icon-img">
+                  <img src="img/svg/car-alert.svg" alt="">
+                </div>
+                <div class="about-icon-title">Бесплатная диагностика</div>
+                <div class="about-icon-info">
+                  Независимая техническая диагностика автомобиля
+
+                </div>
+              </div>
+              <div class="about-icon">
+                <div class="about-icon-img">
+                  <img src="img/svg/doc.svg" alt="">
+                </div>
+                <div class="about-icon-title">Бесплатное оформление
+                  документов</div>
+                <div class="about-icon-info">
+                  Бесплатно оформим все документы
+
+                </div>
+              </div>
+              <div class="about-icon">
+                <div class="about-icon-img">
+                  <img src="img/svg/cart-check.svg" alt="">
+                </div>
+                <div class="about-icon-title">Деньги сразу
+                </div>
+                <div class="about-icon-info">
+                  Наличными денежными средствами, проверенными в присутствии клиента на современном банковском
+                  оборудовании, или безналичным переводом
+                </div>
+              </div>
+            </div>
+            <div class="about-short-inner left">
+              <div class="about-short-info">
+                <div class="about-short-info-title">Группа компаний «Зерновая 52» –
+                  сеть дилерских и сервисных центров 
+                  в г. Калуга
+                  
+                </div>
+                <div class="about-short-info-description">
+                  <p>
+                    Хорошие результаты работы группы компаний «Зерновая 52»
+                    отмечены премиями и дипломами. Так Автосалон Престиж,
+                    официальный дилер Рено в Калуге шестикратно становился
+                    дилером года RENAULT в России и трехкратно победителем
+                    премии «Калужский бренд», а автосалон АВЕС-Калуга,
+                    официальный дилер Лада в Калуге в 2018 году стал лучшим
+                    дилерским центром в центральном федеральном округе и
+                    двухкратно победителем премии «Калужский бренд» в
+                    номинации «Лучшее предприятие автомобильной сферы».
+                    Предприятия ГК «Зерновая 52» на различных сайтах имеют
+                    одни из лучших показателей по отзывам клиентов.
+                  </p>
+                </div>
+              </div>
+              <div class="img-with-caption">
+                <div class="about-short-img">
+                  <picture>
+                    <source
+                      media="(max-width:992px )"
+                      srcset="img/img-l-320.jpg"
+                    />
+
+                    <source srcset="img/img-l.jpg" />
+                    <img src="img/img-l.jpg" alt="" />
+                  </picture>
+                </div>
+
+              </div>
+            </div>
+            <div class="special">
+              <div class="section-title">
+                <h3 class="title">Акции и спецпредложения «ЗЕРНОВАЯ 52»</h3>
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+              <div class="special-slider-inner">
+                <div class="special-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            renault
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Диагностика подвески в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            renault
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Диагностика подвески в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-1.jpg" alt="" />
+                          <div class="special-slider-item-img-info">lada</div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Выгода 5 000 000 ₽ рублей по программе Трейд - ин
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-2.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            Кузовной ремонт
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Каждому 10 клиенту скидка 50% на шиномонтаж
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="special-slider-item">
+                        <div class="special-slider-item-img">
+                          <img src="img/special-3.jpg" alt="" />
+                          <div class="special-slider-item-img-info">
+                            автовито / АВТО С ПРОБЕГОМ
+                          </div>
+                        </div>
+                        <div class="special-slider-item-title">
+                          Замена масла в подарок
+                        </div>
+                        <div class="special-slider-item-more">
+                          подробнее
+  
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                            <path d="M6 14L10 10L6 6" stroke="#9B9B9B" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="special-slider-more more">
+                <a href="#" class="btn btn-sec">все акции</a>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+        <section class="feedback bg">
+          <div class="container">
+            <div class="feedback-inner">
+              <div class="section-title">
+                <h3 class="title">Отзывы</h3>
+                <a href="#" class="btn btn-sec">все отзывы</a>
+              </div>
+              <div class="feedback-slider-inner">
+                <div class="feedback-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="feedback-slider-item border-tr border-tr-1">
+                        <div class="feedback-slider-item-head">
+                          <div class="feedback-slider-item-head-img">
+                            <img src="img/avatar.png" alt="">
+                          </div>
+                          <div class="feedback-slider-item-head-info">
+                            <div class="feedback-slider-item-head-info-title">Зоя Куркова</div>
+                            <div class="feedback-slider-item-head-info-raiting">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star.svg" alt="">
+                            </div>
+                            <div class="feedback-slider-item-head-info-date">1 марта 2022</div>
+                          </div>
+                        </div>
+                        <div class="feedback-slider-item-info">
+                          Здравствуйте. Сегодня приобрели в салоне автомобиль Рено Аркана. Покупкой очень давольны! Мы
+                          уже покупали в рено автомобиль, но обслуживание было не очень хорошее. Решили сменить салон,не
+                          меняя производителя, нам выпала удача!!!
+                        </div>
+                        <div class="feedback-slider-item-info-more">Читать полностью</div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="feedback-slider-item border-tr border-tr-2">
+                        <div class="feedback-slider-item-head">
+                          <div class="feedback-slider-item-head-img">
+                            <img src="img/avatar-1.png" alt="">
+                          </div>
+                          <div class="feedback-slider-item-head-info">
+                            <div class="feedback-slider-item-head-info-title">Анна Вавилова</div>
+                            <div class="feedback-slider-item-head-info-raiting">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star.svg" alt="">
+                            </div>
+                            <div class="feedback-slider-item-head-info-date">1 марта 2022</div>
+                          </div>
+                        </div>
+                        <div class="feedback-slider-item-info">
+                          Добрый день. Приятный персонал, мы приехали с другого города, нас встретили, показали нами
+                          выбранный автомобиль . Довольно быстро одобрели кредит, и страховку . Старую свою машину сдали
+                          в салон в зачёт нового. Всем остались довольны.
+                        </div>
+                        <div class="feedback-slider-item-info-more">Читать полностью</div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="feedback-slider-item border-tr border-tr-3">
+                        <div class="feedback-slider-item-head">
+                          <div class="feedback-slider-item-head-img">
+                            <img src="img/avatar-2.png" alt="">
+                          </div>
+                          <div class="feedback-slider-item-head-info">
+                            <div class="feedback-slider-item-head-info-title">Владимир Заднепропетровский</div>
+                            <div class="feedback-slider-item-head-info-raiting">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star-fill.svg" alt="">
+                              <img src="img/svg/star.svg" alt="">
+                            </div>
+                            <div class="feedback-slider-item-head-info-date">1 марта 2022</div>
+                          </div>
+                        </div>
+                        <div class="feedback-slider-item-info">
+                          Обслуживала автомобиль в данном салоне! Все сотрудники очень внимательны,все разъяснили,салон
+                          очень чистый,приятно было там находиться,держите уровень!!!
+                        </div>
+
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="special-slider-more more">
+                <a href="#" class="btn btn-sec">все отзывы</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-top-inner">
+            <div class="footer-top-items">
+              <a href="#" class="footer-top-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                  <path
+                    d="M16.3333 3.3335H4.66667C3.74619 3.3335 3 4.07969 3 5.00016V16.6668C3 17.5873 3.74619 18.3335 4.66667 18.3335H16.3333C17.2538 18.3335 18 17.5873 18 16.6668V5.00016C18 4.07969 17.2538 3.3335 16.3333 3.3335Z"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M3 8.3335H18" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M13.8334 1.6665V4.99984" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M7.16663 1.6665V4.99984" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Записаться на сервис
+              </a>
+              <a href="#" class="footer-top-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                  <path d="M6.11591 14.873H10.5" stroke="white" stroke-width="1.5" />
+                  <path
+                    d="M16.0837 4.76239L16.7227 4.36984L16.7227 4.36984L16.0837 4.76239ZM17.4666 7.01387L16.8276 7.40641L17.1584 7.94494L17.7452 7.71023L17.4666 7.01387ZM3.52534 7.01387L3.24681 7.71023L3.88892 7.96706L4.19688 7.34785L3.52534 7.01387ZM4.5566 4.94028L5.22814 5.27426L5.22917 5.27219L4.5566 4.94028ZM2.92751 14.4747L3.63903 14.7119L3.78561 14.2722L3.45784 13.9444L2.92751 14.4747ZM18.0724 14.4747L17.5421 13.9444L17.2143 14.2721L17.3609 14.7119L18.0724 14.4747ZM18.0452 9.3254L18.0073 8.57636L18.0452 9.3254ZM17.9634 9.4764L17.3336 9.8837L17.9634 9.4764ZM2.95471 9.32545L2.91675 10.0745L2.95471 9.32545ZM3.03657 9.47645L2.40681 9.06914L3.03657 9.47645ZM6.52945 4.46387H14.2091V2.96387H6.52945V4.46387ZM15.4446 5.15494L16.8276 7.40641L18.1057 6.62132L16.7227 4.36984L15.4446 5.15494ZM4.19688 7.34785L5.22814 5.27426L3.88507 4.60631L2.85381 6.67989L4.19688 7.34785ZM14.2091 4.46387C14.713 4.46387 15.1808 4.72553 15.4446 5.15494L16.7227 4.36984C16.1861 3.49621 15.2343 2.96387 14.2091 2.96387V4.46387ZM6.52945 2.96387C5.40653 2.96387 4.38098 3.60139 3.88404 4.60838L5.22917 5.27219C5.47342 4.77723 5.97751 4.46387 6.52945 4.46387V2.96387ZM3.80387 6.31751C3.10158 6.0366 2.33104 6.0917 1.72206 6.39417C1.10906 6.69864 0.583313 7.30465 0.583313 8.13418H2.08331C2.08331 8.00719 2.1554 7.85377 2.38932 7.73759C2.62725 7.61941 2.95273 7.59261 3.24681 7.71023L3.80387 6.31751ZM0.583313 8.13418C0.583313 8.89498 1.00086 9.40773 1.50061 9.69682C1.96161 9.96349 2.50102 10.0534 2.91675 10.0745L2.99268 8.57641C2.69411 8.56128 2.42283 8.49741 2.2517 8.39841C2.17348 8.35317 2.13608 8.31212 2.11786 8.28366C2.10308 8.26057 2.08331 8.21965 2.08331 8.13418H0.583313ZM2.40681 9.06914C2.28377 9.25938 2.05423 9.57883 1.87801 10.0379C1.69862 10.5051 1.57969 11.0919 1.57969 11.8842H3.07969C3.07969 11.2474 3.17427 10.8466 3.27836 10.5755C3.38562 10.2961 3.50952 10.1262 3.66634 9.88375L2.40681 9.06914ZM1.57969 11.8842C1.57969 12.7427 1.68689 13.4128 1.83435 13.9142C1.97394 14.3888 2.16889 14.7768 2.39718 15.0051L3.45784 13.9444C3.48686 13.9734 3.38291 13.8633 3.2734 13.4909C3.17176 13.1454 3.07969 12.6199 3.07969 11.8842H1.57969ZM2.216 14.2376C2.13479 14.4812 1.97824 15.0835 1.97824 15.6704H3.47824C3.47824 15.3008 3.58739 14.8668 3.63903 14.7119L2.216 14.2376ZM1.97824 15.6704C1.97824 16.0333 2.03608 16.4981 2.21983 16.9024C2.40534 17.3105 2.80936 17.8153 3.52534 17.8153V16.3153C3.55783 16.3153 3.59925 16.3311 3.62351 16.351C3.63598 16.3612 3.6163 16.3497 3.58538 16.2817C3.52003 16.1379 3.47824 15.9053 3.47824 15.6704H1.97824ZM5.91664 17.8153C6.77109 17.8153 7.46374 17.1227 7.46374 16.2682H5.96374C5.96374 16.2942 5.94266 16.3153 5.91664 16.3153V17.8153ZM17.7452 7.71023C18.0389 7.59274 18.3669 7.61907 18.6079 7.73819C18.8453 7.85555 18.9166 8.00962 18.9166 8.13413H20.4166C20.4166 7.30211 19.8861 6.69679 19.2726 6.39352C18.6627 6.09201 17.8907 6.03647 17.1881 6.3175L17.7452 7.71023ZM18.9166 8.13413C18.9166 8.21961 18.8969 8.26052 18.8821 8.28361C18.8639 8.31207 18.8265 8.35312 18.7483 8.39836C18.5771 8.49736 18.3058 8.56123 18.0073 8.57636L18.0832 10.0744C18.4989 10.0534 19.0383 9.96345 19.4993 9.69678C19.9991 9.40769 20.4166 8.89493 20.4166 8.13413H18.9166ZM17.3336 9.8837C17.4904 10.1262 17.6143 10.296 17.7216 10.5754C17.8257 10.8465 17.9203 11.2473 17.9203 11.8841H19.4203C19.4203 11.0918 19.3013 10.5051 19.1219 10.0378C18.9457 9.57878 18.7162 9.25933 18.5931 9.06909L17.3336 9.8837ZM17.9203 11.8841C17.9203 12.6198 17.8282 13.1453 17.7265 13.4909C17.617 13.8632 17.5131 13.9734 17.5421 13.9444L18.6028 15.005C18.8311 14.7767 19.026 14.3887 19.1656 13.9141C19.3131 13.4128 19.4203 12.7426 19.4203 11.8841H17.9203ZM17.3609 14.7119C17.4126 14.8668 17.5217 15.3007 17.5217 15.6703H19.0217C19.0217 15.0834 18.8652 14.4812 18.7839 14.2375L17.3609 14.7119ZM17.5217 15.6703C17.5217 15.9052 17.4799 16.1379 17.4146 16.2816C17.3837 16.3497 17.364 16.3611 17.3764 16.3509C17.4007 16.3311 17.4421 16.3153 17.4746 16.3153V17.8153C18.1906 17.8153 18.5946 17.3105 18.7801 16.9023C18.9639 16.4981 19.0217 16.0333 19.0217 15.6703H17.5217ZM15.0833 16.3153C15.0573 16.3153 15.0362 16.2942 15.0362 16.2682H13.5362C13.5362 17.1226 14.2289 17.8153 15.0833 17.8153V16.3153ZM3.52534 17.8153H5.91664V16.3153H3.52534V17.8153ZM17.4746 16.3153H15.0833V17.8153H17.4746V16.3153ZM18.0073 8.57636C17.4156 8.60635 16.9455 9.28361 17.3336 9.8837L18.5931 9.06909C18.8979 9.54024 18.5215 10.0522 18.0832 10.0744L18.0073 8.57636ZM2.91675 10.0745C2.47845 10.0523 2.10209 9.54029 2.40681 9.06914L3.66634 9.88375C4.05445 9.28366 3.58434 8.6064 2.99268 8.57641L2.91675 10.0745Z"
+                    fill="white" />
+                  <path d="M14.884 14.873H10.5" stroke="white" stroke-width="1.5" />
+                  <path
+                    d="M8.4939 7.60859C8.4939 8.0228 8.82968 8.35859 9.2439 8.35859C9.65811 8.35859 9.9939 8.0228 9.9939 7.60859H8.4939ZM9.43598 10.1208C9.43598 10.535 9.77177 10.8708 10.186 10.8708C10.6002 10.8708 10.936 10.535 10.936 10.1208H9.43598ZM9.9939 7.60859C9.9939 7.58195 9.9991 7.57532 9.99968 7.57433C10.0022 7.56996 10.0144 7.55146 10.0525 7.52606C10.1373 7.46947 10.2972 7.4165 10.5 7.4165V5.9165C10.0747 5.9165 9.60656 6.02055 9.22041 6.27799C8.81203 6.55024 8.4939 7.00363 8.4939 7.60859H9.9939ZM10.5 7.4165C10.7028 7.4165 10.8627 7.46947 10.9476 7.52606C10.9857 7.55146 10.9978 7.56996 11.0003 7.57433C11.0009 7.57532 11.0061 7.58195 11.0061 7.60859H12.5061C12.5061 7.00363 12.188 6.55024 11.7796 6.27799C11.3935 6.02055 10.9253 5.9165 10.5 5.9165V7.4165ZM11.0061 7.60859C11.0061 7.7838 10.9661 7.88633 10.9167 7.96854C10.8541 8.07301 10.7646 8.16751 10.5977 8.33437L11.6584 9.39503C11.9803 9.07313 12.5061 8.56641 12.5061 7.60859H11.0061ZM10.5977 8.33437C10.5535 8.37863 10.4915 8.42912 10.3765 8.5222C10.2753 8.60412 10.1385 8.71513 10.0089 8.84467C9.74534 9.10827 9.43598 9.52387 9.43598 10.1208H10.936C10.936 10.0897 10.9407 10.0343 11.0696 9.90533C11.1363 9.8386 11.2154 9.77298 11.3203 9.68807C11.4114 9.61432 11.5456 9.5078 11.6584 9.39503L10.5977 8.33437Z"
+                    fill="white" />
+                  <circle cx="10.1695" cy="11.5459" r="0.625" fill="white" />
+                </svg>
+                Trade-in оценка авто
+              </a>
+              <a href="#" class="footer-top-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M19.25 10C19.25 15.1086 15.1086 19.25 10 19.25C4.89137 19.25 0.75 15.1086 0.75 10C0.75 4.89137 4.89137 0.75 10 0.75C15.1086 0.75 19.25 4.89137 19.25 10Z"
+                    stroke="white" stroke-width="1.5" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.51001 9.58229C1.66933 9.47377 1.83624 9.36771 2.01067 9.26434C3.91203 8.13761 6.5876 7.4165 9.58327 7.4165C12.5789 7.4165 15.2545 8.13761 17.1559 9.26434C17.6683 9.56799 18.1158 9.89494 18.4966 10.2391C18.4988 10.1596 18.4999 10.0799 18.4999 9.99984C18.4999 9.38854 18.4354 8.79232 18.3128 8.21761C18.1847 8.13414 18.0538 8.05288 17.9206 7.97391C15.7502 6.68778 12.8008 5.9165 9.58327 5.9165C6.64517 5.9165 3.93063 6.55963 1.82873 7.65063C1.6514 8.26857 1.54227 8.91534 1.51001 9.58229Z"
+                    fill="white" />
+                  <path
+                    d="M19.1666 11.2721L15.7928 10.8972C15.4379 10.8578 15.0888 11.0106 14.8771 11.2982L11.8614 15.3936C11.7349 15.5654 11.6666 15.7732 11.6666 15.9865V19.1668"
+                    stroke="white" stroke-width="1.5" />
+                  <path
+                    d="M0.833374 11.2721L4.20723 10.8972C4.56214 10.8578 4.91116 11.0106 5.1229 11.2982L8.13861 15.3936C8.26513 15.5654 8.33337 15.7732 8.33337 15.9865V19.1668"
+                    stroke="white" stroke-width="1.5" />
+                </svg>
+                заказать тест-драйв
+              </a>
+              <a href="#" class="footer-top-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M18.3333 14.0999V16.5999C18.3343 16.832 18.2867 17.0617 18.1937 17.2744C18.1008 17.487 17.9644 17.6779 17.7934 17.8348C17.6224 17.9917 17.4205 18.1112 17.2006 18.1855C16.9808 18.2599 16.7478 18.2875 16.5167 18.2666C13.9523 17.988 11.4892 17.1117 9.32498 15.7083C7.31151 14.4288 5.60443 12.7217 4.32499 10.7083C2.91663 8.53426 2.04019 6.05908 1.76665 3.48325C1.74583 3.25281 1.77321 3.02055 1.84707 2.80127C1.92092 2.58199 2.03963 2.38049 2.19562 2.2096C2.35162 2.03871 2.54149 1.90218 2.75314 1.80869C2.9648 1.7152 3.1936 1.6668 3.42499 1.66658H5.92499C6.32941 1.6626 6.72148 1.80582 7.02812 2.06953C7.33476 2.33324 7.53505 2.69946 7.59165 3.09992C7.69717 3.89997 7.89286 4.68552 8.17499 5.44158C8.2871 5.73985 8.31137 6.06401 8.24491 6.37565C8.17844 6.68729 8.02404 6.97334 7.79998 7.19992L6.74165 8.25825C7.92795 10.3445 9.65536 12.072 11.7417 13.2583L12.8 12.1999C13.0266 11.9759 13.3126 11.8215 13.6243 11.755C13.9359 11.6885 14.26 11.7128 14.5583 11.8249C15.3144 12.107 16.0999 12.3027 16.9 12.4083C17.3048 12.4654 17.6745 12.6693 17.9388 12.9812C18.203 13.2931 18.3435 13.6912 18.3333 14.0999Z"
+                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                обратная связь
+              </a>
+
+            </div>
+            <div class="footer-top-lists">
+              <div class="footer-top-list">
+                <div class="footer-top-list-title">Купить авто</div>
+                <div class="footer-top-list-box">
+                  <a href="#">Новые автомобили </a>
+                  <a href="#">Авто с пробегом </a>
+                  <a href="#">Акции
+                    и спецпредложения </a>
+                </div>
+              </div>
+              <div class="footer-top-list">
+                <div class="footer-top-list-title">Выкуп авто</div>
+                <div class="footer-top-list-box">
+                  <a href="#">Экспресс оценка </a>
+                  <a href="#">Срочный выкуп</a>
+                  <a href="#">Комиссионная продажа</a>
+                </div>
+              </div>
+              <div class="footer-top-list">
+                <div class="footer-top-list-title">Сервис</div>
+                <div class="footer-top-list-box">
+                  <a href="#">Renault</a>
+                  <a href="#">Lada</a>
+                  <a href="#">Запчасти и аксессуары</a>
+                </div>
+              </div>
+              <div class="footer-top-list footer-top-list-tw">
+                <div class="footer-top-list-title">Кузовной ремонт</div>
+                <div class="footer-top-list-box">
+                  <a href="#">Покраска</a>
+                  <a href="#">Стапель</a>
+                  <a href="#">Выпрямление вмятин</a>
+                  <a href="#">Вклейка стекол</a>
+                  <a href="#">Полировка</a>
+                  <a href="#">Партнеры
+                    по автострахованию</a>
+                  <a href="#">Галерея работ</a>
+                  <a href="#">SOS</a>
+                </div>
+              </div>
+              <div class="footer-top-list">
+                <div class="footer-top-list-title">О компании</div>
+                <div class="footer-top-list-box">
+                  <a href="#">Контакты</a>
+                  <a href="#">Новости</a>
+                  <a href="#">Вакансии</a>
+                  <a href="#">Вклейка стекол</a>
+                  <a href="#">Политика
+                    конфиденциальности</a>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="footer-top-policy">
+              Политика конфиденциальности
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-bottom-inner">
+            <div class="footer-bottom-item">© Группа компаний «Зерновая 52»</div>
+            <a href="#" class="footer-bottom-item">Создание сайта — Айти-Эскорт</a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </footer>
+  </div>
+  <div class="page-link">
+    <div class="page-link-items">
+      <a href="#" class="page-link-item">
+        <div class="page-link-item-info">Сравнение</div>
+        <div class="page-link-item-img">
+          <img src="img/svg/three-line.svg" alt="" />
+          <span class="page-link-item-img-count">12</span>
+        </div>
+      </a>
+      <a href="#" class="page-link-item">
+        <div class="page-link-item-info">Расчет</div>
+        <div class="page-link-item-img">
+          <img src="img/svg/сalculator.svg" alt="" />
+        </div>
+      </a>
+      <a href="#" class="page-link-item">
+        <div class="page-link-item-info">Trade-in</div>
+        <div class="page-link-item-img">
+          <img src="img/svg/fi_car.svg" alt="" />
+        </div>
+      </a>
+      <a href="#" class="page-link-item">
+        <div class="page-link-item-info">Тест-драйв</div>
+        <div class="page-link-item-img">
+          <img src="img/svg/ruler.svg" alt="" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div id="modal-signing" class="modal modal-signing" style="display:none;">
+    <div class="modal-inner">
+      <div class="modal-title">Запись на сервис
+      </div>
+      <form>
+        <div class="modal-form-box">
+          <select class="web-select select-wv">
+            <option selected hidden>Тип сервиса</option>
+            <option>aksdjkasjdkljaskldjakl aklsdjlkasjdlkasj jklasjdklasjkld1</option>
+            <option>2</option>
+          </select>
+          <input type="text" placeholder="Имя" class="web-input">
+          <input type="tel" placeholder="Телефон" class="web-input add-phone-mask">
+        </div>
+
+        <button class="btn btn-pr">Записаться</button>
+        <div class="web-check">
+          <label>
+            <input type="checkbox" class="check-box" required="">
+            <span class="check-style"></span>
+            <span class="web-check-text">
+              Нажимая кнопку «Записаться», я даю свое согласие на обработку моих персональных данных
+            </span>
+
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.inputmask.js"></script>
+  <!-- <script src="js/dynamicAdapt.js"></script> -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

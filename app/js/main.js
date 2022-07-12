@@ -76,7 +76,7 @@ $(function () {
           slidesPerView: 2,
           slidesPerGroup: 2,
         },
-        991: {
+        992: {
           slidesPerView: 3,
           slidesPerGroup: 3,
         },
@@ -144,10 +144,6 @@ $(function () {
     loop: false,
     watchOverflow: true,
 
-    slidesPerView: 6,
-    spaceBetween: 8,
-    slidesPerGroup: 1,
-
     fadeEffect: {
       crossFade: true,
     },
@@ -157,7 +153,7 @@ $(function () {
         spaceBetween: 8,
         slidesPerGroup: 1,
       },
-      576: {
+      768: {
         spaceBetween: 15,
       }
     },
@@ -197,14 +193,14 @@ $(function () {
         spaceBetween: 0,
         slidesPerGroup: 1,
       },
-      576: {
+      768: {
         slidesPerView: 2,
-        spaceBetween: 15,
+        spaceBetween: 30,
         slidesPerGroup: 2,
       },
-      992: {
+      1200: {
         slidesPerView: 3,
-        spaceBetween: 15,
+        spaceBetween: 30,
         slidesPerGroup: 3,
       },
 

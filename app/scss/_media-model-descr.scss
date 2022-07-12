@@ -1,19 +1,22 @@
 @media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+  .page-bg {
+    display: block;
+  }
   .model-description-slider-car {
     min-height: 260px;
   }
-  .page-bg {
-    display: block;
+
+
+  .model-description-slider-car {
+    margin-bottom: 35px;
   }
   .model-description-slider-car-item-img img,
   .model-description-slider-car-item-img picture {
     height: 230px;
   }
-  .model-description-slider-car {
-    margin-bottom: 35px;
-  }
-}
-@media (min-width: 768px) {
   .model-detail-inner {
     display: grid;
     grid-template-areas: "sliders sliders-info" "slider-prices slider-prices";
