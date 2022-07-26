@@ -7,9 +7,7 @@
 @media (min-width: 768px){
     .used-car{
         padding-bottom: 70px;
-        .filter-wrapper{
-            margin-bottom: 70px;
-        }
+ 
     }
     .used-car-list{
         grid-template-columns: repeat(3,1fr);
@@ -18,9 +16,7 @@
 @media (min-width: 992px){
     .used-car{
         padding-bottom: 80px;
-        .filter-wrapper{
-            margin-bottom: 80px;
-        }
+
     }
     .used-car-list{
         grid-template-columns: repeat(4,1fr);
@@ -30,9 +26,7 @@
 @media (min-width: 1200px){
     .used-car{
         padding-bottom: 96px;
-        .filter-wrapper{
-            margin-bottom: 96px;
-        }
+
     }
     .used-car-list{
         grid-template-columns: repeat(5,1fr);

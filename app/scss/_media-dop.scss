@@ -1,0 +1,228 @@
+//Дополнительные стили / правки в css (это рабочие стили из интеграции, просто хочу добавить в верстку)
+/* нужен скрол, если слишком дофига элементов */
+.custom-select .select-options {
+    max-height: 442px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+  
+  .custom-select .select-options::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-select .select-options::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-select .select-options::-webkit-scrollbar-thumb {
+    background-color: #e9e7e7;
+    border-radius: 4px;
+    border: transparent;
+  }
+  
+  /* left и right устанавливает скрипт. В крайнем положении 0. Поэтому смещение через margin */
+  .bx-ui-slider-handle.left {
+    left: 0;
+    margin: 0 0 0 -15px;
+  }
+  
+  .bx-ui-slider-handle.right {
+    right: 0;
+    margin: 0 -15px 0 0;
+  }
+  
+  /* должен быть выше всех */
+  .bx-ui-slider-range {
+    z-index: 50;
+  }
+  
+  /* нужно для фильтра */
+  .filter .custom-select .select-options li.disabled {
+    display: none;
+  }
+  
+  .filter .custom-select .select-options li:first-child {
+    position: relative;
+    display: flex;
+  }
+  
+  .filter .custom-select .select-options li:first-child::before {
+    content: "✖";
+    margin: 0 6px 0 0;
+    color: #ccc;
+    transition: all 0.25s;
+  }
+  
+  .filter .custom-select .select-options li:first-child:hover::before {
+    color: #ff1e26;
+  }
+  
+  /* чекбоксы для фильтра */
+  .filter-checkbox {
+    position: relative;
+    flex: 1 1 170px;
+    height: 48px;
+  }
+  
+  .filter-checkbox-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 13px 48px 11px 16px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #9b9b9b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #fff;
+    border: 1.5px solid #9b9b9b;
+    overflow: hidden;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  
+  .filter-checkbox-name.active {
+    color: #242424;
+    border-color: #ff1e26;
+    border-bottom-color: transparent;
+  }
+  
+  .filter-checkbox-name::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/svg/chevron-down.svg) center / 20px 20px no-repeat #fff;
+  }
+  
+  .filter-checkbox-name.active::after {
+    transform: rotate(180deg);
+  }
+  
+  .filter-checkbox-items {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 442px;
+    background-color: #fff;
+    border: 1.5px solid #ff1e26;
+    border-top: none;
+    opacity: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    transition: 0.25s;
+  }
+  
+  .filter-checkbox-items::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .filter-checkbox-items::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .filter-checkbox-items::-webkit-scrollbar-thumb {
+    background-color: #e9e7e7;
+    border-radius: 4px;
+    border: transparent;
+  }
+  
+  .filter-checkbox-name:not(.active) + .filter-checkbox-items {
+    height: 0;
+    opacity: 0;
+  }
+  
+  .filter-checkbox-item {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    padding: 14px 24px 14px 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #242424;
+    border-top: 1px solid #e6e6e6;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  
+  .filter-checkbox-item:hover {
+    color: #ff1e26;
+    background: #f6f6f9;
+  }
+  
+  .filter-checkbox-item.disabled {
+    display: none;
+  }
+  
+  .filter-checkbox-item-clear::before {
+    content: "✖";
+    width: 20px;
+    color: #ccc;
+    text-align: center;
+  }
+  
+  .filter-checkbox-item-clear:hover::before {
+    color: #ff1e26;
+  }
+  
+  .filter-checkbox-item input {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .filter-checkbox-item-display {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1.5px solid #9b9b9b;
+  }
+  
+  .filter-checkbox-item input:checked + .filter-checkbox-item-display::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #ff1e26;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (min-width: 768px) {
+    .filter-checkbox-name {
+      padding: 13px 48px 11px 24px;
+    }
+  
+    .filter-checkbox-item {
+      padding: 14px 24px 14px 24px;
+    }
+  
+    .filter-checkbox-item input {
+      left: 24px;
+    }
+  }
+  
+  /* если кнопка вместо ссылки */
+  .footer-top-item {
+    background: transparent;
+    outline: none;
+  }
+  
+  /* ссылка внутри блока, а не сам блок */
+  .footer-bottom-item a {
+    color: #fff;
+  }
+  

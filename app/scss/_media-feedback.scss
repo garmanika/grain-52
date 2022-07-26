@@ -1,21 +1,18 @@
-@media (min-width: 768px) {
+@media (min-width:768px) {
 	.feedback-slider-inner .swiper-pagination-bullet {
-		margin-top: 28px
+	  margin-top: 28px
 	}
-
 	.feedback {
-		margin-bottom: 70px;
+	  margin-bottom: 70px
 	}
-}
-
-@media (min-width: 992px) {
+  }
+  @media (min-width:992px) {
 	.feedback {
-		margin-bottom: 80px;
+	  margin-bottom: 80px
 	}
-}
-
-@media (min-width: 1200px) {
+  }
+  @media (min-width:1200px) {
 	.feedback {
-		margin-bottom: 96px;
+	  margin-bottom: 96px
 	}
-}
+  }

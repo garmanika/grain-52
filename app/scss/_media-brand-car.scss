@@ -3,9 +3,7 @@
 @media (min-width: 768px) {
     .brand-car {
         padding-bottom: 70px;
-        .filter-wrapper{
-            margin-bottom: 70px;
-        }
+
     }
     .brand-car-items{
         grid-template-columns: repeat(2,1fr);
@@ -18,17 +16,13 @@
 @media (min-width: 992px) {
     .brand-car {
         padding-bottom: 80px;
-        .filter-wrapper{
-            margin-bottom: 80px;
-        }
+
     }
 }
 @media (min-width: 1200px) {
     .brand-car {
         padding-bottom: 96px;
-        .filter-wrapper{
-            margin-bottom: 96px;
-        }
+
     }
     .brand-car-items{
         grid-template-columns: repeat(3,1fr);

@@ -1,5 +1,23 @@
 $(function () {
-  $.fancybox.defaults.backFocus = false
+  $(".faq-item-item-head").on("click", function () {
+    $(this).siblings('.faq-item-item-body').slideToggle();
+    $(this).siblings('.faq-item-item-icon').toggleClass('active');
+  })
+  $(".info-car-tab-head").on("click", function () {
+    $(this).siblings('.info-car-tab-body').fadeToggle();
+    $(this).toggleClass('active');
+  })
+  $(".file-upload").change(function () {
+    var filepath = this.value;
+    var m = filepath.match(/([^\/\\]+)$/);
+    var filename = m[1];
+    $(this)
+      .closest(".file-upload-wrapper")
+      .find(".filename")
+      .html(filename)
+      .addClass("selecte");
+  });
+  $.fancybox.defaults.backFocus = false;
   let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-bottom");
 
@@ -46,6 +64,7 @@ $(function () {
   $(".header-inner-mobile .is-parent").on("click", function () {
     $(this).siblings(".is-parent.active").removeClass("active");
   });
+
   $(window).on("scroll", function () {
     let height = $(document).scrollTop().valueOf();
     if (height >= 160) {
@@ -54,14 +73,14 @@ $(function () {
       $(".header").removeClass("sticky");
     }
   });
-  $('.gallery').each(function () {
+  $(".gallery").each(function () {
     let section = $(this);
-    new Swiper(section.find('.gallery-slider')[0], {
+    new Swiper(section.find(".gallery-slider")[0], {
       spaceBetween: 30,
       watchOverflow: true,
       navigation: {
-        nextEl: section.find('.slider-next')[0],
-        prevEl: section.find('.slider-prev')[0],
+        nextEl: section.find(".slider-next")[0],
+        prevEl: section.find(".slider-prev")[0],
       },
       pagination: {
         el: ".gallery-slider .swiper-pagination",
@@ -142,11 +161,6 @@ $(function () {
   });
   const swiper3 = new Swiper(".model-description-slider-color", {
     loop: false,
-    watchOverflow: true,
-
-    fadeEffect: {
-      crossFade: true,
-    },
     breakpoints: {
       320: {
         slidesPerView: 6,
@@ -155,7 +169,7 @@ $(function () {
       },
       768: {
         spaceBetween: 15,
-      }
+      },
     },
   });
   const swiper4 = new Swiper(".model-description-slider-car", {
@@ -181,7 +195,7 @@ $(function () {
   const swiper5 = new Swiper(".model-description-stock-slider", {
     loop: false,
     watchOverflow: true,
-    
+
     pagination: {
       el: ".model-description-stock-slider-inner .swiper-pagination",
       type: "bullets",
@@ -203,12 +217,12 @@ $(function () {
         spaceBetween: 30,
         slidesPerGroup: 3,
       },
-
     },
   });
   const swiper7 = new Swiper(".model-detail-slider-tb", {
     loop: false,
     watchOverflow: true,
+
     navigation: {
       nextEl: ".model-detail-slider-tb-inner .slider-next",
       prevEl: ".model-detail-slider-tb-inner .slider-prev",
@@ -235,8 +249,6 @@ $(function () {
   const swiper6 = new Swiper(".model-detail-slider", {
     loop: false,
     watchOverflow: true,
-    speed: 0,
-    effect: "fade",
     fadeEffect: {
       crossFade: true,
     },
@@ -256,7 +268,6 @@ $(function () {
       },
     },
   });
-
 
   indexFeedbackSlider = new Swiper(".feedback-slider-inner > .swiper", {
     loop: false,
@@ -328,7 +339,7 @@ $(function () {
       numberOfOptions = $(this).children("option").length;
     $this.addClass("select-hidden");
     $this.wrap('<div class="select"></div>');
-    $this.after('<div class="select-styled"></div>');
+    $this.after('<div class="select-styled req"></div>');
 
     let $styledSelect = $this.next("div.select-styled");
     $styledSelect.text($this.children("option:selected").text());
@@ -338,24 +349,22 @@ $(function () {
     }).insertAfter($styledSelect);
 
     for (let i = 0; i < numberOfOptions; i++) {
-      let itemClass = '';
+      let itemClass = "";
       let curOption = $this.children("option").eq(i);
-      if (curOption.is(':disabled')) {
-        itemClass = 'disabled';
+      if (curOption.is(":disabled")) {
+        itemClass = "disabled";
       }
       $("<li />", {
         text: curOption.text(),
         rel: curOption.val(),
-        class: itemClass
+        class: itemClass,
       }).appendTo($list);
       //if ($this.children('option').eq(i).is(':selected')){
       //  $('li[rel="' + $this.children('option').eq(i).val() + '"]').addClass('is-selected')
       //}
     }
 
-
     let $listItems = $list.children("li");
-
     $styledSelect.click(function (e) {
       e.stopPropagation();
       $("div.select-styled.active")
@@ -381,4 +390,35 @@ $(function () {
       $list.hide();
     });
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // filter checkbox dropdown
+  let filterCheckboxTriggers = document.querySelectorAll(
+    ".filter-checkbox-name"
+  );
+  if (filterCheckboxTriggers.length > 0) {
+    for (let trigger of filterCheckboxTriggers) {
+      trigger.addEventListener("click", function () {
+        if (trigger.classList.contains("active")) {
+          trigger.classList.remove("active");
+        } else {
+          for (let activeTrigger of document.querySelectorAll(
+            ".filter-checkbox-name.active"
+          )) {
+            activeTrigger.classList.remove("active");
+          }
+          trigger.classList.add("active");
+        }
+      });
+    }
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".filter-checkbox")) {
+        for (let activeTrigger of document.querySelectorAll(
+          ".filter-checkbox-name.active"
+        )) {
+          activeTrigger.classList.remove("active");
+        }
+      }
+    });
+  }
 });

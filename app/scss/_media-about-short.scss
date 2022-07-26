@@ -1,192 +1,150 @@
-@media (min-width: 576px) {
+@media (min-width:576px) {
 	.about-short-info-title {
-		font-size: 24px;
-		line-height: 40px
+	  font-size: 24px;
+	  line-height: 40px
 	}
-
 	.about-short {
-		padding: 60px 0 90px
+	  padding: 60px 0 90px
 	}
-
 	.about-short-img {
-		margin-right: 30px
+	  margin-right: 30px
 	}
-
 	.image-caption {
-		margin: 0;
-		position: absolute;
-		right: 0;
-		bottom: -30px
+	  margin: 0;
+	  position: absolute;
+	  right: 0;
+	  bottom: -30px
 	}
-
 	.about-short-img img {
-		width: 100%
+	  width: 100%
 	}
-}
-
-@media (min-width: 768px) {
+  }
+  @media (min-width:768px) {
 	.about-short-info-title {
-		font-size: 28px;
-		line-height: 40px;
-		margin-bottom: 48px
-	}	
-	.about-short{
-		margin-bottom: 70px;
+	  font-size: 28px;
+	  line-height: 40px;
+	  margin-bottom: 48px
 	}
-
 	.about-short {
-		padding: 78px 0 100px
+	  margin-bottom: 70px;
+	  padding: 78px 0 100px
 	}
-
 	.image-caption {
-		max-width: 230px
+	  max-width: 230px
 	}
-
 	.image-caption-info-number {
-		margin-top: 16px
+	  margin-top: 16px
 	}
-
 	.about-short-inner {
-		gap: 48px
+	  gap: 48px
 	}
-}
-
-@media (min-width: 992px) {
-	.about-short{
-		margin-bottom: 80px;
+  }
+  @media (min-width:992px) {
+	.about-short {
+	  margin-bottom: 80px;
+	  padding: 98px 0 125px
 	}
 	.about-short-info-title {
-		font-size: 32px;
-		line-height: 40px
+	  font-size: 32px;
+	  line-height: 40px
 	}
-
-	.about-short {
-		padding: 98px 0 125px
-	}
-
 	.image-caption {
-		padding: 50px 30px
+	  padding: 50px 30px
 	}
-
 	.about-short-inner {
-		gap: 50px;
-		grid-template-columns: minmax(auto, 495px) minmax(auto, 410px);
-		justify-content: space-between
+	  gap: 50px;
+	  grid-template-columns: minmax(auto,495px) minmax(auto,410px);
+	  justify-content: space-between
 	}
-
 	.about-short-img picture::before {
-		content: "";
-		position: absolute;
-		left: -30px;
-		top: 50%;
-		transform: translate(0, 50%);
-		width: 120px;
-		height: 2px;
-		background: #bdbdbd;
-		z-index: 1
+	  content: "";
+	  position: absolute;
+	  left: -30px;
+	  top: 50%;
+	  transform: translate(0,50%);
+	  width: 120px;
+	  height: 2px;
+	  background: #bdbdbd;
+	  z-index: 1
 	}
-
 	.about-short-inner.left .about-short-img {
-		order: 0;
-		margin-right: 0;
-		margin-left: 40px
+	  order: 0;
+	  margin-right: 0;
+	  margin-left: 40px
 	}
-
 	.about-short-inner.left .image-caption {
-		left: 0
+	  left: 0
 	}
-
 	.about-short-inner.left .about-short-info {
-		order: 1
+	  order: 1
 	}
-
 	.about-short-inner.left .about-short-img::before {
-		left: auto;
-		right: -30px
+	  left: auto;
+	  right: -30px
 	}
-
 	.about-short-inner.center {
-		align-items: center
+	  align-items: center
 	}
-
 	.about-short-inner.center .about-short-info {
-		padding-top: 0
+	  padding-top: 0
 	}
-
 	.about-short-img img,
 	.about-short-img picture {
-		max-height: 460px;
-		object-fit: cover;
+	  max-height: 460px;
+	  object-fit: cover
 	}
-}
-
-@media (min-width: 1200px) {
-	.about-short{
-		margin-bottom: 96px;
-	}
+  }
+  @media (min-width:1200px) {
 	.about-short {
-		padding-bottom: 111px
+	  margin-bottom: 96px;
+	  padding-bottom: 111px
 	}
-
 	.image-caption {
-		max-width: 250px
+	  max-width: 250px
 	}
-
 	.image-caption-info {
-		font-size: 20px;
-		line-height: 28px
+	  font-size: 20px;
+	  line-height: 28px
 	}
-
 	.about-short-img {
-		margin-right: 60px
+	  margin-right: 60px
 	}
-
 	.about-short-inner {
-		gap: 170px;
-		grid-template-columns: minmax(auto, 520px) minmax(auto, 520px);
-		grid-template-columns: minmax(auto, 495px) minmax(auto, 420px)
+	  gap: 170px;
+	  grid-template-columns: minmax(auto,520px) minmax(auto,520px);
+	  grid-template-columns: minmax(auto,495px) minmax(auto,420px)
 	}
-
 	.about-short-info {
-		padding-top: 15px
+	  padding-top: 15px
 	}
-
 	.about-short-img picture::before {
-		left: -60px
+	  left: -60px
 	}
-
 	.about-short-inner.left .about-short-img {
-		margin-left: 40px
+	  margin-left: 40px
 	}
-
 	.about-short-inner .about-short-img {
-		margin-right: 40px
+	  margin-right: 40px
 	}
-}
-
-@media (min-width: 1400px) {
+  }
+  @media (min-width:1400px) {
 	.about-short-inner.left .about-short-img {
-		margin-left: 60px
+	  margin-left: 60px
 	}
-
 	.about-short-inner .about-short-img {
-		margin-right: 60px
+	  margin-right: 60px
 	}
-
 	.about-short {
-		padding: 96px 0 120px
+	  padding: 96px 0 120px
 	}
-
 	.about-short-info {
-		padding-top: 60px
+	  padding-top: 60px
 	}
-
 	.about-short-inner {
-		grid-template-columns: minmax(auto, 520px) minmax(auto, 520px)
+	  grid-template-columns: minmax(auto,520px) minmax(auto,520px)
 	}
-
 	.about-short-img img,
 	.about-short-img picture {
-		max-height: 560px
+	  max-height: 560px
 	}
-}
+  }
