@@ -1,12 +1,15 @@
 $(function () {
-  $(".faq-item-item-head").on("click", function () {
-    $(this).siblings('.faq-item-item-body').slideToggle();
-    $(this).siblings('.faq-item-item-icon').toggleClass('active');
-  })
-  $(".info-car-tab-head").on("click", function () {
-    $(this).siblings('.info-car-tab-body').fadeToggle();
+  $(".faq-item-item").on("click", function () {
     $(this).toggleClass('active');
-  })
+    $(this).find(".faq-item-item-body").slideToggle();
+    $(this).find(".faq-item-item-icon").toggleClass("active");
+  });
+
+  $(".info-car-tab-head").on("click", function () {
+    $(this).siblings(".info-car-tab-body").fadeToggle();
+    $(this).toggleClass("active");
+  });
+
   $(".file-upload").change(function () {
     var filepath = this.value;
     var m = filepath.match(/([^\/\\]+)$/);
@@ -15,9 +18,16 @@ $(function () {
       .closest(".file-upload-wrapper")
       .find(".filename")
       .html(filename)
+      .closest(".file-upload-filename-box")
       .addClass("selecte");
   });
+  $(".file-upload-filename-btn").on("click", function () {
+    $(this).siblings(".filename ").text(" ");
+    $(".file-upload").val("");
+    $(this).closest(".file-upload-filename-box").removeClass("selecte");
+  });
   $.fancybox.defaults.backFocus = false;
+
   let mobileNavTrigger = $(".menu-btn");
   let mobileNav = $(".header-bottom");
 
@@ -161,6 +171,8 @@ $(function () {
   });
   const swiper3 = new Swiper(".model-description-slider-color", {
     loop: false,
+    grabCursor: false,
+    allowTouchMove: false,
     breakpoints: {
       320: {
         slidesPerView: 6,

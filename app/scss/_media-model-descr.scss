@@ -113,10 +113,13 @@
     padding: 23px;
     top: -3.5px
   }
-  .model-description-slider-car-item-img img,
-  .model-description-slider-car-item-img picture {
-    height: 280px
-  }
+	.swiper-slide-active {
+		.model-description-slider-car-item-img img,
+		.model-description-slider-car-item-img picture {
+			height: 280px
+		}
+	}
+
   .model-description-slider-color-item {
     height: 46px;
     width: 46px
@@ -183,10 +186,13 @@
   .model-description-links {
     margin-bottom: 80px
   }
-  .model-description-slider-car-item-img img,
-  .model-description-slider-car-item-img picture {
-    height: 350px
-  }
+	.swiper-slide-active {
+		.model-description-slider-car-item-img img,
+		.model-description-slider-car-item-img picture {
+			height: 350px
+		}
+	}
+
   .model-detail-slider-tb-inner {
     padding-left: 65px;
     padding-right: 65px

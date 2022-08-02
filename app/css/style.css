@@ -1001,7 +1001,7 @@ ul.mobile-navigation-menu > li a.active::before {
 .services-item {
   border: 2px solid #575656;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 5px;
   display: block;
   transition: .25s
 }
@@ -2634,7 +2634,9 @@ ul.mobile-navigation-menu > li a.active::before {
   padding: 10px 16px;
   color: #242424;
   border: 1.5px solid #9b9b9b;
-  transition: .25s
+  transition: .25s;
+  width: 100%;
+  height: 48px
 }
 .web-input::placeholder {
   color: #9b9b9b
@@ -3558,6 +3560,7 @@ ul.mobile-navigation-menu > li a.active::before {
   }
 }
 .no-padding {
+  margin: 0;
   padding: 0
 }
 .contacts {
@@ -3817,7 +3820,7 @@ ul.mobile-navigation-menu > li a.active::before {
   z-index: 0
 }
 .page-bg.buyback {
-  height: 548px
+  height: 100%
 }
 .page-bg img,
 .page-bg picture {
@@ -3828,6 +3831,10 @@ ul.mobile-navigation-menu > li a.active::before {
 }
 .model-description-slider-car-item-img img,
 .model-description-slider-car-item-img picture {
+  display: none
+}
+.swiper-slide-active .model-description-slider-car-item-img img,
+.swiper-slide-active .model-description-slider-car-item-img picture {
   display: block;
   height: 140px;
   object-fit: cover;
@@ -4671,8 +4678,8 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
     padding: 23px;
     top: -3.5px
   }
-  .model-description-slider-car-item-img img,
-  .model-description-slider-car-item-img picture {
+  .swiper-slide-active .model-description-slider-car-item-img img,
+  .swiper-slide-active .model-description-slider-car-item-img picture {
     height: 280px
   }
   .model-description-slider-color-item {
@@ -4739,8 +4746,8 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   .model-description-links {
     margin-bottom: 80px
   }
-  .model-description-slider-car-item-img img,
-  .model-description-slider-car-item-img picture {
+  .swiper-slide-active .model-description-slider-car-item-img img,
+  .swiper-slide-active .model-description-slider-car-item-img picture {
     height: 350px
   }
   .model-detail-slider-tb-inner {
@@ -4933,9 +4940,6 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   flex-direction: column;
   gap: 15px
 }
-.stock-items-more .air {
-  display: none
-}
 .stock-items-more .btn {
   width: 100%;
   display: block
@@ -4980,6 +4984,18 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   color: #ff1e26
 }
 @media (min-width:768px) {
+  .stock-items-more {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px
+  }
+  .stock-items-more-button {
+    grid-column: 1/2
+  }
+  .stock-items-more-pagination {
+    grid-column: 2/3;
+    justify-content: end
+  }
   .stock-items-wrapper {
     margin-bottom: 70px
   }
@@ -5017,6 +5033,17 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
 }
 @media (min-width:1200px) {
+  .stock-items-more {
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: 64px
+  }
+  .stock-items-more-button {
+    grid-column: 2/3
+  }
+  .stock-items-more-pagination {
+    grid-column: 3/4;
+    justify-content: end
+  }
   .stock-items-wrapper {
     margin-bottom: 96px
   }
@@ -5028,19 +5055,12 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
     padding-left: 24px;
     padding-right: 30px
   }
-  .stock-items-more {
-    margin-top: 64px
-  }
   .stock-items {
     grid-template-columns: repeat(3,1fr);
     gap: 64px 45px
   }
 }
 @media (min-width:1400px) {
-  .stock-items-more .air {
-    display: block;
-    flex-basis: 34%
-  }
   .stock-items-more {
     gap: 64px
   }
@@ -5066,24 +5086,29 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   grid-template-columns: 1fr;
   gap: 15px
 }
-.info-car .filter-control,
 .info-car-box.hidden {
   display: grid
 }
+.info-car {
+  margin-bottom: 60px
+}
+.info-car .filter-wrapper {
+  padding: 40px 15px
+}
+.info-car .filter-control {
+  display: grid;
+  gap: 0;
+  grid-template-areas: auto
+}
+.info-car .filter-body-items {
+  display: block
+}
 .info-car .filter-control-link-more {
-  justify-content: center;
   grid-area: auto;
   margin: 32px auto 24px;
   text-align: left;
   position: relative;
   padding-left: 40px
-}
-.info-car .filter-body-items {
-  display: block
-}
-.info-car .filter-control {
-  gap: 0;
-  grid-template-areas: auto
 }
 .info-car .web-input {
   width: 100%
@@ -5106,17 +5131,24 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   top: 0;
   cursor: pointer;
   left: 0;
-  padding: 12px 16px;
+  padding: 13px 16px 10px;
   display: none;
   width: 100%;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  color: #9b9b9b
+  color: #9b9b9b;
+  height: 48px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 .web-form-item label span {
   color: #ff1e26;
-  font-weight: 500
+  font-weight: 500;
+  position: relative;
+  top: -1px;
+  right: -1px
 }
 .web-form-item input:placeholder-shown + label.web-form-label-desk,
 .web-form-item textarea:placeholder-shown + label.web-form-label-desk {
@@ -5124,6 +5156,10 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 }
 .web-form-item input:placeholder-shown ~ label.web-form-label-mob,
 .web-form-item textarea:placeholder-shown ~ label.web-form-label-mob {
+  display: block
+}
+.web-form-item input:placeholder-shown ~ label.web-form-label-sole,
+.web-form-item textarea:placeholder-shown ~ label.web-form-label-sole {
   display: block
 }
 .about-short-inner.simple .about-short-img {
@@ -5139,34 +5175,26 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 .procedures {
   margin-bottom: 60px
 }
-.procedures-items {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 50px;
-  justify-items: center;
-  position: relative
-}
-.procedures-items::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  background-color: #575656;
-  z-index: 0
+.procedures-items > .row > div + div {
+  display: flex;
+  margin: 60px 0 0;
+  flex-direction: column
 }
 .procedures-item {
   position: relative;
   z-index: 1;
-  background: #f6f6f9;
-  padding: 10px 0;
   width: 100%
 }
-.procedures-item:first-child {
-  padding-top: 0
-}
-.procedures-item:last-child {
-  padding-bottom: 0
+.procedures-items > .row > div + div .procedures-item::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: calc(50% - 1px);
+  display: block;
+  width: 2px;
+  height: 30px;
+  margin: 0 0 15px;
+  background-color: #575656
 }
 .procedures-item-head-bubble {
   width: 64px;
@@ -5211,20 +5239,23 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   font-size: 18px;
   line-height: 24px;
   color: #242424;
-  text-transform: capitalize
+  text-transform: inherit
+}
+.buyback-car {
+  position: relative
+}
+.buyback-car-box {
+  position: relative;
+  z-index: 1
 }
 .buyback-car-img {
   position: relative;
-  height: 0;
-  padding-bottom: 52%
+  max-width: 380px;
+  margin: 0 auto 60px
 }
 .buyback-car-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover
+  max-width: 100%;
+  height: auto
 }
 .buyback-car-img-info {
   background: #ffc700;
@@ -5235,7 +5266,7 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 2px;
+  right: 0;
   top: 0;
   flex-direction: column;
   font-family: Oswald,sans-serif;
@@ -5254,14 +5285,18 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   font-weight: 200
 }
 .buyback-title {
-  margin-bottom: 66px
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1
 }
-.buyback-car-inner {
-  margin-bottom: 65px
+.buyback-title .page-title {
+  margin: 0
 }
 .buyback-car-form {
   background: #575656;
-  padding: 40px 0
+  padding: 40px 0;
+  position: relative;
+  z-index: 1
 }
 .buyback-car-form-title {
   font-weight: 500;
@@ -5303,7 +5338,6 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   position: relative
 }
 .buyback-car {
-  z-index: 1;
   margin-bottom: 60px
 }
 .faq {
@@ -5312,19 +5346,13 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   margin-bottom: 60px
 }
 .faq-item-item {
+  padding: 40px 30px;
   background: #fff;
   position: relative;
-  padding-bottom: 40px
-}
-.faq-item-item-head {
-  padding-top: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
   cursor: pointer
 }
-.faq-item-item-body {
-  padding-left: 30px;
-  padding-right: 30px
+.faq-item-item-head {
+  transition: .5s
 }
 .faq-items {
   display: grid;
@@ -5348,8 +5376,11 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   color: #000
 }
 .faq-item-item-body {
-  margin-top: 16px;
+  padding-right: 32px;
   display: none
+}
+.faq-item-item.active .faq-item-item-head {
+  padding-bottom: 16px
 }
 .faq-item-item-icon {
   position: absolute;
@@ -5391,8 +5422,9 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 }
 .sliders.buyback img {
   width: 100%;
-  height: 100%;
-  object-fit: cover
+  height: 300px;
+  object-fit: cover;
+  display: block
 }
 .sliders.buyback .sliders-info-wrapper {
   height: auto;
@@ -5478,55 +5510,99 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   gap: 24px
 }
 .file-upload-wrapper {
-  position: relative;
-  outline: 0;
-  box-shadow: none;
-  height: 48px;
-  font-size: 14px;
-  line-height: 20px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  padding: 13px 20px;
-  width: 100%
-}
-.file-upload-wrapper .filename {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  font-size: 14px;
-  line-height: 20px;
-  color: #818490;
-  position: absolute;
-  padding-right: 40px;
-  top: 13px;
-  left: 0;
-  padding-left: 20px
-}
-.file-upload-wrapper .filename span {
-  font-size: 18px
-}
-.file-upload-wrapper label {
-  cursor: pointer
+  position: relative
 }
 .file-upload-wrapper .file-upload {
   position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
-  height: 100%;
-  width: 100%
+  height: 0;
+  overflow: hidden;
+  cursor: pointer
 }
-.file-upload-wrapper .icon {
-  display: block;
-  width: 24px;
-  height: 24px;
+.file-upload-title {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424;
+  padding-left: 32px;
+  align-items: end;
+  position: relative;
+  cursor: pointer
+}
+.file-upload-title img,
+.file-upload-title svg {
   position: absolute;
-  top: 12px;
-  right: 13px
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: cover
+}
+.file-upload-title img path,
+.file-upload-title svg path {
+  stroke: #ccc
+}
+.file-upload-filename-btn {
+  display: none
+}
+.file-upload-filename-box.selecte {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  margin-top: 16px
+}
+.file-upload-filename-box.selecte .file-upload-filename-btn {
+  display: block;
+  background: 0 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 4;
+  cursor: pointer
+}
+.filename {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9b9b9b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.buyback-car-box-box {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+@media (min-width:576px) {
+  .buyback-car-box-box {
+    max-width: 540px
+  }
 }
 @media (min-width:768px) {
+  .info-car .filter-control-link-more {
+    justify-content: center
+  }
+  .buyback-car-box-box {
+    max-width: 720px
+  }
+  .page-bg.buyback {
+    height: calc(100% - 374px)
+  }
+  .info-car .filter-wrapper {
+    padding: 48px 30px
+  }
+  .info-car {
+    margin-bottom: 70px
+  }
+  .sliders.buyback img {
+    height: 100%
+  }
   .feedback-short-info-title {
     font-size: 24px
   }
@@ -5562,7 +5638,7 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
   .web-form-item input:placeholder-shown + label.web-form-label-desk,
   .web-form-item textarea:placeholder-shown + label.web-form-label-desk {
-    display: block
+    display: flex
   }
   .web-form-item input:placeholder-shown ~ label.web-form-label-mob,
   .web-form-item textarea:placeholder-shown ~ label.web-form-label-mob {
@@ -5585,53 +5661,46 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
     padding: 70px 0
   }
   .web-form-item label {
-    padding-left: 25px
+    padding-left: 24px
   }
-  .procedures-items {
-    grid-template-columns: repeat(3,1fr)
+  .procedures-items > .row > div + div {
+    margin: 0
   }
-  .procedures-items::before {
-    width: 100%;
+  .procedures-items > .row > div.col-md-4:nth-child(n+4) {
+    margin: 60px 0 0
+  }
+  .procedures-items > .row > div + div .procedures-item::before {
+    top: 31px;
+    right: 50%;
+    bottom: auto;
+    left: auto;
+    display: block;
+    width: calc(100% - 72px);
     height: 2px;
-    left: 0;
-    top: 32px
+    margin: 0 47px 0 0
+  }
+  .procedures-items > .row > div.col-md-4:nth-child(3n+1) .procedures-item::before {
+    display: none
   }
   .procedures-item {
-    padding: 0;
-    position: relative;
-    background-color: transparent
+    background-color: transparent;
+    padding: 0
   }
   .buyback-title {
-    margin-bottom: 11px
-  }
-  .buyback-car-img img {
-    height: 321px;
-    position: static;
-    object-fit: contain
+    margin-bottom: 30px
   }
   .buyback-car-img {
-    height: auto;
-    padding: 0
+    max-width: 580px
   }
   .buyback-car-img-info {
     width: 140px;
     height: 140px;
     font-size: 32px;
-    line-height: 24px;
-    top: 9px;
-    right: 2px
+    line-height: 24px
   }
   .buyback-car-img-info span {
     font-size: 18px;
     line-height: 24px
-  }
-  .buyback-car-img {
-    width: fit-content;
-    margin: 0 auto
-  }
-  .buyback-car-inner {
-    min-height: 377px;
-    margin-bottom: 0
   }
   .buyback-car-form-inputs {
     grid-template-columns: repeat(2,1fr)
@@ -5655,6 +5724,30 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
 }
 @media (min-width:992px) {
+  .buyback-car-box-box {
+    max-width: 100%;
+    padding: 0
+  }
+  .buyback-car-inner {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto,410px);
+    width: 100%;
+    gap: 0 24px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px
+  }
+  .page-bg.buyback {
+    height: 100%
+  }
+  .info-car .filter-wrapper {
+    padding: 48px 60px
+  }
+  .info-car {
+    margin-bottom: 70px
+  }
   .feedback.bg {
     padding: 70px 0
   }
@@ -5673,22 +5766,41 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   .procedures-wrapper {
     padding: 80px 0
   }
-  .buyback-car-img img {
-    height: 407px
-  }
-  .buyback-car-img-info {
-    top: 52px;
-    right: 39px
-  }
   .buyback-car-img {
-    margin: 0 0 0 20px
+    margin-bottom: 0
   }
   .buyback-title {
-    margin-top: 50px;
-    margin-bottom: -70px
+    margin-top: 45px;
+    margin-bottom: 20px
+  }
+  .buyback-car-form-inputs {
+    grid-template-columns: 1fr
   }
 }
 @media (min-width:1200px) {
+  .buyback-car-inner {
+    max-width: 1140px;
+    gap: 0 48px
+  }
+  .info-car {
+    margin-bottom: 96px
+  }
+  .buyback-title {
+    margin-top: 50px;
+    margin-bottom: 10px
+  }
+  .procedures-items > .row > div.col-xl-2:nth-child(n+4) {
+    margin: 0
+  }
+  .procedures-items > .row > div.col-xl-2:nth-child(n+7) {
+    margin: 60px 0 0
+  }
+  .procedures-items > .row > div.col-xl-2:nth-child(3n+1) .procedures-item::before {
+    display: block
+  }
+  .procedures-items > .row > div.col-xl-2:nth-child(6n+1) .procedures-item::before {
+    display: none
+  }
   .feedback.bg {
     padding: 96px 0
   }
@@ -5697,7 +5809,7 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
   .feedback-short-inner {
     grid-template-columns: minmax(auto,481px) 1fr;
-    gap: 60px
+    gap: 30px
   }
   .feedback-short-info {
     grid-template-columns: 48px 1fr;
@@ -5727,8 +5839,8 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   .buyback-car {
     margin-bottom: 96px
   }
-  .buyback-car-form-inputs {
-    grid-template-columns: 1fr
+  .buyback-car-img {
+    max-width: 660px
   }
   .buyback-car-form .web-check {
     margin-top: 42px
@@ -5736,21 +5848,11 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   .buyback-car-form .btn {
     width: 100%
   }
-  .buyback-car-form {
-    position: absolute;
-    left: calc(50% + 145px);
-    top: 0;
-    width: 410px;
-    height: 548px
-  }
   .procedures {
     margin-bottom: 96px
   }
   .procedures-wrapper {
     padding: 96px 0
-  }
-  .info-car-box {
-    grid-template-columns: repeat(6,1fr)
   }
   .info-car .filter-control,
   .info-car .filter-control-link-more,
@@ -5768,8 +5870,14 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
 }
 @media (min-width:1400px) {
-  .buyback-car-form {
-    left: calc(50% + 235px)
+  .buyback-car-inner {
+    max-width: 1320px
+  }
+  .feedback-short-inner {
+    gap: 60px
+  }
+  .info-car-box {
+    grid-template-columns: repeat(6,1fr)
   }
   .about-short-inner.simple {
     grid-template-columns: minmax(auto,520px) minmax(auto,630px)
@@ -5777,6 +5885,429 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   .about-short-inner.simple.right {
     gap: 250px
   }
+}
+.service,
+.service .services-items,
+.service-brand {
+  margin-bottom: 60px
+}
+.service-brand-items {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px 5px
+}
+.service-brand-item {
+  text-align: center
+}
+.service-brand-item-img {
+  margin-bottom: 16px
+}
+.service-brand-item-img img {
+  height: 48px;
+  object-fit: contain
+}
+.service-brand-item-title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424
+}
+.service-brand .filter {
+  margin-bottom: 40px
+}
+.services-item-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #242424;
+  margin-top: 8px
+}
+.about-short-inner.simple {
+  margin-bottom: 60px
+}
+.service-brand-request-form {
+  border: 1.5px solid #575656;
+  padding: 40px 20px
+}
+.service-brand-request-form .web-check {
+  margin-bottom: 16px
+}
+.service-brand-request-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px
+}
+.service-brand-request-form-container {
+  order: -1
+}
+.service-brand-request-form-container .filter-control {
+  gap: 0;
+  grid-template-areas: auto;
+  display: grid
+}
+.service-brand-request-form-title {
+  font-family: Oswald,sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #242424;
+  margin-bottom: 32px
+}
+.service-brand-request-form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 32px
+}
+.service-brand-request-form-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px
+}
+.web-form-item textarea {
+  resize: none;
+  border: 1.5px solid #9b9b9b;
+  font-size: 16px;
+  line-height: 24px;
+  min-height: 96px;
+  padding: 10px 16px;
+  width: 100%
+}
+.web-form-item textarea:active,
+.web-form-item textarea:focus {
+  border-color: #ff1e26
+}
+.service-brand-maintenance {
+  margin-bottom: 60px
+}
+.service-brand-maintenance .about-icons-box {
+  margin-top: 0
+}
+.service-brand-maintenance-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 60px
+}
+.service-brand-price-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  gap: 30px
+}
+.service-brand-price-line:nth-child(odd) {
+  background: #f6f6f9
+}
+.service-brand-price-title {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424
+}
+.service-brand-price {
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff1e26
+}
+.service-brand-price span {
+  font-size: 20px
+}
+.service-brand-maintenance .service-brand-request-form {
+  padding: 40px 10px
+}
+.service-brand-maintenance .filter-control {
+  display: grid;
+  gap: 0
+}
+.service-brand .services-items {
+  grid-template-columns: 1fr
+}
+.service-another .services-items {
+  margin-bottom: 40px
+}
+@media (min-width:768px) {
+  .service-brand .services-items {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr)
+  }
+  .service-brand-maintenance,
+  .service-brand-maintenance-inner {
+    margin-bottom: 70px
+  }
+  .service-brand .filter {
+    margin-bottom: 30px
+  }
+  .web-form-item textarea {
+    padding-left: 24px
+  }
+  .service,
+  .service .services-items,
+  .service-brand {
+    margin-bottom: 70px
+  }
+  .service-brand-items {
+    grid-template-columns: repeat(7,1fr);
+    gap: 48px 15px
+  }
+  .service-brand-item-img img {
+    height: 64px
+  }
+  .about-short-inner.simple {
+    margin-bottom: 70px
+  }
+  .service-brand-request-form-box {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .service-brand-request-form {
+    padding: 40px 50px
+  }
+  .service-brand-maintenance-inner {
+    gap: 48px
+  }
+  .service-brand-price-line {
+    padding: 15px 30px
+  }
+  .service-brand-maintenance .service-brand-request-form {
+    padding: 40px 30px
+  }
+  .service-another .services-items {
+    margin-bottom: 48px
+  }
+}
+@media (min-width:992px) {
+  .about-short-inner.simple,
+  .service,
+  .service-brand,
+  .service-brand-maintenance,
+  .service-brand-maintenance-inner {
+    margin-bottom: 80px
+  }
+  .service-brand-request-form {
+    padding: 40px 30px
+  }
+  .service-another .services-items {
+    margin-bottom: 64px
+  }
+  .service-brand-maintenance-inner {
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px
+  }
+  .service-brand-request-inner {
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 960px
+  }
+  .service-brand-request-inner .map {
+    height: 100%
+  }
+  .service-brand-request-form-container {
+    order: 0;
+    padding: 0
+  }
+  .service-brand-request-form-container .filter-control .btn {
+    width: 100%
+  }
+}
+@media (min-width:1200px) {
+  .about-short-inner.simple,
+  .service,
+  .service-brand,
+  .service-brand-maintenance,
+  .service-brand-maintenance-inner {
+    margin-bottom: 96px
+  }
+  .service .services-items,
+  .service-brand .filter {
+    margin-bottom: 64px
+  }
+  .service-brand-items {
+    grid-template-columns: repeat(10,1fr)
+  }
+  .service-brand-request-inner {
+    grid-template-columns: 1fr minmax(auto,409px);
+    max-width: 1140px;
+    gap: 30px
+  }
+}
+@media (min-width:1400px) {
+  .service-brand-request-inner {
+    max-width: 1320px;
+    gap: 60px
+  }
+}
+.action .sliders {
+  margin-bottom: 40px
+}
+.action .list-title {
+  margin: 12px 0
+}
+.action .about h4 {
+  margin: 32px 0
+}
+.action .about ul {
+  margin: 12px 0 24px
+}
+.action .about ul li p {
+  margin: 12px 0
+}
+.action .req {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ff1e26
+}
+.page-prev {
+  margin-top: 40px
+}
+.page-prev .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px
+}
+.page-prev .btn svg path {
+  transition: .4s
+}
+.page-prev .btn:focus svg path,
+.page-prev .btn:hover svg path {
+  stroke: #242424
+}
+ul.actions-list {
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  gap: 40px;
+  padding-bottom: 10px;
+  margin-bottom: 20px
+}
+ul.actions-list::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+  padding: 23px 0;
+  box-shadow: 0 -5px 10px rgba(0,0,0,.1)
+}
+ul.actions-list::-webkit-scrollbar-track {
+  background: #eee
+}
+ul.actions-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 15px;
+  border: transparent
+}
+ul.actions-list::-webkit-scrollbar-thumb:hover {
+  background-color: #1f1d1e
+}
+ul.actions-list li a {
+  font-family: Oswald,sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  position: relative;
+  transition: .4s
+}
+ul.actions-list li a:focus,
+ul.actions-list li a:hover {
+  color: #242424
+}
+ul.actions-list li a:focus::before,
+ul.actions-list li a:hover::before {
+  opacity: 1
+}
+ul.actions-list li a::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  background-color: #ff1e26;
+  height: 2px;
+  width: 100%;
+  opacity: 0;
+  transition: .4s
+}
+ul.actions-list li.active a {
+  font-weight: 500;
+  color: #242424
+}
+ul.actions-list li.active a::before {
+  opacity: 1
+}
+.about-short-inner.simple .about-short-img img {
+  width: 100%
+}
+.web-check .check-style {
+  margin: 1px 0 0
+}
+.actions-main-row {
+  gap: 40px 0
+}
+.actions-main {
+  margin-bottom: 60px
+}
+@media (min-width:576px) {
+  .action .sliders {
+    margin-bottom: 58px
+  }
+}
+@media (min-width:768px) {
+  .actions-main {
+    margin-bottom: 70px
+  }
+  .actions-main-row {
+    gap: 48px 0
+  }
+  .page-prev .btn {
+    display: inline-flex
+  }
+  .page-prev {
+    margin-top: 48px
+  }
+  .event .sliders {
+    margin-bottom: 78px
+  }
+  .section-title {
+    margin-bottom: 52px
+  }
+  .custom-select .select-options li,
+  .custom-select .select-styled,
+  .range-slider-input,
+  .web-input,
+  .web-select {
+    padding-left: 24px
+  }
+  .special-slider-item-fw .special-slider-item-img {
+    padding-bottom: 62%
+  }
+}
+@media (min-width:992px) {
+  .actions-main {
+    margin-bottom: 80px
+  }
+  .event .sliders {
+    margin-bottom: 94px
+  }
+  .special-slider-item-fw .special-slider-item-img {
+    padding-bottom: 48%
+  }
+}
+@media (min-width:1200px) {
+  .actions-main {
+    margin-bottom: 96px
+  }
+}
+.service-autopart .about-icons-box {
+  margin-top: 0
 }
 @media (min-width:768px) {
   .section-title {

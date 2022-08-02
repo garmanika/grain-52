@@ -271,83 +271,96 @@
         </div>
       </header>
       <main class="page-wrapper">
-        <div class="page-bg buyback">
-          <picture>
-            <source media="(max-width: 992px)" srcset="img/bg-call-768.jpg" />
-            <source media="(max-width: 768px)" srcset="img/bg-call.jpg" />
-            <source srcset="img/bg-call.jpg" />
-            <img src="img/bg-call.jpg" alt="" />
-          </picture>
-        </div>
-        <div class="container">
-          <section class="breadcrumbs">
+        <section class="buyback-car">
+          <div class="buyback-car-inner">
+            <div class="buyback-car-box">
+              <div class="buyback-car-box-box">
+                <div class="breadcrumbs">
 
-            <div class="breadcrumbs-inner">
-              <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-list-item">
-                  <a href="#">Главная</a>
-                  <span class="breadcrumbs-list-item-splitter">/</span>
-                </li>
-                <li class="breadcrumbs-list-item">
-                  <a href="#">Выкуп авто</a>
-                  <span class="breadcrumbs-list-item-splitter">/</span>
-                </li>
-                <li class="breadcrumbs-list-item active">
-                  <span>Срочный выкуп </span>
-                </li>
-              </ul>
-            </div>
+                  <div class="breadcrumbs-inner">
+                    <ul class="breadcrumbs-list">
+                      <li class="breadcrumbs-list-item">
+                        <a href="#">Главная</a>
+                        <span class="breadcrumbs-list-item-splitter">/</span>
+                      </li>
+                      <li class="breadcrumbs-list-item">
+                        <a href="#">Выкуп авто</a>
+                        <span class="breadcrumbs-list-item-splitter">/</span>
+                      </li>
+                      <li class="breadcrumbs-list-item active">
+                        <span>Срочный выкуп </span>
+                      </li>
+                    </ul>
+                  </div>
 
-          </section>
 
-          <h1 class="page-title buyback-title">Выкуп авто в калуге
-            <span class="page-subtitle">Деньги в день обращения!</span>
-          </h1>
 
-        </div>
-        <div class="buyback-car">
-          <div class="container">
-            <div class="buyback-car-inner">
-              <div class="buyback-car-img">
-                <img src="img/buyback-car.png" alt="">
-                <div class="buyback-car-img-info">
-                  100%
-                  <span>рыночная цена</span>
+                </div>
+                <div class="buyback-title">
+                  <h1 class="page-title ">Выкуп авто в калуге
+
+                  </h1>
+                  <span class="page-subtitle">Деньги в день обращения!</span>
+                </div>
+                <div class="buyback-car-img-inner">
+                  <div class="buyback-car-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/buyback-car-mobile.png" />
+                      <source srcset="img/buyback-car.png" />
+                      <img src="img/buyback-car.png" alt="">
+                    </picture>
+                    <div class="buyback-car-img-info">
+                      100%
+                      <span>рыночная цена</span>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
+            <div class="buyback-car-form">
+              <div class="container">
+                <div class="buyback-car-form-wrapper">
+                  <form>
+                    <div class="buyback-car-form-title">Закажите
+                      обратный звонок</div>
+                    <div class="buyback-car-form-subtitle">Мы перезвоним и сообщим примерную стоимость</div>
+                    <div class="buyback-car-form-inputs">
+                      <input type="text" placeholder="Имя" class="web-input">
+                      <input type="tel" placeholder="Телефон" class="web-input add-phone-mask" inputmode="text">
 
-          </div>
-          <div class="buyback-car-form">
-            <div class="container">
-              <div class="buyback-car-form-wrapper">
-                <div class="buyback-car-form-title">Закажите
-                  обратный звонок</div>
-                <div class="buyback-car-form-subtitle">Мы перезвоним и сообщим примерную стоимость</div>
-                <div class="buyback-car-form-inputs">
-                  <input type="text" placeholder="Имя" class="web-input">
-                  <input type="tel" placeholder="Телефон" class="web-input add-phone-mask" inputmode="text">
+                    </div>
+                    <div class="web-check">
+                      <label>
+                        <input type="checkbox" class="check-box" required="">
+                        <span class="check-style"></span>
+                        <span class="web-check-text">
+                          Нажимая кнопку «Заказать звонок»,
+                          я даю свое согласие на обработку моих персональных данных
+                        </span>
+
+                      </label>
+                    </div>
+                    <button class="btn btn-pr">Заказать звонок</button>
+                  </form>
 
                 </div>
-                <div class="web-check">
-                  <label>
-                    <input type="checkbox" class="check-box" required="">
-                    <span class="check-style"></span>
-                    <span class="web-check-text">
-                      Нажимая кнопку «Заказать звонок»,
-                      я даю свое согласие на обработку моих персональных данных
-                    </span>
 
-                  </label>
-                </div>
-                <button class="btn btn-pr">Заказать звонок</button>
               </div>
 
+
             </div>
-
-
+            <div class="page-bg buyback">
+              <picture>
+                <source media="(max-width: 992px)" srcset="img/bg-call-768.jpg" />
+                <source media="(max-width: 768px)" srcset="img/bg-call.jpg" />
+                <source srcset="img/bg-call.jpg" />
+                <img src="img/bg-call.jpg" alt="" />
+              </picture>
+            </div>
           </div>
-        </div>
+
+        </section>
         <section class="icons">
           <div class="container">
             <div class="section-title">
@@ -412,85 +425,205 @@
                 <h3 class="title">Как осуществляется выкуп?</h3>
               </div>
               <div class="procedures-items">
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 01</div>
-
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">01</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Звоните и оставляете заявку
+                          на обратный звонок
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      Звоните и оставляете заявку
-                      на обратный звонок
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">02</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Оценщик договаривается о месте и времени осмотра автомобиля
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">03</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Диагностика автомобиля происходит в присутствии владельца
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">04</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          По результатам осмотра озвучиваем стоимость автомобиля
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">05</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Оформляем сделку
+                          купли-продажи
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">06</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Выплачиваем деньги удобным способом
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">01</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Звоните и оставляете заявку
+                          на обратный звонок
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">02</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Оценщик договаривается о месте и времени осмотра автомобиля
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">03</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Диагностика автомобиля происходит в присутствии владельца
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">04</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          По результатам осмотра озвучиваем стоимость автомобиля
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">05</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Оформляем сделку
+                          купли-продажи
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">06</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Выплачиваем деньги удобным способом
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">01</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Звоните и оставляете заявку
+                          на обратный звонок
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">02</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Оценщик договаривается о месте и времени осмотра автомобиля
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">03</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          Диагностика автомобиля происходит в присутствии владельца
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4 col-xl-2">
+                    <div class="procedures-item">
+                      <div class="procedures-item-head">
+                        <div class="procedures-item-head-bubble">04</div>
+                      </div>
+                      <div class="procedures-item-info">
+                        <div class="procedures-item-info-descr">
+                          По результатам осмотра озвучиваем стоимость автомобиля
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 02</div>
-
-                  </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      Оценщик договаривается о месте и времени осмотра автомобиля
-                    </div>
-                  </div>
-                </div>
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 03</div>
-
-                  </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      Диагностика автомобиля происходит в присутствии владельца
-
-                    </div>
-                  </div>
-                </div>
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 04</div>
-
-                  </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      По результатам осмотра озвучиваем стоимость автомобиля
-
-                    </div>
-                  </div>
-                </div>
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 05</div>
-
-                  </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      Оформляем сделку
-                      купли-продажи
-
-                    </div>
-                  </div>
-                </div>
-                <div class="procedures-item">
-                  <div class="procedures-item-head">
-                    <div class="procedures-item-head-bubble"> 06</div>
-
-                  </div>
-                  <div class="procedures-item-info">
-
-                    <div class="procedures-item-info-descr">
-                      Выплачиваем деньги удобным способом
-
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
           </div>
@@ -584,10 +717,12 @@
                   </div>
                   <div class="faq-item-item-body">
                     <div class="faq-item-item-body-info">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis sollicitudin.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis
+                      sollicitudin.
                       Augue in bibendum morbi sit. Lectus felis sem dui velit quis. Cursus amet sem vestibulum euismod
                       quam purus urna, curabitur tellus. Orci dictum venenatis, ornare turpis odio. Feugiat nisi amet ut
-                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec eget
+                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec
+                      eget
                       venenatis, faucibus sed. Sagittis enim pellentesque massa vel erat elementum, fringilla at amet.
                       Velit sit quam aliquet nisl vivamus fermentum rhoncus tincidunt sed.
                     </div>
@@ -607,10 +742,12 @@
                   </div>
                   <div class="faq-item-item-body">
                     <div class="faq-item-item-body-info">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis sollicitudin.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis
+                      sollicitudin.
                       Augue in bibendum morbi sit. Lectus felis sem dui velit quis. Cursus amet sem vestibulum euismod
                       quam purus urna, curabitur tellus. Orci dictum venenatis, ornare turpis odio. Feugiat nisi amet ut
-                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec eget
+                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec
+                      eget
                       venenatis, faucibus sed. Sagittis enim pellentesque massa vel erat elementum, fringilla at amet.
                       Velit sit quam aliquet nisl vivamus fermentum rhoncus tincidunt sed.
                     </div>
@@ -629,10 +766,12 @@
                   </div>
                   <div class="faq-item-item-body">
                     <div class="faq-item-item-body-info">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis sollicitudin.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu et dui, netus felis
+                      sollicitudin.
                       Augue in bibendum morbi sit. Lectus felis sem dui velit quis. Cursus amet sem vestibulum euismod
                       quam purus urna, curabitur tellus. Orci dictum venenatis, ornare turpis odio. Feugiat nisi amet ut
-                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec eget
+                      massa vulputate enim id mauris nisi. Nec vitae diam, id erat posuere netus dignissim. Id donec
+                      eget
                       venenatis, faucibus sed. Sagittis enim pellentesque massa vel erat elementum, fringilla at amet.
                       Velit sit quam aliquet nisl vivamus fermentum rhoncus tincidunt sed.
                     </div>
