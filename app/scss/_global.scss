@@ -11,6 +11,8 @@ html {
   font-family: "Open Sans", sans-serif;
   scrollbar-width: thin;
   background-color: #fff;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 body.no-scroll-mobile {
@@ -87,6 +89,7 @@ input {
   white-space: nowrap;
   text-align: center;
   transition: 0.25s;
+	height: 48px;
 }
 .web-radio-btn label {
   font-weight: 300;
@@ -139,7 +142,7 @@ input {
   border-color: #242424;
 }
 
-.btn.small {
+.btn.btn-small {
   padding: 2px 24px;
   font-size: 14px;
   height: 32px;

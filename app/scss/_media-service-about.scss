@@ -1,0 +1,41 @@
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+    .service-about-info-img{
+        height: 360px;
+    }
+    .service-about-info{
+        margin-bottom: 70px;
+    }
+}
+@media (min-width: 992px){
+    .service-about-info{
+        grid-template-columns: auto 570px;
+        gap: 30px;
+        align-items: center;
+    }
+    .service-about-info{
+        margin-bottom: 80px;
+    }
+    .service-about-info-img{
+        margin-right: 30px;
+    }
+}
+@media (min-width: 1200px){
+    .service-about-info{
+        grid-template-columns: auto 670px;
+        gap: 60px;
+    }
+    .service-about-info{
+        margin-bottom: 96px;
+    }
+}
+@media (min-width: 1400px){
+    .service-about-info{
+        grid-template-columns: auto 790px;
+    }
+    .service-about-info-img{
+        margin-right: 60px;
+    }
+}

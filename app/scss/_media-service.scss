@@ -41,7 +41,11 @@
     margin-bottom: 70px;
   }
   .service-brand-request-form-box {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+		.custom-select,
+		.web-form-item{
+			grid-column: span 2;
+		}
   }
   .service-brand-request-form {
     padding: 40px 50px;
@@ -60,6 +64,12 @@
       margin-bottom: 48px;
     }
   }
+	.service-brand-request-form{
+		.info-car-btn{
+			width: fit-content;
+			margin: 0 auto;
+		}
+	}
 }
 @media (min-width: 992px) {
   .service-brand-maintenance-inner{
@@ -108,11 +118,11 @@
     padding: 0;
     
   }
-  .service-brand-request-form-container .filter-control {
-    .btn {
-      width: 100%;
-    }
-  }
+	.service-brand-request-form{
+		.info-car-btn{
+			width: 100%;
+		}
+	}
 }
 @media (min-width: 1200px) {
   .service-brand-maintenance-inner{

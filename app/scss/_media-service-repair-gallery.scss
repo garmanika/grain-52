@@ -1,0 +1,25 @@
+@media (min-width: 576px){
+
+}
+@media (min-width: 768px){
+.service-repair-gallery-items{
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.service-repair-gallery{
+    margin-bottom: 70px;
+}
+}
+@media (min-width: 992px){
+    .service-repair-gallery{
+        margin-bottom: 80px;
+    }
+}
+@media (min-width: 1200px){
+    .service-repair-gallery{
+        margin-bottom: 96px;
+    }
+}
+@media (min-width: 1400px){
+
+}

@@ -1,0 +1,19 @@
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .sos-items{
+        grid-template-columns: repeat(2,1fr);
+        gap: 48px 30px;
+    }
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+    .sos-items{
+        grid-template-columns: repeat(4,1fr);
+        gap: 48px 30px;
+    }
+}
+@media (min-width: 1400px) {
+}

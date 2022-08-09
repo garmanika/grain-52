@@ -1,0 +1,48 @@
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    .service-rapair-gallary {
+        margin-bottom: 60px;
+    }
+    .about-short-info-more {
+        .btn {
+            width: fit-content;
+        }
+
+        margin-top: 48px;
+    }
+    .service-rapair .services-items {
+        margin-bottom: 48px;
+    }
+    .service-rapair {
+        margin-bottom: 70px;
+    }
+    .service-rapair-gallary-slider-box {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .service-rapair-gallary {
+        margin-bottom: 70px;
+    }
+    .service-rapair .services-items {
+        margin-bottom: 30px;
+    }
+    .service-rapair {
+        margin-bottom: 80px;
+    }
+    .service-rapair-gallary-slider-img {
+        height: 248px;
+    }
+}
+@media (min-width: 1200px) {
+    .service-rapair-gallary {
+        margin-bottom: 86px;
+    }
+    .service-rapair {
+        margin-bottom: 96px;
+    }
+}
+@media (min-width: 1400px) {
+}

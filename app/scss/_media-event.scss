@@ -2,8 +2,14 @@
     .action .sliders{
         margin-bottom: 58px;
     }
+		.actions-main-row .special-slider-item-img{
+			height: 232px;
+		}
 }
 @media (min-width: 768px){
+	.actions-main-row .special-slider-item-img{
+		height: 195px;
+	}
     .actions-main{
         margin-bottom: 70px;
     }
@@ -37,32 +43,29 @@
     .custom-select .select-options li{
         padding-left: 24px;
     }
-    .special-slider-item-fw{
-        .special-slider-item-img{
-            padding-bottom: 62%;
-        }
-        
-    }
+
 }
 @media (min-width: 992px){
+	.actions-main-row .special-slider-item-img{
+		height: 285px;
+	}
     .actions-main{
         margin-bottom: 80px;
     }
     .event .sliders{
         margin-bottom: 94px;
     }
-    .special-slider-item-fw{
-        .special-slider-item-img{
-            padding-bottom: 48%;
-        }
-        
-    }
 }
 @media (min-width: 1200px){
 .actions-main{
     margin-bottom: 96px;
 }
+.actions-main-row .special-slider-item-img{
+	height: 228px;
+}
 }
 @media (min-width: 1400px){
-
+	.actions-main-row .special-slider-item-img{
+		height: 285px;
+	}
 }

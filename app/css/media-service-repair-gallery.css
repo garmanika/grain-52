@@ -1,0 +1,12 @@
+@media (min-width:768px) {
+  .section-title {
+    margin-bottom: 52px
+  }
+  .custom-select .select-options li,
+  .custom-select .select-styled,
+  .range-slider-input,
+  .web-input,
+  .web-select {
+    padding-left: 24px
+  }
+}

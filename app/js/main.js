@@ -1,10 +1,14 @@
 $(function () {
   $(".faq-item-item").on("click", function () {
-    $(this).toggleClass('active');
+    $(this).toggleClass("active");
     $(this).find(".faq-item-item-body").slideToggle();
     $(this).find(".faq-item-item-icon").toggleClass("active");
   });
-
+  $('.service-autopart-navigation .is-parent > a').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('li').toggleClass('active')
+    $(this).siblings('ul').fadeToggle();
+  })
   $(".info-car-tab-head").on("click", function () {
     $(this).siblings(".info-car-tab-body").fadeToggle();
     $(this).toggleClass("active");
@@ -109,6 +113,23 @@ $(function () {
           slidesPerView: 3,
           slidesPerGroup: 3,
         },
+      },
+    });
+  });
+  $(".service-rapair-gallary").each(function () {
+    let section = $(this);
+    new Swiper(section.find(".service-rapair-gallary-slider")[0], {
+      spaceBetween: 30,
+      watchOverflow: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: section.find(".slider-next")[0],
+        prevEl: section.find(".slider-prev")[0],
+      },
+      pagination: {
+        el: ".service-rapair-gallary-slider .swiper-pagination",
+        clickable: true,
       },
     });
   });
@@ -344,6 +365,12 @@ $(function () {
     $(this)
       .toggleClass("active")
       .closest(".filter-body-items")
+      .toggleClass("hidden");
+  });
+  $(".info-car-link-more").click(function () {
+    $(this)
+      .toggleClass("active")
+      .closest(".info-car-items")
       .toggleClass("hidden");
   });
   $(".custom-select > select").each(function () {

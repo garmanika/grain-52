@@ -1,134 +1,134 @@
-@media (min-width:576px) {
+@media (min-width: 576px) {
   .gallery-items {
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .model-description-stock-slider-item-info-price-old {
-    display: inline-flex
+    display: inline-flex;
   }
   .page-bg {
-    display: block
+    display: block;
   }
   .model-detail-info,
   .model-detail-sliders {
-    margin-bottom: 0
+    margin-bottom: 0;
   }
   .model-detail-info-subtitle {
-    margin-bottom: 32px
+    margin-bottom: 32px;
   }
   .model-detail-sliders {
-    max-width: 330px
+    width: 330px;
   }
   .model-detail-inner {
     display: grid;
     grid-template-areas: "sliders sliders-info" "slider-prices slider-prices";
     gap: 48px 30px;
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
   .model-detail-slider .swiper-pagination {
-    display: none
+    display: none;
   }
   .model-detail-slider {
-    margin-bottom: 32px
+    margin-bottom: 32px;
   }
   .model-detail-slider-tb-inner {
-    display: block
+    display: block;
   }
   .model-detail-slider-tb-inner .gallery-slider-arrows {
-    margin-top: 15px
+    margin-top: 15px;
   }
   .model-detail-slider-tb-img {
-    height: 64px
+    height: 64px;
   }
   .model-detail-slider-tb-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
   }
   .model-detail-tabs-info {
-    margin-top: 38px
+    margin-top: 38px;
   }
   .model-detail-tabs-inner {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .model-detail-tabs {
-    gap: 40px
+    gap: 40px;
   }
   .model-detail-prices {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding: 32px 24px
+    padding: 32px 24px;
   }
   .model-color-items {
-    grid-template-columns: repeat(2,1fr);
-    gap: 96px 30px
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px 30px;
   }
   .model-color {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .model-specification-item-img {
-    padding-bottom: 55%
+    padding-bottom: 55%;
   }
   .model-specification-items {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .gallery {
-    margin-bottom: 60px
+    margin-bottom: 60px;
   }
   .gallery.no-slider {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .gallery-slider-title {
-    margin-bottom: 48px
+    margin-bottom: 48px;
   }
   .model-description-stock-inner {
-    margin-bottom: 60px
+    margin-bottom: 60px;
   }
   .model-description-stock-inner .section-title .btn .desk {
-    display: block
+    display: block;
   }
   .model-description-stock-inner .section-title .btn .mob {
-    display: none
+    display: none;
   }
   .model .about,
   .model-description-info-box,
   .model-description-links {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .model-description-slider-car {
     min-height: 260px;
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
   .model-description-slider-color {
     padding: 10px 0;
-    margin-bottom: 22px
+    margin-bottom: 22px;
   }
   .model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::before {
     padding: 21px;
-    top: -3px
+    top: -3px;
   }
   .model-description-slider-color .swiper-slide-thumb-active .model-description-slider-color-item::after {
     padding: 23px;
-    top: -3.5px
+    top: -3.5px;
   }
-	.swiper-slide-active {
-		.model-description-slider-car-item-img img,
-		.model-description-slider-car-item-img picture {
-			height: 280px
-		}
-	}
+  .swiper-slide-active {
+    .model-description-slider-car-item-img img,
+    .model-description-slider-car-item-img picture {
+      height: 280px;
+    }
+  }
 
   .model-description-slider-color-item {
     height: 46px;
-    width: 46px
+    width: 46px;
   }
   .model-description-price-box-inner {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    gap: 30px
+    gap: 30px;
   }
   .point-helper {
     position: relative;
@@ -142,171 +142,171 @@
   }
 
   .model-description-icons-box {
-    margin-top: 64px
+    margin-top: 64px;
   }
   .model-detail-info-subtitle {
-    gap: 16px
+    gap: 16px;
   }
   .model-detail-info-subtitle-box {
-    gap: 24px
+    gap: 24px;
   }
 }
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .model-detail-slider-tb-inner .gallery-slider-arrows {
-    margin: 0
+    margin: 0;
   }
   .model-detail-sliders {
-    max-width: 450px
+    width: 450px;
   }
   .model-detail-inner,
   .model-detail-tabs-inner {
-    margin-bottom: 80px
+    margin-bottom: 80px;
   }
   .model-detail-prices {
-    padding: 24px
+    padding: 24px;
   }
   .model-color-items {
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(3, 1fr);
   }
   .model-color,
   .model-specification-items {
-    margin-bottom: 80px
+    margin-bottom: 80px;
   }
   .gallery {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .gallery.no-slider {
-    margin-bottom: 80px
+    margin-bottom: 80px;
   }
   .model-description-stock-inner {
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
   .model .about,
   .model-description-info-box,
   .model-description-links {
-    margin-bottom: 80px
+    margin-bottom: 80px;
   }
-	.swiper-slide-active {
-		.model-description-slider-car-item-img img,
-		.model-description-slider-car-item-img picture {
-			height: 350px
-		}
-	}
+  .swiper-slide-active {
+    .model-description-slider-car-item-img img,
+    .model-description-slider-car-item-img picture {
+      height: 350px;
+    }
+  }
 
   .model-detail-slider-tb-inner {
     padding-left: 65px;
-    padding-right: 65px
+    padding-right: 65px;
   }
   .model-detail-sliders .slider-prev {
     position: absolute;
     top: 5px;
-    left: 0
+    left: 0;
   }
   .model-detail-sliders .slider-next {
     position: absolute;
     top: 5px;
-    right: 0
+    right: 0;
   }
   .model-specification-items {
     display: grid;
-    grid-template-columns: repeat(2,1fr)
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .model-detail-prices {
     grid-template-columns: auto auto;
     justify-content: space-between;
-    gap: 40px
+    gap: 40px;
   }
   .model-detail-info-specification {
-    grid-template-columns: repeat(2,1fr);
-    gap: 24px 30px
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 30px;
   }
   .model-detail-info-subtitle {
     flex-direction: row;
-    gap: 40px
+    gap: 40px;
   }
   .model-detail-info-subtitle-box {
-    gap: 40px
+    gap: 40px;
   }
   .model-detail-slider-tb-box {
-    position: relative
+    position: relative;
   }
   .model-detail-sliders {
-    max-width: 540px
+   width: 540px;
   }
   .model-detail-inner {
     gap: 40px 60px;
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .model-detail-sliders .gallery-slider-arrows {
-    margin: 0
+    margin: 0;
   }
   .model-detail-sliders .slider-prev {
     position: absolute;
     top: 16px;
-    left: 0
+    left: 0;
   }
   .model-detail-sliders .slider-next {
     position: absolute;
     top: 16px;
-    right: 0
+    right: 0;
   }
   .model-detail-slider-tb-inner {
     padding-left: 65px;
-    padding-right: 65px
+    padding-right: 65px;
   }
   .model-detail-slider-tb-img {
-    height: 80px
+    height: 80px;
   }
   .model-color,
   .model-detail-tabs-inner {
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .gallery-items {
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(3, 1fr);
   }
   .model-specification-items {
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .gallery {
-    margin-bottom: 86px
+    margin-bottom: 86px;
   }
   .gallery.no-slider {
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .model-description-stock-inner {
-    margin-bottom: 86px
+    margin-bottom: 86px;
   }
   .model-description-info-box {
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .model .about,
   .model-description-links {
-    margin-bottom: 96px
+    margin-bottom: 96px;
   }
   .model-detail-inner {
     grid-template-areas: "sliders sliders-info" "sliders slider-prices";
-    grid-template-columns: auto 1fr
+    grid-template-columns: auto 1fr;
   }
   .model-detail-slider {
-    margin-bottom: 50px
+    margin-bottom: 50px;
   }
   .model-detail-info-subtitle {
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
 }
-@media (min-width:1400px) {
+@media (min-width: 1400px) {
   .model-detail-prices {
-    gap: 50px
+    gap: 50px;
   }
   .model-detail-sliders {
-    max-width: 630px
+    width: 630px;
   }
   .model-detail-inner {
-    gap: 40px 140px
+    gap: 40px 140px;
   }
   .model-detail-slider {
-    margin-bottom: 62px
+    margin-bottom: 62px;
   }
 }

@@ -1,25 +1,28 @@
 @media (min-width: 576px) {
-  .buyback-car-box-box{
+  .buyback-car-box-box {
     max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .info-car .filter-control-link-more{
+	.info-car-link-more img, .info-car-link-more svg{
+		top: 3px;
+	}
+  .info-car-link-more {
     justify-content: center;
   }
-  .buyback-car-box-box{
+  .buyback-car-box-box {
     max-width: 720px;
   }
-  .page-bg.buyback{
+  .page-bg.buyback {
     height: calc(100% - 374px);
   }
-  .info-car .filter-wrapper{
+  .info-car-inner {
     padding: 48px 30px;
   }
-  .info-car{
+  .info-car {
     margin-bottom: 70px;
   }
-  .sliders.buyback img{
+  .sliders.buyback img {
     height: 100%;
   }
   .feedback-short-info-title {
@@ -69,7 +72,7 @@
   .info-car-box {
     grid-template-columns: repeat(3, 1fr);
   }
-  .info-car .filter-control-link-more,
+  .info-car-link-more,
   .info-car .web-check,
   .info-car .filter-control {
     width: fit-content;
@@ -105,7 +108,10 @@
     margin: 0 47px 0 0;
   }
 
-  .procedures-items > .row > div.col-md-4:nth-child(3n + 1) .procedures-item::before {
+  .procedures-items
+    > .row
+    > div.col-md-4:nth-child(3n + 1)
+    .procedures-item::before {
     display: none;
   }
   .procedures-item {
@@ -116,7 +122,7 @@
     padding: 0;
   }
   .buyback-title {
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
   .buyback-car-img {
     max-width: 580px;
@@ -146,9 +152,6 @@
   .feedback-short-form {
     grid-template-columns: repeat(3, 1fr);
   }
-  .filter-control .btn {
-    width: auto;
-  }
   .info-car-tabs {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -157,11 +160,11 @@
   }
 }
 @media (min-width: 992px) {
-  .buyback-car-box-box{
+  .buyback-car-box-box {
     max-width: 100%;
     padding: 0;
   }
-  .buyback-car-inner{
+  .buyback-car-inner {
     display: grid;
     grid-template-columns: 1fr minmax(auto, 410px);
     width: 100%;
@@ -172,13 +175,13 @@
     margin-left: auto;
     max-width: 960px;
   }
-  .page-bg.buyback{
+  .page-bg.buyback {
     height: 100%;
   }
-  .info-car .filter-wrapper{
+  .info-car-inner {
     padding: 48px 60px;
   }
-  .info-car{
+  .info-car {
     margin-bottom: 70px;
   }
   .feedback.bg {
@@ -204,8 +207,6 @@
     padding: 80px 0;
   }
 
-
-
   .buyback-car-img {
     margin-bottom: 0;
   }
@@ -218,14 +219,17 @@
   .buyback-car-form-inputs {
     grid-template-columns: 1fr;
   }
-
+  .info-car-btn {
+    width: fit-content;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 1200px) {
-  .buyback-car-inner{
+  .buyback-car-inner {
     max-width: 1140px;
     gap: 0 48px;
   }
-  .info-car{
+  .info-car {
     margin-bottom: 96px;
   }
 
@@ -241,11 +245,17 @@
     margin: 60px 0 0 0;
   }
 
-  .procedures-items > .row > div.col-xl-2:nth-child(3n + 1) .procedures-item::before {
+  .procedures-items
+    > .row
+    > div.col-xl-2:nth-child(3n + 1)
+    .procedures-item::before {
     display: block;
   }
 
-  .procedures-items > .row > div.col-xl-2:nth-child(6n + 1) .procedures-item::before {
+  .procedures-items
+    > .row
+    > div.col-xl-2:nth-child(6n + 1)
+    .procedures-item::before {
     display: none;
   }
   .feedback.bg {
@@ -304,7 +314,7 @@
     padding: 96px 0;
   }
 
-  .info-car .filter-control-link-more,
+  .info-car-link-more,
   .info-car .web-check,
   .info-car .filter-control {
     grid-column: span 6;
@@ -324,15 +334,12 @@
   }
 }
 @media (min-width: 1400px) {
-  .buyback-car-inner{
+  .buyback-car-inner {
     max-width: 1320px;
   }
-  .feedback-short-inner{
+  .feedback-short-inner {
     gap: 60px;
   }
-
-
-
 
   .info-car-box {
     grid-template-columns: repeat(6, 1fr);
