@@ -1021,21 +1021,28 @@ ul.mobile-navigation-menu > li a.active::before {
   position: absolute;
   background: #fff
 }
+.border-eraser-h-ctr::before,
 .border-eraser-h-ltr::before,
 .border-eraser-h-rtl::before {
   bottom: 100%;
   width: 15px;
   height: 3px
 }
+.border-eraser-h-ctr::after,
 .border-eraser-h-ltr::after,
 .border-eraser-h-rtl::after {
   top: 100%;
   width: 15px;
   height: 3px
 }
+.border-eraser-h-ctr::before {
+  left: 50%;
+  transform: translateX(-50%)
+}
 .border-eraser-h-ltr::before {
   left: 18px
 }
+.border-eraser-h-ctr::after,
 .border-eraser-h-ltr::after,
 .border-eraser-h-rtl::before {
   right: 18px
@@ -1093,6 +1100,7 @@ ul.mobile-navigation-menu > li a.active::before {
   .border-eraser-h-ltr::before {
     left: 30px
   }
+  .border-eraser-h-ctr::after,
   .border-eraser-h-ltr::after,
   .border-eraser-h-rtl::before {
     right: 30px
@@ -1129,6 +1137,8 @@ ul.mobile-navigation-menu > li a.active::before {
   .services-item-title {
     font-size: 18px
   }
+  .border-eraser-h-ctr::after,
+  .border-eraser-h-ctr::before,
   .border-eraser-h-ltr::after,
   .border-eraser-h-ltr::before,
   .border-eraser-h-rtl::after,
@@ -1150,6 +1160,8 @@ ul.mobile-navigation-menu > li a.active::before {
   .services {
     padding: 64px 0 94px
   }
+  .border-eraser-h-ctr::after,
+  .border-eraser-h-ctr::before,
   .border-eraser-h-ltr::after,
   .border-eraser-h-ltr::before,
   .border-eraser-h-rtl::after,
@@ -1174,6 +1186,7 @@ ul.mobile-navigation-menu > li a.active::before {
   .border-eraser-h-ltr::before {
     left: 40px
   }
+  .border-eraser-h-ctr::after,
   .border-eraser-h-ltr::after,
   .border-eraser-h-rtl::before {
     right: 40px
@@ -3688,7 +3701,7 @@ ul.mobile-navigation-menu > li a.active::before {
   background-repeat: no-repeat;
   background-position: center;
   left: 0;
-  top: 5px;
+  top: 3px;
   width: 20px;
   height: 20px
 }
@@ -3717,7 +3730,7 @@ ul.mobile-navigation-menu > li a.active::before {
   background-repeat: no-repeat;
   background-position: center;
   left: 0;
-  top: 5px;
+  top: 3px;
   width: 20px;
   height: 20px
 }
@@ -3739,7 +3752,7 @@ ul.mobile-navigation-menu > li a.active::before {
   background-repeat: no-repeat;
   background-position: center;
   left: 0;
-  top: 5px;
+  top: 3px;
   width: 20px;
   height: 20px
 }
@@ -5195,7 +5208,8 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   margin: 32px 0 16px
 }
 .web-form-item {
-  position: relative
+  position: relative;
+  width: 100%
 }
 .web-form-item label {
   pointer-events: none;
@@ -5585,6 +5599,12 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 .file-upload-wrapper {
   position: relative
 }
+.file-upload-wrapper label {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer
+}
 .file-upload-wrapper .file-upload {
   position: absolute;
   left: 0;
@@ -5636,7 +5656,6 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   cursor: pointer
 }
 .filename {
-  font-style: italic;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -6434,6 +6453,11 @@ ul.actions-list li.active a::before {
     height: 228px
   }
 }
+@media (min-width:1400px) {
+  .actions-main-row .special-slider-item-img {
+    height: 285px
+  }
+}
 .service-autopart {
   margin-bottom: 60px
 }
@@ -6457,7 +6481,7 @@ ul.actions-list li.active a::before {
   grid-template-columns: 1fr;
   gap: 15px
 }
-.web-form-item-search button {
+.web-form-item-search .web-form-search {
   background: 0 0;
   border: none;
   padding: 0;
@@ -6469,10 +6493,11 @@ ul.actions-list li.active a::before {
   width: 50px;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  cursor: pointer
 }
-.web-form-item-search button img,
-.web-form-item-search button svg {
+.web-form-item-search .web-form-search img,
+.web-form-item-search .web-form-search svg {
   width: 20px;
   height: 20px;
   object-fit: contain;
@@ -6498,7 +6523,7 @@ ul.actions-list li.active a::before {
   align-items: center;
   gap: 15px
 }
-.service-autopart-control-sort button {
+.service-autopart-control-sort {
   background: 0 0;
   border: none;
   padding: 0;
@@ -6506,6 +6531,13 @@ ul.actions-list li.active a::before {
   display: flex;
   align-items: center;
   gap: 4px
+}
+.service-autopart-control-sort.sort-active svg:not(.svg-cont) path {
+  fill: #ff1e26;
+  stroke: #ff1e26
+}
+.service-autopart-control-sort.sort-asc .svg-cont {
+  transform: rotate(180deg)
 }
 .svg-cont {
   width: 16px;
@@ -6515,6 +6547,9 @@ ul.actions-list li.active a::before {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px
+}
+.service-autopart-items-wrapper .stock-items-more-button {
+  grid-column: 1/2
 }
 .service-autopart-item {
   display: flex;
@@ -6603,7 +6638,10 @@ ul.actions-list li.active a::before {
   color: #242424;
   font-family: Oswald,sans-serif;
   display: block;
-  padding: 12px 44px 12px 24px
+  padding: 12px 16px
+}
+.service-autopart-navigation-list > li.is-parent > a {
+  padding: 12px 32px 12px 16px
 }
 .service-autopart-navigation-sublist > li > a {
   font-family: Oswald,sans-serif;
@@ -6612,18 +6650,28 @@ ul.actions-list li.active a::before {
   line-height: 24px;
   text-transform: uppercase;
   color: #242424;
-  padding: 12px 44px 12px 40px
+  padding: 12px 16px 12px 32px
+}
+.service-autopart-navigation-sublist > li > a:hover {
+  background: #b4b5bc;
+  color: #fff
+}
+.service-autopart-navigation-list a.active + ul {
+  display: block
+}
+.service-autopart-navigation-sublist > li.is-parent > a {
+  padding: 12px 32px
 }
 .service-autopart-navigation-sub-sublist > li > a {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   color: #242424;
-  padding-left: 54px;
-  padding-right: 44px
+  padding-left: 48px;
+  padding-right: 16px
 }
-ul.service-autopart-navigation-sub-sublist {
-  padding: 12px 0
+.service-autopart-navigation-sub-sublist > li > a.active {
+  color: #ff1e26
 }
 ul.service-autopart-navigation-sub-sublist li + li {
   margin-top: 12px
@@ -6631,10 +6679,13 @@ ul.service-autopart-navigation-sub-sublist li + li {
 ul.service-autopart-navigation-list,
 ul.service-autopart-navigation-sub-sublist,
 ul.service-autopart-navigation-sublist {
-  display: block;
   width: 100%
 }
-.service-autopart-navigation-list > li.is-parent.active > a {
+ul.service-autopart-navigation-sub-sublist,
+ul.service-autopart-navigation-sublist {
+  display: none
+}
+.service-autopart-navigation-list > li.is-parent > a.active {
   background: #b4b5bc;
   color: #fff;
   text-shadow: .7px 0 #fff,.7px 0 #fff
@@ -6643,8 +6694,8 @@ ul.service-autopart-navigation-sublist {
   background: #b4b5bc;
   color: #fff
 }
-.service-autopart-navigation-sub-sublist > li > a:hover {
-  text-shadow: 1px 0 #ff1e26,1px 0 #ff1e26;
+.service-autopart-navigation-sub-sublist>li>a:focus,
+.service-autopart-navigation-sub-sublist>li>a:hover {
   color: #ff1e26
 }
 .service-autopart-navigation.fancybox-content {
@@ -6661,7 +6712,7 @@ ul.service-autopart-navigation-sublist {
   justify-content: center;
   color: #ccc;
   top: 6px;
-  right: 6px
+  right: 2px
 }
 .service-autopart-navigation.fancybox-content .fancybox-button svg {
   width: 24px;
@@ -6672,7 +6723,7 @@ ul.service-autopart-navigation-sublist {
 .service-autopart-navigation.fancybox-content .fancybox-button:hover {
   color: #242424
 }
-.service-autopart-navigation-list li.is-parent.active > a::after {
+.service-autopart-navigation-list li.is-parent > a.active::after {
   background-image: url(../img/svg/chevron-wh.svg)
 }
 @media (min-width:768px) {
@@ -6717,7 +6768,7 @@ ul.service-autopart-navigation-sublist {
   .service-autopart-control {
     grid-template-columns: minmax(auto,637px) auto;
     justify-content: space-between;
-    gap: 40px
+    gap: 30px
   }
   .service-autopart-navigation-btn {
     display: none
@@ -6731,17 +6782,28 @@ ul.service-autopart-navigation-sublist {
   }
   .service-autopart-inner {
     display: grid;
-    grid-template-columns: minmax(auto,300px) 1fr;
+    grid-template-columns: minmax(auto,210px) 1fr;
     gap: 30px;
     align-items: start
   }
 }
 @media (min-width:1200px) {
+  .service-autopart-inner {
+    grid-template-columns: minmax(auto,255px) 1fr
+  }
+  .service-autopart-control {
+    gap: 40px
+  }
   .service-autopart {
     margin-bottom: 96px
   }
   .service-autopart-item-title {
     max-width: 577px
+  }
+}
+@media (min-width:1400px) {
+  .service-autopart-inner {
+    grid-template-columns: minmax(auto,300px) 1fr
   }
 }
 .service-rapair {
@@ -6761,10 +6823,11 @@ ul.service-autopart-navigation-sublist {
   height: 100%;
   object-fit: cover
 }
-.service-rapair-gallary-slider-box {
-  display: flex;
-  flex-direction: column;
-  gap: 15px
+.service-rapair-gallary-slider .swiper-wrapper {
+  height: 275px
+}
+.service-rapair-gallary-slider .swiper-slide {
+  height: auto
 }
 .about-short-info-more {
   margin-top: 40px
@@ -6792,8 +6855,18 @@ ul.service-autopart-navigation-sublist {
     flex-direction: row;
     gap: 30px
   }
+  .service-rapair-gallary-slider .swiper-slide {
+    height: 100%
+  }
+  .service-rapair-gallary-slider .swiper-wrapper {
+    height: auto
+  }
 }
 @media (min-width:992px) {
+  .service-rapair-gallary-slider .swiper-slide,
+  .service-rapair-gallary-slider .swiper-wrapper {
+    height: auto
+  }
   .service-rapair-gallary {
     margin-bottom: 70px
   }
@@ -6815,21 +6888,21 @@ ul.service-autopart-navigation-sublist {
     margin-bottom: 96px
   }
 }
-.service-repair-deteil-about {
+.service-repair-detail-about {
   margin-bottom: 60px
 }
-.service-repair-deteil-items {
+.service-repair-detail-items {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 40px
 }
-.service-repair-deteil-item-img {
+.service-repair-detail-item-img {
   position: relative;
   height: 0;
   padding-bottom: 66%
 }
-.service-repair-deteil-item-img img {
+.service-repair-detail-item-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -6841,21 +6914,21 @@ ul.service-autopart-navigation-sublist {
   margin-bottom: 60px
 }
 @media (min-width:768px) {
-  .service-repair-deteil-items {
+  .service-repair-detail-items {
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
     margin-bottom: 48px
   }
   .service-brand-request,
-  .service-repair-deteil-about {
+  .service-repair-detail-about {
     margin-bottom: 70px
   }
 }
 @media (min-width:992px) {
-  .service-repair-deteil-items {
+  .service-repair-detail-items {
     margin-bottom: 64px
   }
-  .service-repair-deteil-about {
+  .service-repair-detail-about {
     margin-bottom: 80px
   }
   .btn-desk-hide .btn {
@@ -6867,7 +6940,7 @@ ul.service-autopart-navigation-sublist {
 }
 @media (min-width:1200px) {
   .service-brand-request,
-  .service-repair-deteil-about {
+  .service-repair-detail-about {
     margin-bottom: 96px
   }
 }
@@ -6933,15 +7006,8 @@ ul.service-autopart-navigation-sublist {
 .title-fw {
   flex-basis: 100%
 }
-.contacts-item-phone-subtitle {
-  display: block;
-  font-family: "Open Sans",sans-serif;
-  margin-top: 8px;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  color: #242424;
-  text-transform: initial
+.contacts-item-phone-title + .contacts-item-phone-title {
+  margin-top: 8px
 }
 @media (min-width:768px) {
   .sos-items {
@@ -6962,17 +7028,13 @@ ul.service-autopart-navigation-sublist {
   margin-bottom: 60px
 }
 .service-about-info-img {
-  height: 192px
+  height: auto
 }
 .service-about-info-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover
+  display: block;
+  max-width: 100%
 }
 @media (min-width:768px) {
-  .service-about-info-img {
-    height: 360px
-  }
   .service-about-info {
     margin-bottom: 70px
   }
@@ -6981,11 +7043,11 @@ ul.service-autopart-navigation-sublist {
   .service-about-info {
     grid-template-columns: auto 570px;
     gap: 30px;
-    align-items: center;
+    align-items: start;
     margin-bottom: 80px
   }
-  .service-about-info-img {
-    margin-right: 30px
+  .service-about-info-descr {
+    align-self: center
   }
 }
 @media (min-width:1200px) {
@@ -6996,14 +7058,8 @@ ul.service-autopart-navigation-sublist {
   }
 }
 @media (min-width:1400px) {
-  .actions-main-row .special-slider-item-img {
-    height: 285px
-  }
   .service-about-info {
     grid-template-columns: auto 790px
-  }
-  .service-about-info-img {
-    margin-right: 60px
   }
 }
 .special-slider-item-subtitle {
@@ -7018,16 +7074,14 @@ ul.service-autopart-navigation-sublist {
   grid-template-columns: 1fr;
   gap: 40px
 }
-.new-img {
-  margin-bottom: 40px;
-  height: 192px
+.news-detail-img {
+  margin-bottom: 40px
 }
-.new-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover
+.news-detail-img img {
+  max-width: 100%;
+  display: block
 }
-.new-info-date {
+.news-detail-info-date {
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -7044,8 +7098,7 @@ ul.service-autopart-navigation-sublist {
   .news-items {
     grid-template-columns: repeat(3,1fr)
   }
-  .new-img {
-    height: 360px;
+  .news-detail-img {
     margin-bottom: 48px
   }
 }
@@ -7054,21 +7107,547 @@ ul.service-autopart-navigation-sublist {
     grid-template-columns: repeat(4,1fr);
     gap: 56px 30px
   }
-  .new-img {
-    margin-bottom: 64px;
-    height: 550px
+  .news-detail-img {
+    margin-bottom: 64px
   }
+}
+.job {
+  margin-bottom: 60px
 }
 .job-items {
   display: grid;
-  grid-template-columns: 1fr
+  grid-template-columns: 1fr;
+  gap: 15px
+}
+.job-items .services-item-title {
+  font-size: 18px
 }
 .job-item {
   border: 1.5px solid #575656;
-  padding: 40px 5px;
+  padding: 40px 30px;
   text-align: center
 }
+.job-item:focus .btn-sec,
+.job-item:hover .btn-sec {
+  color: #242424;
+  border-color: #000
+}
+.job-item .services-item-subtitle {
+  margin-top: 4px
+}
+.job-item .btn {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px
+}
+.job-item-price {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #242424;
+  margin-top: 16px;
+  font-family: Oswald,sans-serif
+}
+.job-form {
+  background: linear-gradient(0deg,#f5f5f9,#f5f5f9);
+  padding: 40px 0;
+  text-align: center
+}
+.job-form-img {
+  margin-bottom: 24px
+}
+.job-form-img img,
+.job-form-img svg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto
+}
+.job-form-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #242424;
+  font-family: Oswald,sans-serif;
+  margin-bottom: 16px
+}
+.job-form-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  color: #242424
+}
+.job-form-btn .btn {
+  display: block
+}
+.modal-job .modal-title {
+  margin-bottom: 48px
+}
+.modal-job .modal-title span {
+  display: block;
+  margin-top: 16px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424;
+  font-family: "Open Sans",sans-serif;
+  text-transform: initial
+}
+.web-form-item-file {
+  width: 100%;
+  cursor: pointer;
+  height: 48px;
+  border: 1.5px solid #9b9b9b
+}
+.web-form-item-file .file-upload-wrapper {
+  height: 100%;
+  width: 100%
+}
+.web-form-item-file .file-upload-wrapper .filename {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 16px
+}
+.web-form-item-file .file-upload-wrapper .icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 14px
+}
+@media (min-width:576px) {
+  .job-items {
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px
+  }
+  .job-item {
+    position: relative
+  }
+  .job-item .btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  .job-item-box {
+    padding-bottom: 64px
+  }
+}
 @media (min-width:768px) {
+  .job-items {
+    gap: 30px
+  }
+  .job-form {
+    padding: 48px 0
+  }
+  .web-form-item-file .file-upload-wrapper .filename {
+    padding-left: 24px
+  }
+  .job {
+    margin-bottom: 70px
+  }
+  .job-form-title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 8px
+  }
+  .job-form-btn .btn {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+@media (min-width:992px) {
+  .job {
+    margin-bottom: 80px
+  }
+  .job-items {
+    grid-template-columns: repeat(3,1fr)
+  }
+}
+@media (min-width:1200px) {
+  .job {
+    margin-bottom: 96px
+  }
+}
+.autopart {
+  margin-bottom: 60px
+}
+.autopart .services-items {
+  grid-template-columns: 1fr
+}
+@media (min-width:768px) {
+  .autopart {
+    margin-bottom: 70px
+  }
+}
+@media (min-width:992px) {
+  .autopart {
+    margin-bottom: 80px
+  }
+}
+@media (min-width:1200px) {
+  .autopart {
+    margin-bottom: 96px
+  }
+}
+.dealership,
+.dealerships {
+  margin-bottom: 60px
+}
+.dealership .about-icons-box {
+  margin-bottom: 40px
+}
+.dealerships-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px
+}
+.dealerships-item-img-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px
+}
+.dealerships-item-img-logo {
+  order: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: inherit;
+  gap: 15px
+}
+.dealerships-item-img-logo-img {
+  width: 48px;
+  height: 48px
+}
+.dealerships-item-img-logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+.dealerships-item-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block
+}
+.dealerships-item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #242424;
+  font-family: Oswald,sans-serif
+}
+.dealerships-item-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424
+}
+.dealerships-item-title-box {
+  display: grid;
+  gap: 4px
+}
+.dealerships-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px
+}
+.dealerships-item-info-box .dealerships-item-title-box {
+  display: none
+}
+.contacts-item-pings {
+  position: relative;
+  margin-bottom: 16px
+}
+.contacts-item-pings::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/svg/map-pin-small.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  top: 3px;
+  width: 20px;
+  height: 20px
+}
+.contacts-item-pings .contacts-item-ping {
+  margin: 0 0 0 44px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #242424
+}
+.dealerships-item-info-btn .btn {
+  display: block
+}
+.dealerships-item-info-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  grid-template-rows: 1fr auto
+}
+.dealership-images-img {
+  margin-bottom: 40px
+}
+.dealership-images-img img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover
+}
+.dealership-info {
+  border: 1.5px solid #575656;
+  padding: 40px 15px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px
+}
+.dealership-info-title-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center
+}
+@media (min-width:768px) {
+  .dealership .about-icons-box {
+    margin-bottom: 48px
+  }
+  .dealerships {
+    margin-bottom: 70px
+  }
+  .dealerships-item {
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px
+  }
+  .dealership-images-img {
+    margin-bottom: 48px
+  }
+  .dealership-info {
+    padding: 48px 30px 35px;
+    margin-bottom: 48px
+  }
+  .dealerships-item-locate {
+    display: grid;
+    grid-template-columns: repeat(2,1fr)
+  }
+  .dealership {
+    margin-bottom: 70px
+  }
+}
+@media (min-width:992px) {
+  .dealership,
+  .dealerships {
+    margin-bottom: 80px
+  }
+  .dealership-info {
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start
+  }
+  .dealerships-item-img-logo-img {
+    width: 80px;
+    height: 80px
+  }
+}
+@media (min-width:1200px) {
+  .dealership .about-icons-box {
+    margin-bottom: 64px
+  }
+  .dealerships {
+    margin-bottom: 96px
+  }
+  .dealership-images-img {
+    margin-bottom: 64px
+  }
+  .dealerships-item-img-logo {
+    order: 0;
+    grid-template-columns: auto auto
+  }
+  .dealerships-item .dealerships-item-title-box {
+    display: none
+  }
+  .dealerships-item-img-box {
+    grid-template-columns: 80px 1fr;
+    align-items: center
+  }
+  .dealerships-item {
+    grid-template-columns: 370px 1fr
+  }
+  .dealerships-item-info-box .dealerships-item-title-box {
+    display: block;
+    margin-bottom: 24px
+  }
+  .dealerships-item-info-box {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-template-rows: 1fr
+  }
+  .dealerships-item-info-locate {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    align-items: center
+  }
+  .dealership-info {
+    padding: 50px 60px;
+    margin-bottom: 64px
+  }
+  .dealership-info-title-box {
+    gap: 30px
+  }
+  .dealerships-item-box :last-child,
+  .dealerships-item-info-locate-box :last-child {
+    margin-bottom: 0
+  }
+  .dealership {
+    margin-bottom: 96px
+  }
+}
+@media (min-width:1400px) {
+  .dealerships-item {
+    grid-template-columns: 410px 1fr
+  }
+  .dealerships-item-info-box,
+  .dealerships-item-info-locate {
+    gap: 60px
+  }
+}
+.page-404-wrapper {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0
+}
+.page-404-title {
+  font-family: Oswald,sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  margin-bottom: 8px
+}
+.page-404-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #9b9b9b;
+  margin-bottom: 32px
+}
+.page-404-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%
+}
+.page-404-number img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+@media (min-width:768px) {
+  .page-404-wrapper {
+    min-height: calc(100vh - 64px);
+    padding: 60px 0
+  }
+  .page-404-subtitle {
+    margin-bottom: 48px
+  }
+  .page-404-back {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px
+  }
+  .page-404-title {
+    font-size: 24px;
+    line-height: 40px
+  }
+}
+@media (min-width:992px) {
+  .page-404-wrapper {
+    min-height: calc(100vh - 137px)
+  }
+}
+.insurance .about {
+  margin-bottom: 60px
+}
+.insurance-partner {
+  border: 1.5px solid #575656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 136px;
+  width: 100%;
+  padding: 5%;
+  min-height: 136px
+}
+.insurance-partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,136px);
+  gap: 15px
+}
+.insurance-partner-img img,
+.insurance-partner-img svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain
+}
+.insurance-partner-img.type-1 {
+  height: 30px
+}
+.insurance-partner-img.type-2 {
+  height: 40px
+}
+.insurance-partner-img.type-3 {
+  height: 30px
+}
+@media (min-width:576px) {
+  .autopart .services-items {
+    grid-template-columns: repeat(2,1fr)
+  }
+  .insurance-partners {
+    grid-template-columns: repeat(3,1fr)
+  }
+  .insurance-partner {
+    min-height: 160px
+  }
+}
+@media (min-width:768px) {
+  .insurance .about {
+    margin-bottom: 70px
+  }
+  .insurance-partner {
+    min-height: 150px
+  }
+  .insurance-partners {
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px
+  }
+  .insurance-partner-img.type-2 {
+    height: 46px
+  }
+  .insurance-partner-img.type-3 {
+    height: 37px
+  }
   .section-title {
     margin-bottom: 52px
   }
@@ -7079,6 +7658,45 @@ ul.service-autopart-navigation-sublist {
   .web-select {
     padding-left: 24px
   }
+}
+@media (min-width:992px) {
+  .insurance-partner {
+    min-height: 162px
+  }
+  .insurance-partners {
+    grid-template-columns: repeat(5,1fr)
+  }
+  .insurance .about {
+    margin-bottom: 80px
+  }
+}
+@media (min-width:1200px) {
+  .insurance .about {
+    margin-bottom: 96px
+  }
+  .insurance-partners {
+    grid-template-columns: repeat(6,1fr)
+  }
+  .insurance-partner {
+    min-height: 160px
+  }
+  .insurance-partner-img.type-1 {
+    height: 40px
+  }
+  .insurance-partner-img.type-2 {
+    height: 56px
+  }
+  .insurance-partner-img.type-3 {
+    height: 43px
+  }
+}
+@media (min-width:1400px) {
+  .insurance-partner {
+    min-height: 190px
+  }
+}
+.no-margin {
+  margin: 0
 }
 .custom-select .select-options {
   max-height: 442px;

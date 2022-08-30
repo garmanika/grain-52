@@ -1,0 +1,68 @@
+@media (min-width: 576px) {
+	.insurance-partners{
+		grid-template-columns: repeat(3,1fr);
+	}
+	.insurance-partner{
+		min-height: 160px;
+	}
+}
+@media (min-width: 768px) {
+  .insurance {
+    .about {
+      margin-bottom: 70px;
+    }
+  }
+	.insurance-partner{
+		min-height: 150px;
+	}
+	.insurance-partners{
+		grid-template-columns: repeat(4,1fr);
+		gap: 30px;
+	}
+	.insurance-partner-img.type-2{
+		height: 46px;
+	}
+	.insurance-partner-img.type-3{
+		height: 37px;
+	}
+}
+@media (min-width: 992px) {
+	.insurance-partner{
+		min-height: 162px;
+	}
+	.insurance-partners{
+		grid-template-columns: repeat(5,1fr);
+	}
+  .insurance {
+    .about {
+      margin-bottom: 80px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .insurance {
+    .about {
+      margin-bottom: 96px;
+    }
+  }
+	.insurance-partners{
+		grid-template-columns: repeat(6,1fr);
+	}
+	.insurance-partner{
+		min-height: 160px;
+	}
+	.insurance-partner-img.type-1{
+		height: 40px;
+	}
+	.insurance-partner-img.type-2{
+		height: 56px;
+	}
+	.insurance-partner-img.type-3{
+		height: 43px;
+	}
+}
+@media (min-width: 1400px) {
+	.insurance-partner{
+		min-height: 190px;
+	}
+}

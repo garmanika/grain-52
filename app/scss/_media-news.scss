@@ -8,8 +8,8 @@
     .news-items {
         grid-template-columns: repeat(3, 1fr);
     }
-    .new-img {
-        height: 360px;
+    .news-detail-img {
+        
         margin-bottom: 48px;
     }
 }
@@ -20,9 +20,9 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 56px 30px;
     }
-    .new-img {
+    .news-detail-img {
         margin-bottom: 64px;
-        height: 550px;
+        
     }
 }
 @media (min-width: 1400px) {

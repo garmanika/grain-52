@@ -4,17 +4,16 @@ $(function () {
     $(this).find(".faq-item-item-body").slideToggle();
     $(this).find(".faq-item-item-icon").toggleClass("active");
   });
-  $('.service-autopart-navigation .is-parent > a').on('click', function (e) {
+  $(".service-autopart-navigation .is-parent > a").on("click", function (e) {
     e.preventDefault();
-    $(this).closest('li').toggleClass('active')
-    $(this).siblings('ul').fadeToggle();
-  })
+    $(this).toggleClass("active");
+  });
   $(".info-car-tab-head").on("click", function () {
     $(this).siblings(".info-car-tab-body").fadeToggle();
     $(this).toggleClass("active");
   });
 
-  $(".file-upload").change(function () {
+  $(" .file-upload").change(function () {
     var filepath = this.value;
     var m = filepath.match(/([^\/\\]+)$/);
     var filename = m[1];
@@ -119,7 +118,7 @@ $(function () {
   $(".service-rapair-gallary").each(function () {
     let section = $(this);
     new Swiper(section.find(".service-rapair-gallary-slider")[0], {
-      spaceBetween: 30,
+
       watchOverflow: true,
       slidesPerView: 1,
       slidesPerGroup: 1,
@@ -127,10 +126,41 @@ $(function () {
         nextEl: section.find(".slider-next")[0],
         prevEl: section.find(".slider-prev")[0],
       },
+      observeSlideChildren: true,
+      observeParents: true,
       pagination: {
         el: ".service-rapair-gallary-slider .swiper-pagination",
         clickable: true,
       },
+      breakpoints: {
+        320: {
+          spaceBetween: 15,
+          grid: {
+            rows: 2,
+            fill: 'column',
+          },
+          slidesPerView: 1,
+          slidesPerGroup: 1
+        },
+        768: {
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
+          spaceBetween: 30,
+          slidesPerView: 2,
+          slidesPerGroup: 2
+        },
+        992: {
+          grid: {
+            rows: 1,
+            fill: 'row',
+          },
+          spaceBetween: 30,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      }
     });
   });
   const swiper = new Swiper(".sliders-images", {

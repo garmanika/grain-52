@@ -21,8 +21,24 @@
         flex-direction: row;
         gap: 30px;
     }
+    .service-rapair-gallary-slider {
+        .swiper-slide {
+            height: 100%;
+        }
+    }
+    .service-rapair-gallary-slider .swiper-wrapper {
+        height: auto;
+    }
 }
 @media (min-width: 992px) {
+    .service-rapair-gallary-slider {
+        .swiper-wrapper {
+            height: auto;
+        }
+        .swiper-slide {
+            height: auto;
+        }
+    }
     .service-rapair-gallary {
         margin-bottom: 70px;
     }
@@ -35,6 +51,7 @@
     .service-rapair-gallary-slider-img {
         height: 248px;
     }
+
 }
 @media (min-width: 1200px) {
     .service-rapair-gallary {

@@ -1,0 +1,57 @@
+@media (min-width: 576px) {
+  .job-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .job-item {
+    position: relative;
+    .btn {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .job-item-box {
+    padding-bottom: 64px;
+  }
+}
+@media (min-width: 768px) {
+  .job-items{
+    gap: 30px;
+  }
+  .job-form {
+    padding: 48px 0;
+  }
+  .web-form-item-file .file-upload-wrapper .filename {
+    padding-left: 24px;
+  }
+  .job {
+    margin-bottom: 70px;
+  }
+  .job-form-title {
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
+  .job-form-btn .btn {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 992px) {
+  .job {
+    margin-bottom: 80px;
+  }
+  .job-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .job {
+    margin-bottom: 96px;
+  }
+}
+@media (min-width: 1400px) {
+}

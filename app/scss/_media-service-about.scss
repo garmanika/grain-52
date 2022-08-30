@@ -2,9 +2,7 @@
 
 }
 @media (min-width: 768px){
-    .service-about-info-img{
-        height: 360px;
-    }
+
     .service-about-info{
         margin-bottom: 70px;
     }
@@ -13,14 +11,14 @@
     .service-about-info{
         grid-template-columns: auto 570px;
         gap: 30px;
-        align-items: center;
+        align-items: start;
     }
     .service-about-info{
         margin-bottom: 80px;
     }
-    .service-about-info-img{
-        margin-right: 30px;
-    }
+.service-about-info-descr{
+    align-self: center;
+}
 }
 @media (min-width: 1200px){
     .service-about-info{
@@ -35,7 +33,5 @@
     .service-about-info{
         grid-template-columns: auto 790px;
     }
-    .service-about-info-img{
-        margin-right: 60px;
-    }
+
 }

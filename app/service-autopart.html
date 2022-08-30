@@ -439,19 +439,19 @@
               </div>
               <div class="service-autopart-inner">
                 <div id="service-autopart-navigation" class="service-autopart-navigation ">
-                  <ul class="service-autopart-navigation-list">
-                    <li class="is-parent">
-                      <a href="#">Motrio</a>
+                  <ul class="service-autopart-navigation-list ">
+                    <li class="is-parent active">
+                      <a class="active" href="#">Motrio</a>
                       <ul class="service-autopart-navigation-sublist">
-                        <li class="is-parent">
-                          <a href="#">ДВИГАТЕЛЬ</a>
+                        <li class="is-parent ">
+                          <a class="active" href="#">ДВИГАТЕЛЬ</a>
                           
                           <ul class="service-autopart-navigation-sub-sublist">
                             <li>
                               <a href="#">Дроссельные заслонки, поршни, шатуны</a>
                             </li>
                             <li>
-                              <a href="#">Коленвалы, распредвалы, ГБЦ, масляный насос</a>
+                              <a class="active" href="#">Коленвалы, распредвалы, ГБЦ, масляный насос</a>
                             </li>
                           </ul>
                         </li>
@@ -533,161 +533,164 @@
                   </ul>
                 </div>
                 <div class="service-autopart-items-wrapper">
-                  <div class="service-autopart-control">
-                    <div class="service-autopart-control-inputs">
-                      <div class="web-form-item web-form-item-search">
-                        <input
-                          class="web-input"
-                          type="text"
-                          id="input"
-                          required="required"
-                          placeholder=" "
-                        />
+									<form >
+										<div class="service-autopart-control">
+											<div class="service-autopart-control-inputs">
+												<div class="web-form-item web-form-item-search">
+													<input
+														class="web-input"
+														type="text"
+														id="input"
+														required="required"
+														placeholder=" "
+													/>
+	
+													<label class="web-form-label-sole" for="input"
+														>Поиск</label
+													>
+													<div class="web-form-search">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="20"
+															height="20"
+															viewBox="0 0 20 20"
+															fill="none"
+														>
+															<path
+																d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+																stroke="#CCCCCC"
+																stroke-width="1.5"
+																stroke-linecap="round"
+																stroke-linejoin="round"
+															/>
+															<path
+																d="M17.5 17.5L13.875 13.875"
+																stroke="#CCCCCC"
+																stroke-width="1.5"
+																stroke-linecap="round"
+																stroke-linejoin="round"
+															/>
+														</svg>
+													</div>
+												</div>
+												<div class="custom-select">
+													<select>
+														<option selected hidden value="hide">Модель</option>
+														<option value="Model 1">Model 1</option>
+														<option value="Model 2">Model 2</option>
+														<option value="Model 2">Model 3</option>
+													</select>
+												</div>
+											</div>
+											<div class="service-autopart-control-box">
+												<div class="web-check">
+													<label>
+														<input
+															type="checkbox"
+															class="check-box"
+															required=" "
+														/>
+														<span class="check-style"></span>
+														<span class="web-check-text"> Распродажа </span>
+													</label>
+												</div>
+												<div class="service-autopart-control-sort-box">
+													<a class="service-autopart-control-sort sort-active sort-asc">
+								 
+															<svg
+																class="svg-sort-name"
+																xmlns="http://www.w3.org/2000/svg"
+																width="32"
+																height="32"
+																viewBox="0 0 32 32"
+																fill="none"
+															>
+																<path
+																	d="M0.769531 26.6666L4.84953 7.22656H6.36153L10.4655 26.6666H9.14553L8.13753 21.2906H3.09753L2.06553 26.6666H0.769531ZM3.28953 20.3306H7.96953L5.61753 8.81056L3.28953 20.3306Z"
+																	fill="#242424"
+																/>
+																<path
+																	d="M12.1641 19.0106V17.9546H17.1081V19.0106H12.1641Z"
+																	fill="#242424"
+																/>
+																<path
+																	d="M18.577 26.6666L22.441 17.8106C21.465 17.4426 20.761 16.7786 20.329 15.8186C19.897 14.8426 19.681 13.7146 19.681 12.4346C19.681 11.5066 19.825 10.6506 20.113 9.86656C20.417 9.08256 20.929 8.45056 21.649 7.97056C22.369 7.47456 23.369 7.22656 24.649 7.22656H28.897V26.6666H27.553V18.1946H24.577C24.433 18.1946 24.265 18.1946 24.073 18.1946C23.897 18.1786 23.745 18.1626 23.617 18.1466L20.041 26.6666H18.577ZM24.745 17.1866H27.553V8.25856H24.697C23.513 8.25856 22.593 8.57856 21.937 9.21856C21.297 9.85856 20.977 10.9306 20.977 12.4346C20.977 14.0026 21.265 15.1866 21.841 15.9866C22.417 16.7866 23.385 17.1866 24.745 17.1866Z"
+																	fill="#242424"
+																/>
+															</svg>
+															<svg
+																class="svg-cont"
+																xmlns="http://www.w3.org/2000/svg"
+																width="16"
+																height="16"
+																viewBox="0 0 16 16"
+																fill="none"
+															>
+																<path
+																	d="M4 6L8 10L12 6"
+																	stroke="#CCCCCC"
+																	stroke-width="1.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+															</svg>
+									 
+													</a>
+													<a class="service-autopart-control-sort sort-desc ">
+											 
+															<svg
+																class="svg-sort-price"
+																xmlns="http://www.w3.org/2000/svg"
+																width="32"
+																height="32"
+																viewBox="0 0 32 32"
+																fill="none"
+															>
+																<path
+																	d="M8 26.6663V21.333"
+																	stroke="#242424"
+																	stroke-width="1.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+																<path
+																	d="M16 26.6663V13.333"
+																	stroke="#242424"
+																	stroke-width="1.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+																<path
+																	d="M24 26.6663V5.33301"
+																	stroke="#242424"
+																	stroke-width="1.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+															</svg>
+															<svg
+																class="svg-cont"
+																xmlns="http://www.w3.org/2000/svg"
+																width="16"
+																height="16"
+																viewBox="0 0 16 16"
+																fill="none"
+															>
+																<path
+																	d="M4 6L8 10L12 6"
+																	stroke="#CCCCCC"
+																	stroke-width="1.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+															</svg>
+											 
+													</a>
+												</div>
+											</div>
+										</div>
+									</form>
 
-                        <label class="web-form-label-sole" for="input"
-                          >Поиск</label
-                        >
-                        <button class="web-form-search">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 20 20"
-                            fill="none"
-                          >
-                            <path
-                              d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
-                              stroke="#CCCCCC"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M17.5 17.5L13.875 13.875"
-                              stroke="#CCCCCC"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                      <div class="custom-select">
-                        <select>
-                          <option selected hidden value="hide">Модель</option>
-                          <option value="Model 1">Model 1</option>
-                          <option value="Model 2">Model 2</option>
-                          <option value="Model 2">Model 3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="service-autopart-control-box">
-                      <div class="web-check">
-                        <label>
-                          <input
-                            type="checkbox"
-                            class="check-box"
-                            required=" "
-                          />
-                          <span class="check-style"></span>
-                          <span class="web-check-text"> Распродажа </span>
-                        </label>
-                      </div>
-                      <div class="service-autopart-control-sort-box">
-                        <div class="service-autopart-control-sort">
-                          <button>
-                            <svg
-                              class="svg-sort-name"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="32"
-                              height="32"
-                              viewBox="0 0 32 32"
-                              fill="none"
-                            >
-                              <path
-                                d="M0.769531 26.6666L4.84953 7.22656H6.36153L10.4655 26.6666H9.14553L8.13753 21.2906H3.09753L2.06553 26.6666H0.769531ZM3.28953 20.3306H7.96953L5.61753 8.81056L3.28953 20.3306Z"
-                                fill="#242424"
-                              />
-                              <path
-                                d="M12.1641 19.0106V17.9546H17.1081V19.0106H12.1641Z"
-                                fill="#242424"
-                              />
-                              <path
-                                d="M18.577 26.6666L22.441 17.8106C21.465 17.4426 20.761 16.7786 20.329 15.8186C19.897 14.8426 19.681 13.7146 19.681 12.4346C19.681 11.5066 19.825 10.6506 20.113 9.86656C20.417 9.08256 20.929 8.45056 21.649 7.97056C22.369 7.47456 23.369 7.22656 24.649 7.22656H28.897V26.6666H27.553V18.1946H24.577C24.433 18.1946 24.265 18.1946 24.073 18.1946C23.897 18.1786 23.745 18.1626 23.617 18.1466L20.041 26.6666H18.577ZM24.745 17.1866H27.553V8.25856H24.697C23.513 8.25856 22.593 8.57856 21.937 9.21856C21.297 9.85856 20.977 10.9306 20.977 12.4346C20.977 14.0026 21.265 15.1866 21.841 15.9866C22.417 16.7866 23.385 17.1866 24.745 17.1866Z"
-                                fill="#242424"
-                              />
-                            </svg>
-                            <svg
-                              class="svg-cont"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                            >
-                              <path
-                                d="M4 6L8 10L12 6"
-                                stroke="#CCCCCC"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="service-autopart-control-sort">
-                          <button>
-                            <svg
-                              class="svg-sort-price"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="32"
-                              height="32"
-                              viewBox="0 0 32 32"
-                              fill="none"
-                            >
-                              <path
-                                d="M8 26.6663V21.333"
-                                stroke="#242424"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M16 26.6663V13.333"
-                                stroke="#242424"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                              <path
-                                d="M24 26.6663V5.33301"
-                                stroke="#242424"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-                            <svg
-                              class="svg-cont"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 16 16"
-                              fill="none"
-                            >
-                              <path
-                                d="M4 6L8 10L12 6"
-                                stroke="#CCCCCC"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              />
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <div class="service-autopart-items">
                     <div class="service-autopart-item">
                       <div class="service-autopart-item-box">
@@ -707,7 +710,7 @@
                         <div class="service-autopart-item-price">
                           2 656 000 ₽
                         </div>
-                        <a href="#" class="btn btn-pr">Заказать</a>
+                        <a data-fancybox="" data-src="#modal-order-autopart" href="#" class="btn btn-pr">Заказать</a>
                       </div>
                     </div>
                     <div class="service-autopart-item">
@@ -729,7 +732,7 @@
                         <div class="service-autopart-item-price">
                           2 656 000 ₽
                         </div>
-                        <a href="#" class="btn btn-pr">Заказать</a>
+                        <a data-fancybox="" data-src="#modal-order-autopart" href="#" class="btn btn-pr">Заказать</a>
                       </div>
                     </div>
                     <div class="service-autopart-item">
@@ -750,7 +753,7 @@
                         <div class="service-autopart-item-price">
                           2 656 000 ₽
                         </div>
-                        <a href="#" class="btn btn-pr">Заказать</a>
+                        <a data-fancybox="" data-src="#modal-order-autopart" href="#" class="btn btn-pr">Заказать</a>
                       </div>
                     </div>
                     <div class="service-autopart-item">
@@ -772,7 +775,7 @@
                         <div class="service-autopart-item-price">
                           2 656 000 ₽
                         </div>
-                        <a href="#" class="btn btn-pr">Заказать</a>
+                        <a data-fancybox="" data-src="#modal-order-autopart" href="#" class="btn btn-pr">Заказать</a>
                       </div>
                     </div>
                     <div class="service-autopart-item">
@@ -794,7 +797,7 @@
                         <div class="service-autopart-item-price">
                           2 656 000 ₽
                         </div>
-                        <a href="#" class="btn btn-pr">Заказать</a>
+                        <a data-fancybox="" data-src="#modal-order-autopart" href="#" class="btn btn-pr">Заказать</a>
                       </div>
                     </div>
                   </div>
@@ -1490,6 +1493,62 @@
               <span class="check-style"></span>
               <span class="web-check-text">
                 Нажимая кнопку «Записаться», я даю свое согласие на обработку
+                моих персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="modal-order" class="modal modal-order" style="display: none">
+      <div class="modal-inner">
+        <div class="modal-title">Заказать автомобиль
+          <div class="modal-title-descr">Arkana Style TCe 150 4х4 CVT</div>
+          </div>
+    
+        <form>
+          <div class="modal-form-box">
+  
+            <input type="text" placeholder="Имя" class="web-input" />
+            <input type="tel" placeholder="Телефон" class="web-input add-phone-mask" />
+          </div>
+  
+          <button class="btn btn-pr">Заказать</button>
+          <div class="web-check">
+            <label>
+              <input type="checkbox" class="check-box" required="" />
+              <span class="check-style"></span>
+              <span class="web-check-text">
+                Нажимая кнопку «Заказать», я даю свое согласие на обработку
+                моих персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="modal-order-autopart" class="modal modal-order-autopart" style="display: none">
+      <div class="modal-inner">
+        <div class="modal-title">Заказать 
+          <div class="modal-title-descr">
+            215/65/16 (Дастер) Tigar SUV Summer
+          </div>
+          </div>
+    
+        <form>
+          <div class="modal-form-box">
+  
+            <input type="text" placeholder="Имя" class="web-input" />
+            <input type="tel" placeholder="Телефон" class="web-input add-phone-mask" />
+          </div>
+  
+          <button class="btn btn-pr">Заказать</button>
+          <div class="web-check">
+            <label>
+              <input type="checkbox" class="check-box" required="" />
+              <span class="check-style"></span>
+              <span class="web-check-text">
+                Нажимая кнопку «Заказать», я даю свое согласие на обработку
                 моих персональных данных
               </span>
             </label>

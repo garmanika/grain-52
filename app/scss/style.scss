@@ -327,22 +327,29 @@ ul.mobile-navigation-menu > li a.active::before {
   background: #fff;
 }
 .border-eraser-h-ltr::before,
-.border-eraser-h-rtl::before {
+.border-eraser-h-rtl::before,
+.border-eraser-h-ctr::before {
   bottom: 100%;
   width: 15px;
   height: 3px;
 }
 .border-eraser-h-ltr::after,
-.border-eraser-h-rtl::after {
+.border-eraser-h-rtl::after,
+.border-eraser-h-ctr::after {
   top: 100%;
   width: 15px;
   height: 3px;
+}
+.border-eraser-h-ctr::before {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .border-eraser-h-ltr::before {
   left: 18px;
 }
 .border-eraser-h-ltr::after,
-.border-eraser-h-rtl::before {
+.border-eraser-h-rtl::before,
+.border-eraser-h-ctr::after {
   right: 18px;
 }
 .border-eraser-h-rtl::after {
@@ -2045,7 +2052,7 @@ ul.mobile-navigation-menu > li a.active::before {
     background-image: url(../img/svg/phone-call-gray.svg);
     @include bgi;
     left: 0;
-    top: 5px;
+    top: 3px;
     width: 20px;
     height: 20px;
   }
@@ -2072,7 +2079,7 @@ ul.mobile-navigation-menu > li a.active::before {
     background-image: url(../img/svg/clock-gray.svg);
     @include bgi;
     left: 0;
-    top: 5px;
+    top: 3px;
     width: 20px;
     height: 20px;
   }
@@ -2092,7 +2099,7 @@ ul.mobile-navigation-menu > li a.active::before {
     background-image: url(../img/svg/mail-gray.svg);
     @include bgi;
     left: 0;
-    top: 5px;
+    top: 3px;
     width: 20px;
     height: 20px;
   }
@@ -3108,6 +3115,7 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 
 .web-form-item {
   position: relative;
+  width: 100%;
 }
 .web-form-item label {
   pointer-events: none;
@@ -3527,6 +3535,12 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
 
 .file-upload-wrapper {
   position: relative;
+  label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .file-upload-wrapper .file-upload {
@@ -3576,7 +3590,6 @@ ul.model-detail-tabs .tabs-item.active .model-detail-tab-btn::after {
   }
 }
 .filename {
-  font-style: italic;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -3945,7 +3958,7 @@ ul.actions-list {
   gap: 15px;
 }
 .web-form-item-search {
-  button {
+  .web-form-search {
     @include no-button;
     position: absolute;
     right: 0;
@@ -3955,6 +3968,7 @@ ul.actions-list {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     svg,
     img {
       width: 20px;
@@ -3987,11 +4001,22 @@ ul.actions-list {
   gap: 15px;
 }
 .service-autopart-control-sort {
-  button {
-    @include no-button;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  @include no-button;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  &.sort-active {
+    svg:not(.svg-cont) {
+      path {
+        fill: #ff1e26;
+        stroke: #ff1e26;
+      }
+    }
+  }
+  &.sort-asc {
+    .svg-cont {
+      transform: rotate(180deg);
+    }
   }
 }
 .svg-cont {
@@ -4002,6 +4027,11 @@ ul.actions-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
+}
+.service-autopart-items-wrapper {
+  .stock-items-more-button {
+    grid-column: 1/2;
+  }
 }
 .service-autopart-item {
   display: flex;
@@ -4091,8 +4121,10 @@ ul.actions-list {
   color: #242424;
   font-family: Oswald, sans-serif;
   display: block;
-  padding: 12px 24px;
-  padding-right: 44px;
+  padding: 12px 16px 12px 16px;
+}
+.service-autopart-navigation-list > li.is-parent > a {
+  padding: 12px 32px 12px 16px;
 }
 .service-autopart-navigation-sublist > li > a {
   font-family: Oswald, sans-serif;
@@ -4101,21 +4133,31 @@ ul.actions-list {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
-  padding-right: 44px;
   color: #242424;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding: 12px 16px 12px 32px;
+  &:hover {
+    background: #b4b5bc;
+    color: #fff;
+  }
+}
+.service-autopart-navigation-list a.active + ul {
+  display: block;
+}
+.service-autopart-navigation-sublist > li.is-parent > a {
+  padding: 12px 32px 12px 32px;
 }
 .service-autopart-navigation-sub-sublist > li > a {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
   color: #242424;
-  padding-left: 54px;
-  padding-right: 44px;
+  padding-left: 48px;
+  padding-right: 16px;
+  &.active {
+    color: #ff1e26;
+  }
 }
 ul.service-autopart-navigation-sub-sublist {
-  padding: 12px 0;
   li + li {
     margin-top: 12px;
   }
@@ -4123,21 +4165,27 @@ ul.service-autopart-navigation-sub-sublist {
 ul.service-autopart-navigation-list,
 ul.service-autopart-navigation-sublist,
 ul.service-autopart-navigation-sub-sublist {
-  display: block;
   width: 100%;
 }
-.service-autopart-navigation-list > li.is-parent.active > a {
+ul.service-autopart-navigation-sub-sublist,
+ul.service-autopart-navigation-sublist {
+  display: none;
+}
+.service-autopart-navigation-list > li.is-parent > a.active {
   background: #b4b5bc;
   color: #ffffff;
   text-shadow: 0.7px 0 #fff, 0.7px 0 #fff;
   // font-weight: 500;
 }
+
 .service-autopart-navigation-list > li > a:hover {
   background: #b4b5bc;
   color: #ffffff;
 }
 .service-autopart-navigation-sub-sublist > li > a:hover {
-  text-shadow: 1px 0 #ff1e26, 1px 0 #ff1e26;
+  color: #ff1e26;
+}
+.service-autopart-navigation-sub-sublist > li > a:focus {
   color: #ff1e26;
 }
 .service-autopart-navigation.fancybox-content {
@@ -4153,7 +4201,7 @@ ul.service-autopart-navigation-sub-sublist {
     justify-content: center;
     color: #ccc;
     top: 6px;
-    right: 6px;
+    right: 2px;
   }
   .fancybox-button svg {
     width: 24px;
@@ -4165,7 +4213,7 @@ ul.service-autopart-navigation-sub-sublist {
     color: #242424;
   }
 }
-.service-autopart-navigation-list li.is-parent.active > a::after {
+.service-autopart-navigation-list li.is-parent > a.active::after {
   background-image: url(../img/svg/chevron-wh.svg);
 }
 @import "_media-service-autopart";
@@ -4188,10 +4236,14 @@ ul.service-autopart-navigation-sub-sublist {
     object-fit: cover;
   }
 }
-.service-rapair-gallary-slider-box {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+.service-rapair-gallary-slider {
+  .swiper-wrapper {
+    height: 275px;
+  }
+  .swiper-slide {
+    height: auto;
+  }
 }
 .about-short-info-more {
   margin-top: 40px;
@@ -4201,16 +4253,16 @@ ul.service-autopart-navigation-sub-sublist {
 }
 @import "_media-service-rapair";
 
-.service-repair-deteil-about {
+.service-repair-detail-about {
   margin-bottom: 60px;
 }
-.service-repair-deteil-items {
+.service-repair-detail-items {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 40px;
 }
-.service-repair-deteil-item-img {
+.service-repair-detail-item-img {
   @include container-img;
   padding-bottom: 66%;
   img {
@@ -4220,7 +4272,7 @@ ul.service-autopart-navigation-sub-sublist {
 .service-brand-request {
   margin-bottom: 60px;
 }
-@import "_media-service-repair-deteil";
+@import "_media-service-repair-detail";
 .service-repair-gallery {
   margin-bottom: 60px;
 }
@@ -4269,15 +4321,8 @@ ul.service-autopart-navigation-sub-sublist {
 .title-fw {
   flex-basis: 100%;
 }
-.contacts-item-phone-subtitle {
-  display: block;
-  font-family: "Open Sans", sans-serif;
+.contacts-item-phone-title + .contacts-item-phone-title {
   margin-top: 8px;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
-  color: #242424;
-  text-transform: initial;
 }
 @import "_media-sos";
 .service-about-info {
@@ -4287,11 +4332,10 @@ ul.service-autopart-navigation-sub-sublist {
   margin-bottom: 60px;
 }
 .service-about-info-img {
-  height: 192px;
+  height: auto;
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
+    max-width: 100%;
   }
 }
 @import "_media-service-about";
@@ -4307,16 +4351,15 @@ ul.service-autopart-navigation-sub-sublist {
   grid-template-columns: 1fr;
   gap: 40px;
 }
-.new-img {
+.news-detail-img {
   margin-bottom: 40px;
-  height: 192px;
+
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    display: block;
   }
 }
-.new-info-date {
+.news-detail-info-date {
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
@@ -4325,15 +4368,349 @@ ul.service-autopart-navigation-sub-sublist {
   margin-bottom: 24px;
 }
 @import "_media-news";
-.job-items{
+.job {
+  margin-bottom: 60px;
+}
+.job-items {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 15px;
+  .services-item-title {
+    font-size: 18px;
+  }
 }
-.job-item{
+.job-item {
   border: 1.5px solid #575656;
-  padding: 40px 5px;
+  padding: 40px 30px;
+  text-align: center;
+  &:hover,
+  &:focus {
+    .btn-sec {
+      color: #242424;
+      border-color: #000;
+    }
+  }
+  .services-item-subtitle {
+    margin-top: 4px;
+  }
+  .btn {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+}
+.job-item-price {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #242424;
+  margin-top: 16px;
+  font-family: Oswald, sans-serif;
+}
+.job-form {
+  background: linear-gradient(0deg, #f5f5f9, #f5f5f9);
+  padding: 40px 0;
   text-align: center;
 }
+.job-form-img {
+  img,
+  svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  margin-bottom: 24px;
+}
+.job-form-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #242424;
+  font-family: Oswald, sans-serif;
+  margin-bottom: 16px;
+}
+.job-form-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+  color: #242424;
+}
+.job-form-btn {
+  .btn {
+    display: block;
+  }
+}
+.modal-job {
+  .modal-title {
+    margin-bottom: 48px;
+    span {
+      display: block;
+      margin-top: 16px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      color: #242424;
+      font-family: "Open Sans", sans-serif;
+      text-transform: initial;
+    }
+  }
+}
+.web-form-item-file {
+  width: 100%;
+  cursor: pointer;
+  height: 48px;
+  border: 1.5px solid #9b9b9b;
+  .file-upload-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .file-upload-wrapper .filename {
+    width: 100%;
+
+    position: absolute;
+    padding-right: 40px;
+    top: 0;
+    left: 0px;
+    padding: 10px 16px;
+  }
+  .file-upload-wrapper .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+  }
+}
+@import "_media-job";
+.autopart {
+  margin-bottom: 60px;
+  .services-items {
+    grid-template-columns: 1fr;
+  }
+}
+@import "_media-autopart";
+.dealerships {
+  margin-bottom: 60px;
+}
+.dealership {
+  margin-bottom: 60px;
+  .about-icons-box {
+    margin-bottom: 40px;
+  }
+}
+.dealerships-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.dealerships-item-img-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.dealerships-item-img-logo {
+  order: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: inherit;
+  gap: 15px;
+}
+.dealerships-item-img-logo-img {
+  width: 48px;
+  height: 48px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.dealerships-item-img {
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
+.dealerships-item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #242424;
+  font-family: Oswald, sans-serif;
+}
+.dealerships-item-subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+}
+.dealerships-item-title-box {
+  display: grid;
+  gap: 4px;
+}
+.dealerships-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.dealerships-item-info-box {
+  .dealerships-item-title-box {
+    display: none;
+  }
+}
+.contacts-item-pings {
+  position: relative;
+  margin-bottom: 16px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/svg/map-pin-small.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 3px;
+    width: 20px;
+    height: 20px;
+  }
+  .contacts-item-ping {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+    margin-left: 44px;
+  }
+}
+.dealerships-item-info-btn {
+  .btn {
+    display: block;
+  }
+}
+.dealerships-item-info-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  grid-template-rows: 1fr auto;
+}
+.dealership-images-img {
+  margin-bottom: 40px;
+  img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+.dealership-info {
+  border: 1.5px solid #575656;
+  padding: 40px 15px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.dealership-info-title-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+@import "_media-dealerships";
+.page-404 {
+}
+.page-404-wrapper {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.page-404-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  margin-bottom: 8px;
+}
+.page-404-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #9b9b9b;
+  margin-bottom: 32px;
+}
+.page-404-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+.page-404-number {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+@import "_media-404";
+.insurance {
+  .about {
+    margin-bottom: 60px;
+  }
+}
+.insurance-partner {
+  border: 1.5px solid #575656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 136px;
+  width: 100%;
+  padding: 5%;
+  min-height: 136px;
+}
+.insurance-partners {
+  display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, 136px);
+  gap: 15px;
+}
+.insurance-partner-img {
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+  &.type-1 {
+    height: 30px;
+  }
+  &.type-2 {
+    height: 40px;
+  }
+  &.type-3 {
+    height: 30px;
+  }
+}
+@import "_media-insurance";
 @import "_media";
 
 @import "_media-dop";

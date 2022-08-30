@@ -1,0 +1,128 @@
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+	.dealership .about-icons-box {
+		margin-bottom: 48px;
+	}
+	.dealerships {
+		margin-bottom: 70px;
+	}
+	.dealerships-item {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+
+	.dealership-images-img {
+		margin-bottom: 48px;
+	}
+	.dealership-info {
+		padding: 48px 30px 35px;
+	}
+	.dealership-info {
+		margin-bottom: 48px;
+	}
+	.dealerships-item-locate {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.dealership {
+		margin-bottom: 70px;
+	}
+}
+@media (min-width: 992px) {
+	.dealerships {
+		margin-bottom: 80px;
+	}
+	.dealership-images-img {
+	}
+	.dealership {
+		margin-bottom: 80px;
+	}
+	.dealership-info {
+		grid-template-columns: 1fr 2fr;
+		gap: 30px;
+	}
+	.dealership-info{
+		align-items: start
+	}
+	.dealerships-item-img-logo-img {
+		width: 80px;
+		height: 80px;
+	}
+}
+@media (min-width: 1200px) {
+	.dealership .about-icons-box {
+		margin-bottom: 64px;
+	}
+	.dealerships {
+		margin-bottom: 96px;
+	}
+	.dealership-images-img {
+		margin-bottom: 64px;
+	}
+	.dealerships-item-img-logo {
+		order: 0;
+	}
+	.dealerships-item .dealerships-item-title-box {
+		display: none;
+	}
+	.dealerships-item-img-logo {
+		grid-template-columns: auto auto;
+	}
+
+	.dealerships-item-img-box {
+		grid-template-columns: 80px 1fr;
+		align-items: center;
+	}
+
+	.dealerships-item {
+		grid-template-columns: 370px 1fr;
+	}
+	.dealerships-item-info-box .dealerships-item-title-box {
+		display: block;
+		margin-bottom: 24px;
+	}
+	.dealerships-item-info-box {
+		grid-template-columns: 1fr auto;
+		align-items: center;
+	}
+	.dealerships-item-info-locate {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+		align-items: center;
+	}
+	.dealership-info {
+		padding: 50px 60px;
+	}
+	.dealership-info {
+		margin-bottom: 64px;
+	}
+
+	.dealership-info-title-box {
+		gap: 30px;
+	}
+	.dealerships-item-info-locate-box,
+	.dealerships-item-box {
+		& :last-child {
+			margin-bottom: 0;
+		}
+	}
+	.dealership {
+		margin-bottom: 96px;
+	}
+	.dealerships-item-info-box {
+		grid-template-rows: 1fr;
+	}
+}
+@media (min-width: 1400px) {
+	.dealerships-item {
+		grid-template-columns: 410px 1fr;
+	}
+	.dealerships-item-info-box {
+		gap: 60px;
+	}
+	.dealerships-item-info-locate {
+		gap: 60px;
+	}
+}

@@ -1,14 +1,14 @@
 @media (min-width: 576px) {
 }
 @media (min-width: 768px) {
-    .service-repair-deteil-items {
+    .service-repair-detail-items {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
-    .service-repair-deteil-items {
+    .service-repair-detail-items {
         margin-bottom: 48px;
     }
-    .service-repair-deteil-about {
+    .service-repair-detail-about {
         margin-bottom: 70px;
     }
     .service-brand-request {
@@ -16,10 +16,10 @@
     }
 }
 @media (min-width: 992px) {
-    .service-repair-deteil-items {
+    .service-repair-detail-items {
         margin-bottom: 64px;
     }
-    .service-repair-deteil-about {
+    .service-repair-detail-about {
         margin-bottom: 80px;
     }
     .btn-desk-hide {
@@ -32,7 +32,7 @@
     }
 }
 @media (min-width: 1200px) {
-    .service-repair-deteil-about {
+    .service-repair-detail-about {
         margin-bottom: 96px;
     }
     .service-brand-request {

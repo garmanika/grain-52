@@ -44,7 +44,7 @@
   .service-autopart-control {
     grid-template-columns: minmax(auto, 637px) auto;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
   }
   .service-autopart-navigation-btn {
     display: none;
@@ -59,12 +59,20 @@
   }
   .service-autopart-inner {
     display: grid;
-    grid-template-columns: minmax(auto, 300px) 1fr;
+    grid-template-columns: minmax(auto, 210px) 1fr;
     gap: 30px;
     align-items: start;
   }
 }
 @media (min-width: 1200px) {
+	.service-autopart-inner {
+
+    grid-template-columns: minmax(auto, 255px) 1fr;
+
+  }
+	.service-autopart-control{
+		gap: 40px;
+	}
   .service-autopart {
     margin-bottom: 96px;
   }
@@ -73,4 +81,9 @@
   }
 }
 @media (min-width: 1400px) {
+	.service-autopart-inner {
+
+    grid-template-columns: minmax(auto, 300px) 1fr;
+
+  }
 }

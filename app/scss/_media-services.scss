@@ -10,7 +10,8 @@
 	  left: 30px
 	}
 	.border-eraser-h-ltr::after,
-	.border-eraser-h-rtl::before {
+	.border-eraser-h-rtl::before,
+	.border-eraser-h-ctr::after {
 	  right: 30px
 	}
 	.border-eraser-h-rtl::after {
@@ -48,7 +49,9 @@
 	.border-eraser-h-ltr::after,
 	.border-eraser-h-ltr::before,
 	.border-eraser-h-rtl::after,
-	.border-eraser-h-rtl::before {
+	.border-eraser-h-rtl::before,
+	.border-eraser-h-ctr::before,
+	.border-eraser-h-ctr::after {
 	  width: 20px
 	}
 	.border-eraser-v-btt::after,
@@ -69,7 +72,9 @@
 	.border-eraser-h-ltr::after,
 	.border-eraser-h-ltr::before,
 	.border-eraser-h-rtl::after,
-	.border-eraser-h-rtl::before {
+	.border-eraser-h-rtl::before,
+	.border-eraser-h-ctr::before,
+	.border-eraser-h-ctr::after {
 	  width: 30px
 	}
 	.border-eraser-v-btt::after,
@@ -91,7 +96,8 @@
 	  left: 40px
 	}
 	.border-eraser-h-ltr::after,
-	.border-eraser-h-rtl::before {
+	.border-eraser-h-rtl::before,
+	.border-eraser-h-ctr::after {
 	  right: 40px
 	}
 	.border-eraser-h-rtl::after {
